@@ -14,10 +14,10 @@ let store = createStore(todoApp, {
           id: 1491998310387,
           options: {
             border: 0,
-            width: '10%',
+            width: '100px',
             height: '100px',
             text: 'test text',
-            display: 'table-cell',
+            display: 'inline-table',
             backgroundColor: '#003388'
           },
           block_id: 1491998309943,
@@ -29,7 +29,7 @@ let store = createStore(todoApp, {
             border: 0,
             width: '100px',
             height: '100px',
-            display: 'table-cell',
+            display: 'inline-table',
             backgroundColor: '#006666',
             image_url: 'https://www.w3schools.com/css/img_fjords.jpg',
           },

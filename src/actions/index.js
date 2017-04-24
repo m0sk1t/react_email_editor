@@ -69,7 +69,7 @@ export const addNode = (node_type) => {
             text: node_type === 'text'? 'test text': '',
             width: '100px',
             height: '100px',
-            display: 'table-cell',
+            display: 'inline-table',
             backgroundColor: '#' + id.toString().substr(6, 6),
             image_url: node_type === 'text'? '': 'https://www.w3schools.com/css/img_fjords.jpg',
         }
