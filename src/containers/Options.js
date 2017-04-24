@@ -46,6 +46,16 @@ const Options = connect(
                         <div>Block options</div>
                         <hr />
                         <div>
+                            <label>
+                                Align:
+                                <select onChange={(e) => onPropChange('textAlign', e.target.value, 'block')}>
+                                    <option value="left">left</option>
+                                    <option value="right">right</option>
+                                    <option value="center">center</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div>
                             <label>Width: <input type="text" value={block.options.width} onChange={(e) => onPropChange('width', e.target.value, 'block')} /></label>
                         </div>
                         <div>
@@ -121,6 +131,16 @@ const Options = connect(
                 <div>Block options</div>
                 <hr />
                 <div>
+                    <label>
+                        Align:
+                        <select onChange={(e) => onPropChange('textAlign', e.target.value, 'block')}>
+                            <option value="left">left</option>
+                            <option value="right">right</option>
+                            <option value="center">center</option>
+                        </select>
+                    </label>
+                </div>
+                <div>
                     <label>Width: <input type="text" value={block.options.width} onChange={(e) => onPropChange('width', e.target.value, 'block')} /></label>
                 </div>
                 <div>
@@ -141,7 +161,7 @@ const Options = connect(
                 style={{
                     width: '20%',
                 }}
-            ></div>
+            >Nothing selected</div>
         );
     }
 });
