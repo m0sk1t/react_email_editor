@@ -1,9 +1,11 @@
 import { combineReducers } from 'redux';
 
-import blocks from './blocks';
+import template from './template';
+import components from './components';
 
-const todoApp = combineReducers({
-    blocks,
+const EmailEditor = combineReducers({
+    template,
+    components
 });
 
-export default todoApp;
+export default EmailEditor;

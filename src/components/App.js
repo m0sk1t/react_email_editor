@@ -1,17 +1,34 @@
 import React from 'react';
 import Options from '../containers/Options';
-import ActiveBlockList from '../containers/ActiveBlockList';
+import BlockList from '../components/BlockList';
 
 const App = () => (
-    <div
-        style={{
-            display: 'flex',
-            flexDirection: 'row',
-        }}
-    >
-        <Options />
-        <ActiveBlockList />
-    </div>
+	<div
+		style={{
+			'height': '100%',
+			'display': 'flex',
+			'flexDirection': 'row',
+		}}
+	>
+		<div style={{
+			'zIndex': 1,
+			'width': '20%',
+			'height': '100%',
+			'overflowY': 'auto',
+			'backgroundColor': '#FAFAFA',
+			'boxShadow': 'rgb(102, 102, 102) 3px 3px 10px 1px'
+		}}>
+			<Options />
+		</div>
+		<div style={{
+			'width': '80%',
+			'height': '100%',
+			'overflowY': 'auto',
+			'backgroundColor': '#F3F3F3'
+		}}>
+			<BlockList />
+		</div>
+	</div>
 );
 
 export default App;
