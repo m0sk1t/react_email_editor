@@ -4,6 +4,9 @@ const OptionsHeader = ({ block, onPropChange }) => {
 	return (
 		<div>
 			<div>
+				<label>Text: <input type="text" value={block.options.elements[0].text} onChange={(e) => onPropChange('text', e.target.value, false, 0)} /></label>
+			</div>
+			<div>
 				<label>
 					Align:
 					<select onChange={(e) => onPropChange('textAlign', e.target.value, false, 0)}>

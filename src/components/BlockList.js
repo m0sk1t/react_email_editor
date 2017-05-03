@@ -44,7 +44,7 @@ const BlockList = connect(
 				'justifyContent': 'center',
 			}}
 		>
-			<table cellPadding="0" cellSpacing="0" role="presentation" style={{width:'768px'}}>
+			<table cellPadding="0" cellSpacing="0" role="presentation" style={{width:'640px'}}>
 				<tbody>
 					{template.map((block, index) =>
 						<tr
@@ -57,7 +57,7 @@ const BlockList = connect(
 									if (blockDragged) {
 										onDrop(blockDragged.id, index);
 									} else {
-										onAdd(components.filter(el => el.selected), index);
+										onAdd(components.filter(el => el.selected)[0].block, index);
 									}
 								}
 							}

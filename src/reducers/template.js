@@ -1,11 +1,5 @@
 const block = (state, action) => {
 	switch (action.type) {
-		case 'ADD_BLOCK':
-			return {
-				id: action.id,
-				nodes: action.nodes,
-				options: action.options,
-			};
 		case 'SELECT_BLOCK':
 			return {
 				...state,
@@ -17,10 +11,7 @@ const block = (state, action) => {
 			if (action.container) {
 				const change = {
 					options: {
-						container: {
-							...state.options.container,
-							...style
-						},
+						container: Object.assign({}, state.options.container, style),
 						elements: state.options.elements
 					}
 				}
@@ -47,9 +38,13 @@ const block = (state, action) => {
 const template = (state = [], action) => {
 	switch (action.type) {
 		case 'ADD_BLOCK':
+			const first = state.slice(0, action.index);
+			const last = state.slice(action.index, state.length);
+			const new_block = Object.assign({}, action.block, {id: action.id})
 			return [
-				...state,
-				block(undefined, action)
+				...first,
+				new_block,
+				...last
 			];
 
 		case 'SWAP_BLOCKS':
