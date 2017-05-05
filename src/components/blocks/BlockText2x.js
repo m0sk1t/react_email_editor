@@ -1,7 +1,6 @@
 import React from 'react';
 
-const BlockImageText = ({ blockOptions }) => {
-	const alt = "cool image!";
+const BlockText2x = ({ blockOptions }) => {
 	return (
 		<table
 			width="100%"
@@ -20,9 +19,9 @@ const BlockImageText = ({ blockOptions }) => {
 						>
 							<tbody>
 								<tr>
-									<td>
-										<img alt={alt} style={{width:'100%'}} src={blockOptions.elements[0].source} />
-									</td>
+									<td
+									dangerouslySetInnerHTML={{__html: blockOptions?blockOptions.elements[0].text:'empty node'}}
+									></td>
 								</tr>
 							</tbody>
 						</table>
@@ -35,9 +34,6 @@ const BlockImageText = ({ blockOptions }) => {
 							<tbody>
 								<tr>
 									<td
-									style={{
-										"padding": "0 2%"
-									}}
 									dangerouslySetInnerHTML={{__html: blockOptions?blockOptions.elements[1].text:'empty node'}}
 									></td>
 								</tr>
@@ -50,4 +46,4 @@ const BlockImageText = ({ blockOptions }) => {
 	);
 };
 
-export default BlockImageText;
+export default BlockText2x;

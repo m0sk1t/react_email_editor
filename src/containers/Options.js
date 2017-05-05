@@ -1,10 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { stylishBlock } from '../actions';
+import { stylizeBlock } from '../actions';
 import OptionsText from '../components/options/OptionsText';
 import OptionsImage from '../components/options/OptionsImage';
 import OptionsHeader from '../components/options/OptionsHeader';
-import OptionsTextImage from '../components/options/OptionsTextImage';
+import OptionsText2x from '../components/options/OptionsText2x';
+import OptionsImage2x from '../components/options/OptionsImage2x';
+import OptionsImage3x from '../components/options/OptionsImage3x';
 import OptionsImageText from '../components/options/OptionsImageText';
 
 const mapStateToProps = (state) => {
@@ -17,7 +19,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
 	return {
 		onPropChange: (prop, val, container, elementIndex) => {
-			dispatch(stylishBlock(prop, val, container, elementIndex));
+			dispatch(stylizeBlock(prop, val, container, elementIndex));
 		}
 	};
 };
@@ -32,12 +34,16 @@ const Options = connect(
 		switch (block.block_type) {
 			case 'text':
 				return <OptionsText block={block} onPropChange={onPropChange} />;
+			case 'text2x':
+				return <OptionsText2x block={block} onPropChange={onPropChange} />;
 			case 'image':
 				return <OptionsImage block={block} onPropChange={onPropChange} />;
+			case 'image2x':
+				return <OptionsImage2x block={block} onPropChange={onPropChange} />;
+			case 'image3x':
+				return <OptionsImage3x block={block} onPropChange={onPropChange} />;
 			case 'header':
 				return <OptionsHeader block={block} onPropChange={onPropChange} />;
-			case 'text_image':
-				return <OptionsTextImage block={block} onPropChange={onPropChange} />;
 			case 'image_text':
 				return <OptionsImageText block={block} onPropChange={onPropChange} />;
 			default:

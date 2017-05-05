@@ -15,9 +15,8 @@ const App = () => (
 	>
 		<div style={{
 			'zIndex': 1,
-			'width': '20%',
+			'width': '25%',
 			'height': '100%',
-			'overflowY': 'auto',
 			'backgroundColor': '#FAFAFA',
 			'boxShadow': 'rgb(102, 102, 102) 3px 3px 10px 1px'
 		}}>
@@ -30,7 +29,7 @@ const App = () => (
 			'width': '80%',
 			'height': '100%',
 			'overflowY': 'auto',
-			'backgroundColor': '#F3F3F3'
+			'backgroundColor': '#CCCCCC'
 		}}>
 			<BlockList />
 		</div>

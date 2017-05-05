@@ -5,7 +5,17 @@ const block = (state, action) => {
 				...state,
 				selected: true,
 			};
-		case 'STYLISH_BLOCK':
+		case 'STYLIZE_ALL':
+			let containerStyle = {};
+			containerStyle[action.propertyName] = action.propertyValue;
+			const change = {
+				options: {
+					elements: state.options.elements,
+					container: Object.assign({}, state.options.container, containerStyle),
+				}
+			}
+			return Object.assign({}, state, change);
+		case 'STYLIZE_BLOCK':
 			let style = {};
 			style[action.propertyName] = action.propertyValue;
 			if (action.container) {
@@ -61,8 +71,14 @@ const template = (state = [], action) => {
 		case 'RM_BLOCK':
 			return state.filter(b => b.id !== action.id);
 
-		case 'STYLISH_BLOCK':
+		case 'STYLIZE_BLOCK':
 			return state.map(b => b.selected? block(b, action): b);
+
+		case 'STYLIZE_ALL':
+			return state.map(b => block(b, action));
+
+		case 'TEMPLATE_LOADED':
+			return action.template;
 
 		case 'SELECT_BLOCK':
 			return state.map((b) => {

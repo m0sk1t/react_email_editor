@@ -8,6 +8,9 @@ const OptionsText = ({ block, onPropChange }) => {
 				<label>Height: <input type="text" value={block.options.container.height} onChange={(e) => onPropChange('height', e.target.value, true)} /></label>
 			</div>
 			<div>
+				<label>Color: <input type="color" value={block.options.container.color} onChange={(e) => onPropChange('color', e.target.value, true)} /></label>
+			</div>
+			<div>
 				<label>Background: <input type="color" value={block.options.container.backgroundColor} onChange={(e) => onPropChange('backgroundColor', e.target.value, true)} /></label>
 			</div>
 			<div>

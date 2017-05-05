@@ -1,14 +1,20 @@
 import React from 'react';
 import TinyMCE from 'react-tinymce';
 
-const OptionsImageText = ({ block, onPropChange }) => {
+const OptionsText2x = ({ block, onPropChange }) => {
 	return (
 		<div>
 			<div>
-				<label>URL: <input type="text" value={block.options.elements[0].source} onChange={(e) => onPropChange('source', e.target.value, false, 0)} /></label>
+				<label>Height: <input type="text" value={block.options.container.height} onChange={(e) => onPropChange('height', e.target.value, true)} /></label>
 			</div>
 			<div>
-				<label>Image size:
+				<label>Color: <input type="color" value={block.options.container.color} onChange={(e) => onPropChange('color', e.target.value, true)} /></label>
+			</div>
+			<div>
+				<label>Background: <input type="color" value={block.options.container.backgroundColor} onChange={(e) => onPropChange('backgroundColor', e.target.value, true)} /></label>
+			</div>
+			<div>
+				<label>Text 1 width:
 				<select onChange={(e) => {
 					switch (e.target.value) {
 						case 'Small':
@@ -34,7 +40,7 @@ const OptionsImageText = ({ block, onPropChange }) => {
 				</label>
 			</div>
 			<div>
-				<label>Image position:
+				<label>Text 1 position:
 				<select onChange={(e) => onPropChange('float', e.target.value, false, 0)}>
 					<option value="left">left</option>
 					<option value="right">right</option>
@@ -43,7 +49,20 @@ const OptionsImageText = ({ block, onPropChange }) => {
 			</div>
 			<div>
 				<label>
-					Text:
+					Text 1:
+					<TinyMCE
+						content={block.options.elements[0].text}
+						config={{
+						  plugins: 'link image code textcolor colorpicker',
+						  toolbar: 'undo redo | forecolor backcolor |bold italic | alignleft aligncenter alignright | code'
+						}}
+						onChange={(e) => onPropChange('text', e.target.getContent(), false, 0)}
+					 />
+				 </label>
+			</div>
+			<div>
+				<label>
+					Text 2:
 					<TinyMCE
 						content={block.options.elements[1].text}
 						config={{
@@ -54,14 +73,8 @@ const OptionsImageText = ({ block, onPropChange }) => {
 					 />
 				 </label>
 			</div>
-			<div>
-				<label>Color: <input type="color" value={block.options.container.color} onChange={(e) => onPropChange('color', e.target.value, true)} /></label>
-			</div>
-			<div>
-				<label>Background: <input type="color" value={block.options.container.backgroundColor} onChange={(e) => onPropChange('backgroundColor', e.target.value, true)} /></label>
-			</div>
 		</div>
 	);
 };
 
-export default OptionsImageText;
+export default OptionsText2x;

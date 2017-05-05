@@ -4,10 +4,12 @@ import { connect } from 'react-redux';
 import { rmBlock } from '../actions';
 import { addBlock } from '../actions';
 import { swapBlocks } from '../actions';
+import { setVisible } from '../actions';
 import { selectBlock } from '../actions';
 
 const mapStateToProps = (state) => {
 	return {
+		common: state.common,
 		template: state.template,
 		components: state.components,
 	};
@@ -24,8 +26,9 @@ const mapDispatchToProps = (dispatch) => {
 		onDrop: (id, index) => {
 			dispatch(swapBlocks(id, index));
 		},
-		onBlockClick: (id) => {
+		selectBlock: (id) => {
 			dispatch(selectBlock(id));
+			dispatch(setVisible('options'));
 		}
 	};
 };
@@ -33,7 +36,7 @@ const mapDispatchToProps = (dispatch) => {
 const BlockList = connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(({ template, components, onAdd, onDrop, onBlockClick }) => {
+)(({ common, template, components, onAdd, onDrop, selectBlock }) => {
 	let blockDragged = null;
 	return (
 		<div
@@ -44,20 +47,25 @@ const BlockList = connect(
 				'justifyContent': 'center',
 			}}
 		>
-			<table cellPadding="0" cellSpacing="0" role="presentation" style={{width:'640px'}}>
+			<table cellPadding="0" cellSpacing="0" role="presentation" style={{width:'570px'}}>
 				<tbody>
 					{template.map((block, index) =>
 						<tr
 							key={block.id}
 							draggable="true"
-							onClick={() => onBlockClick(block.id)}
+							style={{
+								'boxShadow': block.selected?'#4CAF50 0px 0px 5px 5px':''
+							}}
+							onClick={() => selectBlock(block.id)}
 							onDragOver={ev => ev.preventDefault()}
-							onDragStart={() => blockDragged = block}
+							onDragStart={() => blockDragged = block.id}
 							onDrop={() => {
 									if (blockDragged) {
-										onDrop(blockDragged.id, index);
+										onDrop(blockDragged, index);
 									} else {
-										onAdd(components.filter(el => el.selected)[0].block, index);
+										let newBlock = components.filter(el => el.selected)[0].block;
+										newBlock.options.container = Object.assign({}, newBlock.options.container, common);
+										onAdd(newBlock, index);
 									}
 								}
 							}
@@ -67,7 +75,6 @@ const BlockList = connect(
 							>
 							<Block
 								block={block}
-								clickHandle={onBlockClick}
 							 />
 							</td>
 						</tr>

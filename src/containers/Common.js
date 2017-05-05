@@ -1,17 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
-//import { setVisible } from '../actions';
+import { stylizeAll } from '../actions';
 
 const mapStateToProps = (state) => {
 	return {
-		tabs: state.tabs
+		tabs: state.tabs,
+		common: state.common
 	};
 };
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		setVisible: (tab) => {
-//			dispatch(setVisible(tab));
+		stylizeAll: (prop, val) => {
+			dispatch(stylizeAll(prop, val));
 		}
 	};
 };
@@ -19,11 +20,21 @@ const mapDispatchToProps = (dispatch) => {
 const Common = connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(({ tabs, /*setVisible*/ }) => {
+)(({ tabs, common, stylizeAll }) => {
 	if (tabs && tabs.common) {
 		return (
-			<div>
+			<div
+			style={{
+				'overflowY': 'auto',
+			}}
+			>
 				Common options
+				<div>
+					<label>Color: <input type="color" value={common.color} onChange={(e) => stylizeAll('color', e.target.value)} /></label>
+				</div>
+				<div>
+					<label>Background: <input type="color" value={common.backgroundColor} onChange={(e) => stylizeAll('backgroundColor', e.target.value)} /></label>
+				</div>
 			</div>
 			);
 	}

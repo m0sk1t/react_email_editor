@@ -1,5 +1,8 @@
 const components = (state = [], action) => {
 	switch (action.type) {
+		case 'COMPONENTS_LOADED':
+			return action.components;
+
 		case 'SELECT_COMPONENT':
 			return state.map((b, index) => {
 				if (index === action.index){

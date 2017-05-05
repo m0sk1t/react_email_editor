@@ -9,7 +9,8 @@
     "react-router": "^4.0.0",
     "react-tinymce": "^0.5.1",
     "redux": "^3.6.0",
-    "redux-saga": "^0.14.4"
+    "redux-devtools-extension": "^2.13.1",
+    "redux-saga": "^0.14.8"
   },
   "devDependencies": {
     "react-scripts": "0.9.5"

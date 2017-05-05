@@ -1,0 +1,136 @@
+{
+	"components": [
+		{
+			"preview": "images/header.png",
+			"block": {
+				"block_type": "header",
+				"options": {
+					"container": {
+					"color": "#333333",
+						"padding": "2%",
+						"backgroundColor": "#FFFFFF"
+					},
+					"elements": [{
+						"text": "Заголовок письма",
+						"fontSize": "32px",
+						"fontWeight": "bold",
+						"textAlign": "center"
+					}]
+				}
+			}
+		},
+		{
+			"preview": "images/text.png",
+			"block": {
+				"block_type": "text",
+				"options": {
+					"container": {
+					"color": "#333333",
+						"padding": "2%",
+						"backgroundColor": "#FFFFFF"
+					},
+					"elements": [{
+						"text": "Простой текстовый блок, который настраивается через TinyMCE. \r\n Вы можете написать свой текст"
+					}]
+				}
+			}
+		},
+		{
+			"preview": "images/text2x.png",
+			"block": {
+				"block_type": "text2x",
+				"options": {
+					"container": {
+					"color": "#333333",
+						"padding": "2%",
+						"backgroundColor": "#FFFFFF"
+					},
+					"elements": [{
+						"width": "50%",
+						"float": "left",
+						"text": "Простой текстовый блок, который настраивается через TinyMCE. \r\n Вы можете написать свой текст"
+					},{
+						"width": "50%",
+						"text": "Простой текстовый блок, который настраивается через TinyMCE. \r\n Вы можете написать свой текст"
+					}]
+				}
+			}
+		},
+		{
+			"preview": "images/image.png",
+			"block": {
+				"block_type": "image",
+				"options": {
+					"container": {
+					"color": "#333333",
+						"padding": "2%",
+						"backgroundColor": "#FFFFFF"
+					},
+					"elements": [{
+						"source": "https://www.w3schools.com/css/trolltunga.jpg"
+					}]
+				}
+			}
+		},
+		{
+			"preview": "images/image2x.png",
+			"block": {
+				"block_type": "image2x",
+				"options": {
+					"container": {
+					"color": "#333333",
+						"padding": "2%",
+						"backgroundColor": "#FFFFFF"
+					},
+					"elements": [{
+						"source": "https://www.w3schools.com/css/trolltunga.jpg"
+					},{
+						"source": "https://www.w3schools.com/css/trolltunga.jpg"
+					}]
+				}
+			}
+		},
+		{
+			"preview": "images/image3x.png",
+			"block": {
+				"block_type": "image3x",
+				"options": {
+					"container": {
+					"color": "#333333",
+						"padding": "2%",
+						"backgroundColor": "#FFFFFF"
+					},
+					"elements": [{
+						"source": "https://www.w3schools.com/css/trolltunga.jpg"
+					},{
+						"source": "https://www.w3schools.com/css/trolltunga.jpg"
+					},{
+						"source": "https://www.w3schools.com/css/trolltunga.jpg"
+					}]
+				}
+			}
+		},
+		{
+			"preview": "images/image_text.png",
+			"block": {
+				"block_type": "image_text",
+				"options": {
+					"container": {
+					"color": "#333333",
+						"padding": "2%",
+						"backgroundColor": "#FFFFFF"
+					},
+					"elements": [{
+						"width": "25%",
+						"float": "left",
+						"source": "https://www.w3schools.com/css/trolltunga.jpg"
+					},
+					{
+						"width": "75%",
+						"text": "Text block"
+					}]
+				}
+			}
+		}
+	]
+}

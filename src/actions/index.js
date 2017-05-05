@@ -23,13 +23,21 @@ export const swapBlocks = (id, index) => {
 	};
 };
 
-export const stylishBlock = (propertyName, propertyValue, container, elementIndex) => {
+export const stylizeBlock = (propertyName, propertyValue, container, elementIndex) => {
 	return {
-		type: 'STYLISH_BLOCK',
+		type: 'STYLIZE_BLOCK',
 		propertyValue,
 		propertyName,
 		elementIndex,
 		container,
+	};
+};
+
+export const stylizeAll = (propertyName, propertyValue) => {
+	return {
+		type: 'STYLIZE_ALL',
+		propertyValue,
+		propertyName,
 	};
 };
 

@@ -26,23 +26,25 @@ const Blocks = connect(
 		return (
 			<div
 			style={{
-				display: 'flex',
-				alignItems: 'center',
-				flexDirection: 'column',
+				'height': '93%',
+				'display': 'flex',
+				'overflowY': 'auto',
+				'alignItems': 'center',
+				'flexDirection': 'column',
 			}}
 			>
 				{components.map((el, index) => 
 					<div
 						key={index}
 						style={{
-							width: '90%',
-							margin: '1%',
-							border: '1px solid #ccc',
+							'width': '90%',
+							'margin': '1%',
+							'border': '1px solid #ccc',
 						}}
 						draggable="true"
 						onClick={() => selectComponent(index)}
 						onDragStart={() => selectComponent(index)}
-						><img style={{width: '100%'}} alt={alt} src={el.preview} />
+						><img style={{'width': '100%'}} alt={alt} src={el.preview} />
 					</div>
 				)}
 			</div>

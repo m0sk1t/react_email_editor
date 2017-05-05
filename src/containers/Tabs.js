@@ -4,7 +4,7 @@ import { setVisible } from '../actions';
 
 const mapStateToProps = (state) => {
 	return {
-		visibility: state.visibility
+		tabs: state.tabs
 	};
 };
 
@@ -19,18 +19,40 @@ const mapDispatchToProps = (dispatch) => {
 const Tabs = connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(({ setVisible }) => {
-	return (<div>
+)(({ tabs, setVisible }) => {
+	const tabsStyle = {
+		'display': 'flex',
+		'color': '#FAFAFA',
+		'fontWeight': 'bold',
+		'justifyContent': 'center',
+		'backgroundColor': 'darkcyan',
+	};
+	const tabStyle = {
+		'width': '33%',
+		'height': '2rem',
+		'display': 'flex',
+		'alignItems': 'center',
+		'justifyContent': 'center',
+	};
+	const active = {
+		'backgroundColor': '#3ACADA'
+	};
+	return (
+		<div style={tabsStyle}>
 			<span
+			style={tabs.blocks?Object.assign({},tabStyle,active):tabStyle}
 			onClick={()=> setVisible('blocks')}
-			>BLOCKS</span>|
+			>BLOCKS</span>
 			<span
+			style={tabs.common?Object.assign({},tabStyle,active):tabStyle}
 			onClick={()=> setVisible('common')}
-			>COMMON</span>|
+			>COMMON</span>
 			<span
+			style={tabs.options?Object.assign({},tabStyle,active):tabStyle}
 			onClick={()=> setVisible('options')}
 			>OPTIONS</span>
-		</div>);
+		</div>
+		);
 });
 
 export default Tabs;

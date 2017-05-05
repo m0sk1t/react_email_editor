@@ -10,10 +10,10 @@ const BlockHeader = ({ blockOptions }) => {
 		>
 			<tbody>
 				<tr>
-					<td>
-						<div
-						style={blockOptions.elements[0]}
-						>{blockOptions.elements[0].text}</div>
+					<td
+					style={blockOptions.elements[0]}
+					>
+						{blockOptions.elements[0].text}
 					</td>
 				</tr>
 			</tbody>
