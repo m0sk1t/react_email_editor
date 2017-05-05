@@ -40,6 +40,7 @@ const BlockList = connect(
 	let blockDragged = null;
 	return (
 		<div
+			id="rootTable"
 			style={{
 				'height': '100%',
 				'display': 'flex',

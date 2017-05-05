@@ -21,7 +21,7 @@ const BlockImageText = ({ blockOptions }) => {
 							<tbody>
 								<tr>
 									<td>
-										<img alt={alt} style={{width:'100%'}} src={blockOptions.elements[0].source} />
+										<img alt={alt} width="100%" height="" src={blockOptions.elements[0].source} />
 									</td>
 								</tr>
 							</tbody>

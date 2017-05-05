@@ -12,13 +12,13 @@ const BlockImage3x = ({ blockOptions }) => {
 			<tbody>
 				<tr>
 					<td>
-						<img alt={alt} style={{width:'100%'}} src={blockOptions.elements[0].source} />
+						<img alt={alt} width="100%" height="" src={blockOptions.elements[0].source} />
 					</td>
 					<td>
-						<img alt={alt} style={{width:'100%'}} src={blockOptions.elements[1].source} />
+						<img alt={alt} width="100%" height="" src={blockOptions.elements[1].source} />
 					</td>
 					<td>
-						<img alt={alt} style={{width:'100%'}} src={blockOptions.elements[2].source} />
+						<img alt={alt} width="100%" height="" src={blockOptions.elements[2].source} />
 					</td>
 				</tr>
 			</tbody>

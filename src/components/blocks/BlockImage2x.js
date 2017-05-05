@@ -12,10 +12,10 @@ const BlockImage2x = ({ blockOptions }) => {
 			<tbody>
 				<tr>
 					<td>
-						<img alt={alt} style={{width: blockOptions.elements[0].usePadding? '98%':' 100%', padding: blockOptions.elements[0].usePadding? '2% 2% 2% 0': '0'}} src={blockOptions.elements[0].source} />
+						<img alt={alt} height="" style={{width: blockOptions.elements[0].usePadding? '98%':' 100%', padding: blockOptions.elements[0].usePadding? '2% 2% 2% 0': '0'}} src={blockOptions.elements[0].source} />
 					</td>
 					<td>
-						<img alt={alt} style={{width: blockOptions.elements[0].usePadding? '98%':' 100%', padding: blockOptions.elements[1].usePadding? '2% 0 2% 2%': '0'}} src={blockOptions.elements[1].source} />
+						<img alt={alt} height="" style={{width: blockOptions.elements[0].usePadding? '98%':' 100%', padding: blockOptions.elements[1].usePadding? '2% 0 2% 2%': '0'}} src={blockOptions.elements[1].source} />
 					</td>
 				</tr>
 			</tbody>
