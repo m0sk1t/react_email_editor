@@ -28,9 +28,10 @@ const Tabs = connect(
 		'backgroundColor': 'darkcyan',
 	};
 	const tabStyle = {
-		'width': '33%',
+		'width': '33.3%',
 		'height': '2rem',
 		'display': 'flex',
+		'cursor': 'pointer',
 		'alignItems': 'center',
 		'justifyContent': 'center',
 	};

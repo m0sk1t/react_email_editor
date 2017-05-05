@@ -42,6 +42,12 @@ const OptionsImageText = ({ block, onPropChange }) => {
 				</label>
 			</div>
 			<div>
+				<label>Color: <input type="color" value={block.options.container.color} onChange={(e) => onPropChange('color', e.target.value, true)} /></label>
+			</div>
+			<div>
+				<label>Background: <input type="color" value={block.options.container.backgroundColor} onChange={(e) => onPropChange('backgroundColor', e.target.value, true)} /></label>
+			</div>
+			<div>
 				<label>
 					Text:
 					<TinyMCE
@@ -53,12 +59,6 @@ const OptionsImageText = ({ block, onPropChange }) => {
 						onChange={(e) => onPropChange('text', e.target.getContent(), false, 1)}
 					 />
 				 </label>
-			</div>
-			<div>
-				<label>Color: <input type="color" value={block.options.container.color} onChange={(e) => onPropChange('color', e.target.value, true)} /></label>
-			</div>
-			<div>
-				<label>Background: <input type="color" value={block.options.container.backgroundColor} onChange={(e) => onPropChange('backgroundColor', e.target.value, true)} /></label>
 			</div>
 		</div>
 	);

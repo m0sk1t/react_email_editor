@@ -47,16 +47,24 @@ const BlockList = connect(
 				'justifyContent': 'center',
 			}}
 		>
-			<table cellPadding="0" cellSpacing="0" role="presentation" style={{width:'570px'}}>
+			<table
+				cellPadding="0"
+				cellSpacing="0"
+				role="presentation"
+				style={{
+					'width':'570px',
+					'boxShadow': 'rgb(102, 102, 102) 2px 2px 5px 1px',
+				}}
+			>
 				<tbody>
 					{template.map((block, index) =>
 						<tr
 							key={block.id}
 							draggable="true"
 							style={{
-								'boxShadow': block.selected?'#4CAF50 0px 0px 5px 5px':''
+								'boxShadow': block.selected?'#4CAF50 0px 0px 3px 7px':''
 							}}
-							onClick={() => selectBlock(block.id)}
+							onClick={(e) => {e.stopPropagation(); selectBlock(block.id);}}
 							onDragOver={ev => ev.preventDefault()}
 							onDragStart={() => blockDragged = block.id}
 							onDrop={() => {

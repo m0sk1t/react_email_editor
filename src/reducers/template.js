@@ -69,7 +69,7 @@ const template = (state = [], action) => {
 			];
 
 		case 'RM_BLOCK':
-			return state.filter(b => b.id !== action.id);
+			return state.filter(b => !b.selected);
 
 		case 'STYLIZE_BLOCK':
 			return state.map(b => b.selected? block(b, action): b);
@@ -79,6 +79,9 @@ const template = (state = [], action) => {
 
 		case 'TEMPLATE_LOADED':
 			return action.template;
+
+		case 'DESELECT_BLOCKS':
+			return state.map((b) => {b.selected = false; return b;});
 
 		case 'SELECT_BLOCK':
 			return state.map((b) => {

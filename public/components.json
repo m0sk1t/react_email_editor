@@ -11,7 +11,7 @@
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
-						"text": "Заголовок письма",
+						"text": "Header",
 						"fontSize": "32px",
 						"fontWeight": "bold",
 						"textAlign": "center"
@@ -30,7 +30,7 @@
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
-						"text": "Простой текстовый блок, который настраивается через TinyMCE. \r\n Вы можете написать свой текст"
+						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu felis sit amet justo ullamcorper malesuada vitae nec odio. Duis suscipit, ligula in sollicitudin luctus, turpis purus bibendum lorem, in blandit nibh ipsum sit amet dui. Mauris nibh quam, commodo at ligula nec, volutpat euismod risus. Morbi nec nibh enim."
 					}]
 				}
 			}
@@ -48,10 +48,10 @@
 					"elements": [{
 						"width": "50%",
 						"float": "left",
-						"text": "Простой текстовый блок, который настраивается через TinyMCE. \r\n Вы можете написать свой текст"
+						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu felis sit amet justo ullamcorper malesuada vitae nec odio. Duis suscipit, ligula in sollicitudin luctus, turpis purus bibendum lorem, in blandit nibh ipsum sit amet dui. Mauris nibh quam, commodo at ligula nec, volutpat euismod risus. Morbi nec nibh enim."
 					},{
 						"width": "50%",
-						"text": "Простой текстовый блок, который настраивается через TinyMCE. \r\n Вы можете написать свой текст"
+						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu felis sit amet justo ullamcorper malesuada vitae nec odio. Duis suscipit, ligula in sollicitudin luctus, turpis purus bibendum lorem, in blandit nibh ipsum sit amet dui. Mauris nibh quam, commodo at ligula nec, volutpat euismod risus. Morbi nec nibh enim."
 					}]
 				}
 			}
@@ -127,7 +127,7 @@
 					},
 					{
 						"width": "75%",
-						"text": "Text block"
+						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu felis sit amet justo ullamcorper malesuada vitae nec odio. Duis suscipit, ligula in sollicitudin luctus, turpis purus bibendum lorem, in blandit nibh ipsum sit amet dui. Mauris nibh quam, commodo at ligula nec, volutpat euismod risus. Morbi nec nibh enim."
 					}]
 				}
 			}

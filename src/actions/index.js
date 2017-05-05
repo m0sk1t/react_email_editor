@@ -8,10 +8,22 @@ export const addBlock = (block, index) => {
 	};
 };
 
+export const rmBlock = () => {
+	return {
+		type: 'RM_BLOCK'
+	};
+};
+
 export const selectBlock = (id) => {
 	return {
 		type: 'SELECT_BLOCK',
 		id
+	};
+};
+
+export const deselectBlocks = () => {
+	return {
+		type: 'DESELECT_BLOCKS'
 	};
 };
 
@@ -41,13 +53,6 @@ export const stylizeAll = (propertyName, propertyValue) => {
 	};
 };
 
-export const rmBlock = (id) => {
-	return {
-		type: 'RM_BLOCK',
-		id
-	};
-};
-
 export const setVisible = (tab) => {
 	return {
 		type: 'SET_VISIBLE',
@@ -61,3 +66,10 @@ export const selectComponent = (index) => {
 		index
 	};
 };
+
+
+export const undoChanges = ()=>{};
+export const redoChanges = ()=>{};
+
+export const saveTemplate = ()=>{};
+export const sendTestEmail = ()=>{};
