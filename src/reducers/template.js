@@ -69,7 +69,12 @@ const template = (state = [], action) => {
 			];
 
 		case 'RM_BLOCK':
-			return state.filter(b => !b.selected);
+			if (state.length > 1) {
+				return state.filter(b => !b.selected);
+			} else {
+				alert("Должен остаться хотя бы один активный блок!");
+				return state;
+			}
 
 		case 'STYLIZE_BLOCK':
 			return state.map(b => b.selected? block(b, action): b);

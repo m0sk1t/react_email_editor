@@ -1,6 +1,6 @@
 import React from 'react';
 
-const OptionsImage2x = ({ block, onPropChange }) => {
+const OptionsImage2x = ({ block, language, onPropChange }) => {
 	return (
 		<div>
 			<div>
@@ -10,13 +10,10 @@ const OptionsImage2x = ({ block, onPropChange }) => {
 				<label>Image 2 URL: <input type="text" value={block.options.elements[1].source} onChange={(e) => onPropChange('source', e.target.value, false, 1)} /></label>
 			</div>
 			<div>
-				<label>Use padding: <input type="checkbox" value={block.options.elements[0].usePadding} onChange={(e) => {onPropChange('usePadding', !block.options.elements[0].usePadding, false, 0); onPropChange('usePadding', !block.options.elements[1].usePadding, false, 1)}} /></label>
+				<label>{language["Use padding"]}: <input type="checkbox" value={block.options.elements[0].usePadding} onChange={(e) => {onPropChange('usePadding', !block.options.elements[0].usePadding, false, 0); onPropChange('usePadding', !block.options.elements[1].usePadding, false, 1)}} /></label>
 			</div>
 			<div>
-				<label>Color: <input type="color" value={block.options.container.color} onChange={(e) => onPropChange('color', e.target.value, true)} /></label>
-			</div>
-			<div>
-				<label>Background: <input type="color" value={block.options.container.backgroundColor} onChange={(e) => onPropChange('backgroundColor', e.target.value, true)} /></label>
+				<label>{language["Background"]}: <input type="color" value={block.options.container.backgroundColor} onChange={(e) => onPropChange('backgroundColor', e.target.value, true)} /></label>
 			</div>
 		</div>
 	);

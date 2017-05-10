@@ -5,7 +5,8 @@ import { stylizeAll } from '../actions';
 const mapStateToProps = (state) => {
 	return {
 		tabs: state.tabs,
-		common: state.common
+		common: state.common,
+		language: state.language,
 	};
 };
 
@@ -20,7 +21,7 @@ const mapDispatchToProps = (dispatch) => {
 const Common = connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(({ tabs, common, stylizeAll }) => {
+)(({ tabs, common, language, stylizeAll }) => {
 	if (tabs && tabs.common) {
 		return (
 			<div
@@ -28,12 +29,12 @@ const Common = connect(
 				'overflowY': 'auto',
 			}}
 			>
-				Common options
+				<label>{language["Common options"]}</label>
 				<div>
-					<label>Color: <input type="color" value={common.color} onChange={(e) => stylizeAll('color', e.target.value)} /></label>
+					<label>{language["Color"]}: <input type="color" value={common.color} onChange={(e) => stylizeAll('color', e.target.value)} /></label>
 				</div>
 				<div>
-					<label>Background: <input type="color" value={common.backgroundColor} onChange={(e) => stylizeAll('backgroundColor', e.target.value)} /></label>
+					<label>{language["Background"]}: <input type="color" value={common.backgroundColor} onChange={(e) => stylizeAll('backgroundColor', e.target.value)} /></label>
 				</div>
 			</div>
 			);

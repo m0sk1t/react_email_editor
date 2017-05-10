@@ -4,7 +4,8 @@ import { rmBlock, undoChanges, redoChanges } from '../actions';
 
 const mapStateToProps = (state) => {
 	return {
-		template: state.template
+		language: state.language,
+		template: state.template,
 	};
 };
 
@@ -24,7 +25,7 @@ const mapDispatchToProps = (dispatch) => {
 const StatePanel = connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(({ template, rmBlock, undoChanges, redoChanges }) => {
+)(({ template, language, rmBlock, undoChanges, redoChanges }) => {
 	const selectedBlock = template.filter((el) => el.selected);
 	const buttonStyle = {
 		'width': '3rem',
@@ -40,7 +41,7 @@ const StatePanel = connect(
 		'backgroundColor': '#a33',
 		'boxShadow': 'rgb(102, 102, 102) 2px 2px 5px 1px',
 	}
-	const deleteButton = selectedBlock.length? <span title="Delete block" onClick={() => rmBlock()} style={buttonStyle}>&#x1F5D1;</span>: null;
+	const deleteButton = selectedBlock.length? <span title={language["Delete selected block"]} onClick={() => rmBlock()} style={buttonStyle}>&#x1F5D1;</span>: null;
 	return (
 		<div
 		style={{
@@ -49,11 +50,14 @@ const StatePanel = connect(
 			'position': 'fixed',
 		}}
 		>
-			<span title="Undo changes" style={buttonStyle}>&#x21b6;</span>
-			<span title="Redo changes" style={buttonStyle}>&#x21b7;</span>
 			{deleteButton}
 		</div>
 	);
 });
+
+/*
+			<span title={language["Undo changes"]} style={buttonStyle}>&#x21b6;</span>
+			<span title={language["Redo changes"]} style={buttonStyle}>&#x21b7;</span>
+ */
 
 export default StatePanel;

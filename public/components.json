@@ -143,10 +143,19 @@
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
+						"textAlign": "left",
 						"ok_source": "icons/ok_3d.png",
 						"vk_source": "icons/vk_3d.png",
 						"youtube_source": "icons/youtube_3d.png",
-						"facebook_source": "icons/facebook_3d.png"
+						"facebook_source": "icons/facebook_3d.png",
+						"ok_display": "",
+						"vk_display": "",
+						"youtube_display": "",
+						"facebook_display": "",
+						"ok_link": "",
+						"vk_link": "",
+						"youtube_link": "",
+						"facebook_link": ""
 					}]
 				}
 			}
@@ -167,7 +176,69 @@
 						"ok_source": "icons/ok_3d.png",
 						"vk_source": "icons/vk_3d.png",
 						"youtube_source": "icons/youtube_3d.png",
-						"facebook_source": "icons/facebook_3d.png"
+						"facebook_source": "icons/facebook_3d.png",
+						"ok_display": "",
+						"vk_display": "",
+						"youtube_display": "",
+						"facebook_display": "",
+						"ok_link": "",
+						"vk_link": "",
+						"youtube_link": "",
+						"facebook_link": ""
+					},{
+						"width": "75%",
+						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu felis sit amet justo ullamcorper malesuada vitae nec odio. Duis suscipit, ligula in sollicitudin luctus, turpis purus bibendum lorem, in blandit nibh ipsum sit amet dui. Mauris nibh quam, commodo at ligula nec, volutpat euismod risus. Morbi nec nibh enim."
+					}]
+				}
+			}
+		},
+		{
+			"preview": "images/feedback.png",
+			"block": {
+				"block_type": "feedback",
+				"options": {
+					"container": {
+					"color": "#333333",
+						"padding": "2%",
+						"backgroundColor": "#FFFFFF"
+					},
+					"elements": [{
+						"textAlign": "left",
+						"like_source": "icons/like_3d.png",
+						"dislike_source": "icons/dislike_3d.png",
+						"neutral_source": "icons/neutral_3d.png",
+						"like_display": "",
+						"dislike_display": "",
+						"neutral_display": "",
+						"like_link": "",
+						"dislike_link": "",
+						"neutral_link": ""
+					}]
+				}
+			}
+		},
+		{
+			"preview": "images/feedback_text.png",
+			"block": {
+				"block_type": "feedback_text",
+				"options": {
+					"container": {
+					"color": "#333333",
+						"padding": "2%",
+						"backgroundColor": "#FFFFFF"
+					},
+					"elements": [{
+						"width": "25%",
+						"float": "left",
+						"like_source": "icons/like_3d.png",
+						"dislike_source": "icons/dislike_3d.png",
+						"neutral_source": "icons/neutral_3d.png",
+						"like_display": "",
+						"dislike_display": "",
+						"neutral_display": "",
+						"like_link": "",
+						"dislike_link": "",
+						"neutral_link": ""
 					},{
 						"width": "75%",
 						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu felis sit amet justo ullamcorper malesuada vitae nec odio. Duis suscipit, ligula in sollicitudin luctus, turpis purus bibendum lorem, in blandit nibh ipsum sit amet dui. Mauris nibh quam, commodo at ligula nec, volutpat euismod risus. Morbi nec nibh enim."

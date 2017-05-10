@@ -6,30 +6,36 @@ import BlockSocial from './blocks/BlockSocial';
 import BlockText2x from './blocks/BlockText2x';
 import BlockImage2x from './blocks/BlockImage2x';
 import BlockImage3x from './blocks/BlockImage3x';
+import BlockFeedback from './blocks/BlockFeedback';
 import BlockImageText from './blocks/BlockImageText';
 import BlockSocialText from './blocks/BlockSocialText';
+import BlockFeedbackText from './blocks/BlockFeedbackText';
 
 const Block = ({ block }) => {
 	if (!block) return null;
 	switch (block.block_type) {
 		case 'text':
 			return <BlockText blockOptions={block.options} />;
-		case 'text2x':
-			return <BlockText2x blockOptions={block.options} />;
 		case 'image':
 			return <BlockImage blockOptions={block.options} />;
-		case 'image2x':
-			return <BlockImage2x blockOptions={block.options} />;
-		case 'image3x':
-			return <BlockImage3x blockOptions={block.options} />;
 		case 'header':
 			return <BlockHeader blockOptions={block.options} />;
 		case 'social':
 			return <BlockSocial blockOptions={block.options} />;
+		case 'text2x':
+			return <BlockText2x blockOptions={block.options} />;
+		case 'image2x':
+			return <BlockImage2x blockOptions={block.options} />;
+		case 'image3x':
+			return <BlockImage3x blockOptions={block.options} />;
+		case 'feedback':
+			return <BlockFeedback blockOptions={block.options} />;
 		case 'image_text':
 			return <BlockImageText blockOptions={block.options} />;
 		case 'social_text':
 			return <BlockSocialText blockOptions={block.options} />;
+		case 'feedback_text':
+			return <BlockFeedbackText blockOptions={block.options} />;
 		default:
 			return null;
 	}

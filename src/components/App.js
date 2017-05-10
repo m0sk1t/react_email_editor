@@ -40,6 +40,7 @@ const App = connect(
 			'width': '25%',
 			'height': '100%',
 			'backgroundColor': '#FAFAFA',
+			'fontFamily': "'Play', sans-serif",
 			'boxShadow': 'rgb(102, 102, 102) 3px 3px 10px 1px'
 		}}
 		>
@@ -53,7 +54,7 @@ const App = connect(
 			'width': '75%',
 			'height': '100%',
 			'overflowY': 'auto',
-			'backgroundColor': '#CCCCCC'
+			'backgroundColor': '#EEEEEE'
 		}}
 		onClick={() => deselectBlocks()}
 		>

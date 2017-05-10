@@ -1,21 +1,18 @@
 import React from 'react';
 import TinyMCE from 'react-tinymce';
 
-const OptionsText = ({ block, onPropChange }) => {
+const OptionsText = ({ block, language, onPropChange }) => {
 	return (
 		<div>
 			<div>
-				<label>Height: <input type="text" value={block.options.container.height} onChange={(e) => onPropChange('height', e.target.value, true)} /></label>
+				<label>{language["Color"]}: <input type="color" value={block.options.container.color} onChange={(e) => onPropChange('color', e.target.value, true)} /></label>
 			</div>
 			<div>
-				<label>Color: <input type="color" value={block.options.container.color} onChange={(e) => onPropChange('color', e.target.value, true)} /></label>
-			</div>
-			<div>
-				<label>Background: <input type="color" value={block.options.container.backgroundColor} onChange={(e) => onPropChange('backgroundColor', e.target.value, true)} /></label>
+				<label>{language["Background"]}: <input type="color" value={block.options.container.backgroundColor} onChange={(e) => onPropChange('backgroundColor', e.target.value, true)} /></label>
 			</div>
 			<div>
 				<label>
-					Text:
+					{language["Text"]}:
 					<TinyMCE
 						content={block.options.elements[0].text}
 						config={{

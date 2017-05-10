@@ -1,5 +1,14 @@
 import { put, takeLatest } from 'redux-saga/effects';
-import { getTemplate, saveTemplate, getComponents } from './api';
+import { getLanguage, getTemplate, saveTemplate, getComponents } from './api';
+
+function* loadLanguage(action) {
+	try {
+		const res = yield getLanguage().then(res => res);
+		yield put({type: 'LANGUAGE_LOADED', language: res});
+	} catch(e) {
+		console.log(e);
+	}
+};
 
 function* loadTemplate(action) {
 	try {
@@ -29,6 +38,7 @@ function* loadComponents(action) {
 };
 
 function* mySagas() {
+	yield takeLatest("LOAD_LANGUAGE", loadLanguage);
 	yield takeLatest("LOAD_TEMPLATE", loadTemplate);
 	yield takeLatest("SAVE_TEMPLATE", uploadTemplate);
 	yield takeLatest("LOAD_COMPONENTS", loadComponents);

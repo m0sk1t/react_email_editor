@@ -4,7 +4,7 @@ import { saveTemplate, sendTestEmail } from '../actions';
 
 const mapStateToProps = (state) => {
 	return {
-		template: state.template
+		language: state.language,
 	};
 };
 
@@ -22,7 +22,7 @@ const mapDispatchToProps = (dispatch) => {
 const ActionsPanel = connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(({ template, saveTemplate, sendTestEmail }) => {
+)(({ language, saveTemplate, sendTestEmail }) => {
 	const buttonStyle = {
 		'width': '3rem',
 		'margin': '1rem',
@@ -45,8 +45,8 @@ const ActionsPanel = connect(
 			'position': 'fixed',
 		}}
 		>
-			<span title="Save template" style={buttonStyle}>&#128190;</span>
-			<span title="Send test email" style={buttonStyle}>&#153;</span>
+			<span title={language["Save template"]} style={buttonStyle}>&#128190;</span>
+			<span title={language["Send test email"]} style={buttonStyle}>&#x2709;</span>
 		</div>
 		);
 });

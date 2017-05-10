@@ -4,7 +4,8 @@ import { setVisible } from '../actions';
 
 const mapStateToProps = (state) => {
 	return {
-		tabs: state.tabs
+		tabs: state.tabs,
+		language: state.language
 	};
 };
 
@@ -19,7 +20,7 @@ const mapDispatchToProps = (dispatch) => {
 const Tabs = connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(({ tabs, setVisible }) => {
+)(({ tabs, language, setVisible }) => {
 	const tabsStyle = {
 		'display': 'flex',
 		'color': '#FAFAFA',
@@ -43,15 +44,15 @@ const Tabs = connect(
 			<span
 			style={tabs.blocks?Object.assign({},tabStyle,active):tabStyle}
 			onClick={()=> setVisible('blocks')}
-			>BLOCKS</span>
+			>{language["BLOCKS"]}</span>
 			<span
 			style={tabs.common?Object.assign({},tabStyle,active):tabStyle}
 			onClick={()=> setVisible('common')}
-			>COMMON</span>
+			>{language["COMMON"]}</span>
 			<span
 			style={tabs.options?Object.assign({},tabStyle,active):tabStyle}
 			onClick={()=> setVisible('options')}
-			>OPTIONS</span>
+			>{language["OPTIONS"]}</span>
 		</div>
 		);
 });

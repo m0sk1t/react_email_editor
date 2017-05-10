@@ -1,14 +1,14 @@
 import React from 'react';
 
-const OptionsHeader = ({ block, onPropChange }) => {
+const OptionsHeader = ({ block, language, onPropChange }) => {
 	return (
 		<div>
 			<div>
-				<label>Text: <input type="text" value={block.options.elements[0].text} onChange={(e) => onPropChange('text', e.target.value, false, 0)} /></label>
+				<label>{language["Text"]}: <input type="text" value={block.options.elements[0].text} onChange={(e) => onPropChange('text', e.target.value, false, 0)} /></label>
 			</div>
 			<div>
 				<label>
-					Align:
+					{language["Align"]}:
 					<input type="range" min="0" max="2" step="1" onChange={(e) => {
 						let align = '';
 						switch (+e.target.value) {
@@ -30,17 +30,17 @@ const OptionsHeader = ({ block, onPropChange }) => {
 				</label>
 			</div>
 			<div>
-				<label>Height: <input type="text" value={block.options.container.height} onChange={(e) => onPropChange('height', e.target.value, true)} /></label>
+				<label>{language["Height"]}: <input type="text" value={block.options.container.height} onChange={(e) => onPropChange('height', e.target.value, true)} /></label>
 			</div>
 			<div>
-				<label>Color: <input type="color" value={block.options.container.color} onChange={(e) => onPropChange('color', e.target.value, true)} /></label>
+				<label>{language["Color"]}: <input type="color" value={block.options.container.color} onChange={(e) => onPropChange('color', e.target.value, true)} /></label>
 			</div>
 			<div>
-				<label>Background: <input type="color" value={block.options.container.backgroundColor} onChange={(e) => onPropChange('backgroundColor', e.target.value, true)} /></label>
+				<label>{language["Background"]}: <input type="color" value={block.options.container.backgroundColor} onChange={(e) => onPropChange('backgroundColor', e.target.value, true)} /></label>
 			</div>
 			<div>
 				<label>
-					Font family:
+					{language["Font family"]}:
 					<select style={{width: '50%'}} onChange={(e) => onPropChange('fontFamily', e.target.value, true, 0)}>
 						<option value='Georgia, serif'>Georgia, serif</option>
 						<option value='Tahoma, Geneva, sans-serif'>Tahoma, Geneva, sans-serif</option>

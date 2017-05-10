@@ -12,7 +12,7 @@ const BlockText = ({ blockOptions }) => {
 				<tr>
 					<td
 						style={blockOptions.elements[0]}
-						dangerouslySetInnerHTML={{__html: blockOptions?blockOptions.elements[0].text:'empty node'}}
+						dangerouslySetInnerHTML={{__html: blockOptions.elements[0].text}}
 					></td>
 				</tr>
 			</tbody>

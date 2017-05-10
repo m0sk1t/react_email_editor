@@ -39,7 +39,7 @@ const Blocks = connect(
 						style={{
 							'width': '90%',
 							'margin': '1%',
-							'border': '1px solid #ccc',
+							'border': '1px solid #DDDDDD',
 						}}
 						draggable="true"
 						onClick={() => selectComponent(index)}

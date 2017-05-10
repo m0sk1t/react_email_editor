@@ -1,21 +1,54 @@
 import React from 'react';
+import TinyMCE from 'react-tinymce';
 
-const OptionsSocialText = ({ block, onPropChange }) => {
+const OptionsSocialText = ({ block, language, onPropChange }) => {
 	return (
 		<div>
 			<div>
-				<label>Height: <input type="text" value={block.options.container.height} onChange={(e) => onPropChange('height', e.target.value, true)} /></label>
-			</div>
-			<div>
-				<label>Color: <input type="color" value={block.options.container.color} onChange={(e) => onPropChange('color', e.target.value, true)} /></label>
-			</div>
-			<div>
-				<label>Background: <input type="color" value={block.options.container.backgroundColor} onChange={(e) => onPropChange('backgroundColor', e.target.value, true)} /></label>
+				<label>{language["Background"]}: <input type="color" value={block.options.container.backgroundColor} onChange={(e) => onPropChange('backgroundColor', e.target.value, true)} /></label>
 			</div>
 			<div>
 				<label>
-					Type:
-					<select onChange={(e) => {
+					{language["Icons area size"]}:
+					<input type="range" min="0" max="3" step="1" value={block.options.elements[0].iconsSize} onChange={(e) => {
+						switch (+e.target.value) {
+							case 0:
+								onPropChange('width', '15%', false, 0);
+								onPropChange('width', '85%', false, 1);
+								break;
+							case 1:
+								onPropChange('width', '25%', false, 0);
+								onPropChange('width', '75%', false, 1);
+								break;
+							case 2:
+								onPropChange('width', '35%', false, 0);
+								onPropChange('width', '65%', false, 1);
+								break;
+							case 3:
+								onPropChange('width', '50%', false, 0);
+								onPropChange('width', '50%', false, 1);
+								break;
+							default:
+								break;
+						}
+						onPropChange('iconsSize', e.target.value, false, 0);
+					}} />
+				</label>
+			</div>
+			<div>
+				<label>{language["Icons position"]}:
+				<select onChange={(e) => onPropChange('float', e.target.value, false, 0)}>
+					<option value="left">{language["left"]}</option>
+					<option value="right">{language["right"]}</option>
+				</select>
+				</label>
+			</div>
+			<div>
+				<label>
+					{language["Icons type"]}:
+					<select
+					value={block.options.elements[0].ok_source.match(/_\w+/)[0].split('').splice(1).join('')}
+					onChange={(e) => {
 						const el = block.options.elements[0];
 						onPropChange('ok_source', el.ok_source.replace(/ok_\w+/, `ok_${e.target.value}`), false, 0);
 						onPropChange('vk_source', el.vk_source.replace(/vk_\w+/, `vk_${e.target.value}`), false, 0);
@@ -30,43 +63,45 @@ const OptionsSocialText = ({ block, onPropChange }) => {
 				 </label>
 			</div>
 			<div>
-				<label>Icons size:
-				<select onChange={(e) => {
-					switch (e.target.value) {
-						case 'Tiny':
-							onPropChange('width', '15%', false, 0);
-							onPropChange('width', '85%', false, 1);
-							break;
-						case 'Small':
-							onPropChange('width', '25%', false, 0);
-							onPropChange('width', '75%', false, 1);
-							break;
-						case 'Middle':
-							onPropChange('width', '35%', false, 0);
-							onPropChange('width', '65%', false, 1);
-							break;
-						case 'Big':
-							onPropChange('width', '50%', false, 0);
-							onPropChange('width', '50%', false, 1);
-							break;
-						default:
-							break;
-					}
-				}}>
-					<option value="Tiny">Tiny</option>
-					<option value="Small">Small</option>
-					<option value="Middle">Middle</option>
-					<option value="Big">Big</option>
-				</select>
+				<label>
+					OK:
+					<input type="checkbox" checked={block.options.elements[0].ok_display === ''? 'none': ''} onChange={(e) => onPropChange('ok_display', (block.options.elements[0].ok_display === ''? 'none': ''), false, 0)} />
+					<input type="text" value={block.options.elements[0].ok_link} onChange={(e) => onPropChange('ok_link', e.target.value, false, 0)} />
 				</label>
 			</div>
 			<div>
-				<label>Icons position:
-				<select onChange={(e) => onPropChange('float', e.target.value, false, 0)}>
-					<option value="left">left</option>
-					<option value="right">right</option>
-				</select>
+				<label>
+					VK:
+					<input type="checkbox" checked={block.options.elements[0].vk_display === ''? 'none': ''} onChange={(e) => onPropChange('vk_display', (block.options.elements[0].vk_display === ''? 'none': ''), false, 0)} />
+					<input type="text" value={block.options.elements[0].vk_link} onChange={(e) => onPropChange('vk_link', e.target.value, false, 0)} />
 				</label>
+			</div>
+			<div>
+				<label>
+					YT:
+					<input type="checkbox" checked={block.options.elements[0].youtube_display === ''? 'none': ''} onChange={(e) => onPropChange('youtube_display', (block.options.elements[0].youtube_display === ''? 'none': ''), false, 0)} />
+					<input type="text" value={block.options.elements[0].youtube_link} onChange={(e) => onPropChange('youtube_link', e.target.value, false, 0)} />
+				</label>
+			</div>
+			<div>
+				<label>
+					FB:
+					<input type="checkbox" checked={block.options.elements[0].facebook_display === ''? 'none': ''} onChange={(e) => onPropChange('facebook_display', (block.options.elements[0].facebook_display === ''? 'none': ''), false, 0)} />
+					<input type="text" value={block.options.elements[0].facebook_link} onChange={(e) => onPropChange('facebook_link', e.target.value, false, 0)} />
+				</label>
+			</div>
+			<div>
+				<label>
+					{language["Text"]}:
+					<TinyMCE
+						content={block.options.elements[1].text}
+						config={{
+						  plugins: 'link image code textcolor colorpicker',
+						  toolbar: 'undo redo | forecolor backcolor |bold italic | alignleft aligncenter alignright | code'
+						}}
+						onChange={(e) => onPropChange('text', e.target.getContent(), false, 1)}
+					 />
+				 </label>
 			</div>
 		</div>
 	);

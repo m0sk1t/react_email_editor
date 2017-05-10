@@ -26,6 +26,7 @@ let store = createStore(todoApp, {
 
 sagaMiddleware.run(mySagas);
 
+store.dispatch({type:"LOAD_LANGUAGE"});
 store.dispatch({type:"LOAD_TEMPLATE"});
 store.dispatch({type:"LOAD_COMPONENTS"});
 
