@@ -41,7 +41,7 @@ const StatePanel = connect(
 		'backgroundColor': '#a33',
 		'boxShadow': 'rgb(102, 102, 102) 2px 2px 5px 1px',
 	}
-	const deleteButton = selectedBlock.length? <span title={language["Delete selected block"]} onClick={() => rmBlock()} style={buttonStyle}>&#x1F5D1;</span>: null;
+	const deleteButton = selectedBlock.length? <span title={language["Delete selected block"]} onClick={() => rmBlock()} style={buttonStyle}>&#x2718;</span>: null;
 	return (
 		<div
 		style={{

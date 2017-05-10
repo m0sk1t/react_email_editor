@@ -45,7 +45,7 @@ const ActionsPanel = connect(
 			'position': 'fixed',
 		}}
 		>
-			<span title={language["Save template"]} style={buttonStyle}>&#128190;</span>
+			<span title={language["Save template"]} style={buttonStyle}>&#x2714;</span>
 			<span title={language["Send test email"]} style={buttonStyle}>&#x2709;</span>
 		</div>
 		);
