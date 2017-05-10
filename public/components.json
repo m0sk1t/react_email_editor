@@ -131,6 +131,49 @@
 					}]
 				}
 			}
+		},
+		{
+			"preview": "images/social.png",
+			"block": {
+				"block_type": "social",
+				"options": {
+					"container": {
+					"color": "#333333",
+						"padding": "2%",
+						"backgroundColor": "#FFFFFF"
+					},
+					"elements": [{
+						"ok_source": "icons/ok_3d.png",
+						"vk_source": "icons/vk_3d.png",
+						"youtube_source": "icons/youtube_3d.png",
+						"facebook_source": "icons/facebook_3d.png"
+					}]
+				}
+			}
+		},
+		{
+			"preview": "images/social_text.png",
+			"block": {
+				"block_type": "social_text",
+				"options": {
+					"container": {
+					"color": "#333333",
+						"padding": "2%",
+						"backgroundColor": "#FFFFFF"
+					},
+					"elements": [{
+						"width": "25%",
+						"float": "left",
+						"ok_source": "icons/ok_3d.png",
+						"vk_source": "icons/vk_3d.png",
+						"youtube_source": "icons/youtube_3d.png",
+						"facebook_source": "icons/facebook_3d.png"
+					},{
+						"width": "75%",
+						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu felis sit amet justo ullamcorper malesuada vitae nec odio. Duis suscipit, ligula in sollicitudin luctus, turpis purus bibendum lorem, in blandit nibh ipsum sit amet dui. Mauris nibh quam, commodo at ligula nec, volutpat euismod risus. Morbi nec nibh enim."
+					}]
+				}
+			}
 		}
 	]
 }

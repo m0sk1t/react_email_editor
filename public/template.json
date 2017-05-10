@@ -2,6 +2,20 @@
 	"template": [
 		{
 			"id": 1491998309943,
+			"block_type": "image",
+			"options": {
+				"container": {
+					"padding": "2%",
+					"color": "#333333",
+					"backgroundColor": "#FFFFFF"
+				},
+				"elements": [{
+					"source": "https://www.w3schools.com/css/trolltunga.jpg"
+				}]
+			}
+		},
+		{
+			"id": 1491998309944,
 			"block_type": "header",
 			"options": {
 				"container": {
@@ -14,20 +28,6 @@
 					"fontSize": "32px",
 					"fontWeight": "bold",
 					"textAlign": "center"
-				}]
-			}
-		},
-		{
-			"id": 1491998309944,
-			"block_type": "image",
-			"options": {
-				"container": {
-					"padding": "2%",
-					"color": "#333333",
-					"backgroundColor": "#FFFFFF"
-				},
-				"elements": [{
-					"source": "https://www.w3schools.com/css/trolltunga.jpg"
 				}]
 			}
 		},

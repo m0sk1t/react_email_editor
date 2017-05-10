@@ -9,11 +9,24 @@ const OptionsHeader = ({ block, onPropChange }) => {
 			<div>
 				<label>
 					Align:
-					<select onChange={(e) => onPropChange('textAlign', e.target.value, false, 0)}>
-						<option value="left">left</option>
-						<option value="right">right</option>
-						<option value="center">center</option>
-					</select>
+					<input type="range" min="0" max="2" step="1" onChange={(e) => {
+						let align = '';
+						switch (+e.target.value) {
+							case 0:
+								align = 'left';
+								break;
+							case 1:
+								align = 'center';
+								break;
+							case 2:
+								align = 'right';
+								break;
+							default:
+								align = 'left';
+								break;
+						}
+						onPropChange('textAlign', align, false, 0);
+					}} />
 				</label>
 			</div>
 			<div>

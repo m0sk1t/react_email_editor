@@ -53,7 +53,7 @@ const StatePanel = connect(
 			<span title="Redo changes" style={buttonStyle}>&#x21b7;</span>
 			{deleteButton}
 		</div>
-		);
+	);
 });
 
 export default StatePanel;

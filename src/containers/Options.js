@@ -4,10 +4,12 @@ import { stylizeBlock } from '../actions';
 import OptionsText from '../components/options/OptionsText';
 import OptionsImage from '../components/options/OptionsImage';
 import OptionsHeader from '../components/options/OptionsHeader';
+import OptionsSocial from '../components/options/OptionsSocial';
 import OptionsText2x from '../components/options/OptionsText2x';
 import OptionsImage2x from '../components/options/OptionsImage2x';
 import OptionsImage3x from '../components/options/OptionsImage3x';
 import OptionsImageText from '../components/options/OptionsImageText';
+import OptionsSocialText from '../components/options/OptionsSocialText';
 
 const mapStateToProps = (state) => {
 	return {
@@ -44,8 +46,12 @@ const Options = connect(
 				return <OptionsImage3x block={block} onPropChange={onPropChange} />;
 			case 'header':
 				return <OptionsHeader block={block} onPropChange={onPropChange} />;
+			case 'social':
+				return <OptionsSocial block={block} onPropChange={onPropChange} />;
 			case 'image_text':
 				return <OptionsImageText block={block} onPropChange={onPropChange} />;
+			case 'social_text':
+				return <OptionsSocialText block={block} onPropChange={onPropChange} />;
 			default:
 				return <div>Nothing selected</div>;
 			}
