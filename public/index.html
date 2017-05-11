@@ -27,7 +27,32 @@
 			label {
 				padding: 3%;
 				display: flex;
+				align-items: center;
 				justify-content: space-between;
+			}
+			input[type="file"] {
+				opacity: 1;
+				width: 30px;
+				height: 30px;
+				cursor: pointer;
+				position: relative;
+			}
+			input[type="file"]::after {
+				content: "\2295";
+				top: 0;
+				left: 0;
+				opacity: 1;
+				width: 32px;
+				height: 32px;
+				display: flex;
+				z-index: 9999;
+				color: #fafafa;
+				cursor: pointer;
+				font-size: 30px;
+				position: absolute;
+				align-items: center;
+				justify-content: center;
+				background-color: rgb(51, 170, 51);
 			}
 		</style>
 		<!--

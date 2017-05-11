@@ -1,5 +1,5 @@
 const noCors = { "mode": "no-cors" };
-const apiPath = "http://localhost:8888/";
+const apiPath = "http://localhost:8888";
 const contentType = {"ContentType": "application/json"};
 
 export const getLanguage = () => {
@@ -9,8 +9,8 @@ export const getLanguage = () => {
 		.then(json => json)
 };
 
-export const getTemplate = () => {
-	return fetch(`/template.json`, { ...noCors, ...contentType })
+export const getTemplate = (templateId) => {
+	return fetch(templateId?`${apiPath}/template/${templateId}`:`/template.json`, { ...noCors, ...contentType })
 		.then(res => res.json())
 		.then(json => json)
 };
@@ -21,33 +21,28 @@ export const getComponents = () => {
 		.then(json => json)
 };
 
-export const getTemplateById = (id) => {
-	return fetch(`${apiPath}/template/${id}`, noCors)
-		.then(res => res.json())
-		.then(json => json)
-};
-
 export const saveImage = (file) => {
 	const params = {
 		method: 'POST',
 		body: file,
 		...noCors
 	};
-	return fetch(`${apiPath}image`, params)
+	return fetch(`${apiPath}/image`, params)
 		.then(res => res.json())
 		.then(json => json)
 };
 
-export const saveTemplate = (id, templateJSON, templateHTML) => {
+export const saveTemplate = ({ id, html, template }) => {
 	const params = {
 		...noCors,
 		method: 'POST',
 		body: {
-			templateJSON,
-			templateHTML
+			id,
+			html,
+			template,
 		}
 	};
-	return fetch(`${apiPath}template/${id||''}`, params)
+	return fetch(`${apiPath}/template/${id||''}`, params)
 		.then(res => res.json())
 		.then(json => json)
 };

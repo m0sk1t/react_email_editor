@@ -80,5 +80,12 @@ export const addImage = (block, index, file) => {
 	};
 };
 
-export const saveTemplate = ()=>{};
+export const saveTemplate = (id, html, template) => {
+	return {
+		type: 'SAVE_TEMPLATE',
+		template,
+		html,
+		id,
+	};
+};
 export const sendTestEmail = ()=>{};

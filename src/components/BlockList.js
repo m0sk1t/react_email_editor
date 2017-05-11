@@ -49,7 +49,6 @@ const BlockList = connect(
 			}}
 		>
 			<table
-				align="center"
 				cellPadding="0"
 				cellSpacing="0"
 				role="presentation"

@@ -8,9 +8,11 @@ import createSagaMiddleware from 'redux-saga';
 import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
-const sagaMiddleware = createSagaMiddleware()
+const sagaMiddleware = createSagaMiddleware();
+const templateId = document.location.search.split('?id=').join('');
 
 let store = createStore(todoApp, {
+	templateId,
 	'common': {
 		'color': '#333333',
 		'backgroundColor': '#FFFFFF',
@@ -27,12 +29,12 @@ let store = createStore(todoApp, {
 sagaMiddleware.run(mySagas);
 
 store.dispatch({type:"LOAD_LANGUAGE"});
-store.dispatch({type:"LOAD_TEMPLATE"});
 store.dispatch({type:"LOAD_COMPONENTS"});
+store.dispatch({type:"LOAD_TEMPLATE", templateId});
 
 render(
 	<Provider store={store}>
 		<App />
 	</Provider>,
 	document.getElementById('root')
-)
+);
