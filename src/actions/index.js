@@ -71,5 +71,14 @@ export const selectComponent = (index) => {
 export const undoChanges = ()=>{};
 export const redoChanges = ()=>{};
 
+export const addImage = (block, index, file) => {
+	return {
+		type: 'ADD_IMAGE',
+		block,
+		index,
+		file,
+	};
+};
+
 export const saveTemplate = ()=>{};
 export const sendTestEmail = ()=>{};

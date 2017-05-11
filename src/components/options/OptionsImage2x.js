@@ -7,10 +7,10 @@ const OptionsImage2x = ({ block, language, onPropChange }) => {
 				<label>{language["Custom style"]}: <input type="checkbox" checked={block.options.container.customStyle? 'checked': '' } onChange={(e) => onPropChange('customStyle', !block.options.container.customStyle, true)} /></label>
 			</div>
 			<div>
-				<label>Image 1 URL: <input type="text" value={block.options.elements[0].source} onChange={(e) => onPropChange('source', e.target.value, false, 0)} /></label>
+				<label>{language["URL"]} 1: <input type="text" value={block.options.elements[0].source} onChange={(e) => onPropChange('source', e.target.value, false, 0)} /></label>
 			</div>
 			<div>
-				<label>Image 2 URL: <input type="text" value={block.options.elements[1].source} onChange={(e) => onPropChange('source', e.target.value, false, 1)} /></label>
+				<label>{language["URL"]} 2: <input type="text" value={block.options.elements[1].source} onChange={(e) => onPropChange('source', e.target.value, false, 1)} /></label>
 			</div>
 			<div>
 				<label>{language["Use padding"]}: <input type="checkbox" value={block.options.elements[0].usePadding} onChange={(e) => {onPropChange('usePadding', !block.options.elements[0].usePadding, false, 0); onPropChange('usePadding', !block.options.elements[1].usePadding, false, 1)}} /></label>

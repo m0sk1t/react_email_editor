@@ -1,5 +1,5 @@
 import { put, takeLatest } from 'redux-saga/effects';
-import { getLanguage, getTemplate, saveTemplate, getComponents } from './api';
+import { getLanguage, getTemplate, saveImage, saveTemplate, getComponents } from './api';
 
 function* loadLanguage(action) {
 	try {
@@ -28,6 +28,15 @@ function* uploadTemplate(action) {
 	}
 };
 
+function* uploadImage(action) {
+	try {
+		const res = yield saveImage(action.file).then(res => res);
+		yield put({type: 'IMAGE_ADDED', block: action.block, index: action.index, image: res.url});
+	} catch(e) {
+		console.log(e);
+	}
+};
+
 function* loadComponents(action) {
 	try {
 		const res = yield getComponents().then(res => res);
@@ -38,6 +47,7 @@ function* loadComponents(action) {
 };
 
 function* mySagas() {
+	yield takeLatest("ADD_IMAGE", uploadImage);
 	yield takeLatest("LOAD_LANGUAGE", loadLanguage);
 	yield takeLatest("LOAD_TEMPLATE", loadTemplate);
 	yield takeLatest("SAVE_TEMPLATE", uploadTemplate);

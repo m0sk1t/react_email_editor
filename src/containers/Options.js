@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { stylizeBlock } from '../actions';
+import { addImage, stylizeBlock } from '../actions';
 import OptionsHr from '../components/options/OptionsHr';
 import OptionsText from '../components/options/OptionsText';
 import OptionsImage from '../components/options/OptionsImage';
@@ -25,6 +25,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
 	return {
+		onFileChange: (block, index, file) => {
+			dispatch(addImage(block, index, file));
+		},
 		onPropChange: (prop, val, container, elementIndex) => {
 			dispatch(stylizeBlock(prop, val, container, elementIndex));
 		}
@@ -34,7 +37,7 @@ const mapDispatchToProps = (dispatch) => {
 const Options = connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(({ tabs, language, template, onPropChange }) => {
+)(({ tabs, language, template, onFileChange, onPropChange }) => {
 	if (tabs.options) {
 		const block = template.filter(b => b.selected)[0];
 		if (!block) return <div><label>{language["Nothing selected"]}</label></div>;
@@ -44,7 +47,7 @@ const Options = connect(
 			case 'text':
 				return <OptionsText block={block} language={language} onPropChange={onPropChange} />;
 			case 'image':
-				return <OptionsImage block={block} language={language} onPropChange={onPropChange} />;
+				return <OptionsImage block={block} language={language} onFileChange={onFileChange} onPropChange={onPropChange} />;
 			case 'button':
 				return <OptionsButton block={block} language={language} onPropChange={onPropChange} />;
 			case 'header':
@@ -54,13 +57,13 @@ const Options = connect(
 			case 'text2x':
 				return <OptionsText2x block={block} language={language} onPropChange={onPropChange} />;
 			case 'image2x':
-				return <OptionsImage2x block={block} language={language} onPropChange={onPropChange} />;
+				return <OptionsImage2x block={block} language={language} onFileChange={onFileChange} onPropChange={onPropChange} />;
 			case 'image3x':
-				return <OptionsImage3x block={block} language={language} onPropChange={onPropChange} />;
+				return <OptionsImage3x block={block} language={language} onFileChange={onFileChange} onPropChange={onPropChange} />;
 			case 'feedback':
 				return <OptionsFeedback block={block} language={language} onPropChange={onPropChange} />;
 			case 'image_text':
-				return <OptionsImageText block={block} language={language} onPropChange={onPropChange} />;
+				return <OptionsImageText block={block} language={language} onFileChange={onFileChange} onPropChange={onPropChange} />;
 			case 'social_text':
 				return <OptionsSocialText block={block} language={language} onPropChange={onPropChange} />;
 			case 'feedback_text':

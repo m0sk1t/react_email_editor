@@ -1,10 +1,28 @@
 const block = (state, action) => {
 	switch (action.type) {
+
+		case 'IMAGE_ADDED':
+			const options = {
+				options: {
+					container: state.options.container,
+					elements: state.options.elements.map((el, i) => {
+						if (i === +action.index) {
+							el.source = action.image;
+							return el;
+						} else {
+							return el;
+						}
+					})
+				}
+			};
+			return Object.assign({}, state, options);
+
 		case 'SELECT_BLOCK':
 			return {
 				...state,
 				selected: true,
 			};
+		
 		case 'STYLIZE_ALL':
 			if (state.options.container.customStyle) return state;
 			let containerStyle = {};
@@ -16,6 +34,7 @@ const block = (state, action) => {
 				}
 			}
 			return Object.assign({}, state, change);
+		
 		case 'STYLIZE_BLOCK':
 			let style = {};
 			style[action.propertyName] = action.propertyValue;
@@ -76,6 +95,9 @@ const template = (state = [], action) => {
 				alert("Должен остаться хотя бы один активный блок!");
 				return state;
 			}
+
+		case 'IMAGE_ADDED':
+			return state.map(b => b.id === action.block.id? block(b, action): b);
 
 		case 'STYLIZE_BLOCK':
 			return state.map(b => b.selected? block(b, action): b);
