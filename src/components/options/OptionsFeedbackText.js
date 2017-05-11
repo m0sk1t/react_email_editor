@@ -1,9 +1,11 @@
 import React from 'react';
-import TinyMCE from 'react-tinymce';
 
 const OptionsFeedbackText = ({ block, language, onPropChange }) => {
 	return (
 		<div>
+			<div>
+				<label>{language["Custom style"]}: <input type="checkbox" checked={block.options.container.customStyle? 'checked': '' } onChange={(e) => onPropChange('customStyle', !block.options.container.customStyle, true)} /></label>
+			</div>
 			<div>
 				<label>{language["Background"]}: <input type="color" value={block.options.container.backgroundColor} onChange={(e) => onPropChange('backgroundColor', e.target.value, true)} /></label>
 			</div>
@@ -81,19 +83,6 @@ const OptionsFeedbackText = ({ block, language, onPropChange }) => {
 					<input type="checkbox" checked={block.options.elements[0].neutral_display === ''? 'none': ''} onChange={(e) => onPropChange('neutral_display', (block.options.elements[0].neutral_display === ''? 'none': ''), false, 0)} />
 					<input type="text" value={block.options.elements[0].neutral_link} onChange={(e) => onPropChange('neutral_link', e.target.value, false, 0)} />
 				</label>
-			</div>
-			<div>
-				<label>
-					{language["Text"]}:
-					<TinyMCE
-						content={block.options.elements[1].text}
-						config={{
-						  plugins: 'link image code textcolor colorpicker',
-						  toolbar: 'undo redo | forecolor backcolor |bold italic | alignleft aligncenter alignright | code'
-						}}
-						onChange={(e) => onPropChange('text', e.target.getContent(), false, 1)}
-					 />
-				 </label>
 			</div>
 		</div>
 	);

@@ -1,6 +1,8 @@
 import React from 'react';
+import BlockHr from './blocks/BlockHr';
 import BlockText from './blocks/BlockText';
 import BlockImage from './blocks/BlockImage';
+import BlockButton from './blocks/BlockButton';
 import BlockHeader from './blocks/BlockHeader';
 import BlockSocial from './blocks/BlockSocial';
 import BlockText2x from './blocks/BlockText2x';
@@ -14,28 +16,32 @@ import BlockFeedbackText from './blocks/BlockFeedbackText';
 const Block = ({ block }) => {
 	if (!block) return null;
 	switch (block.block_type) {
+		case 'hr':
+			return <BlockHr id={block.id} blockOptions={block.options} />;
 		case 'text':
-			return <BlockText blockOptions={block.options} />;
+			return <BlockText id={block.id} blockOptions={block.options} />;
 		case 'image':
-			return <BlockImage blockOptions={block.options} />;
+			return <BlockImage id={block.id} blockOptions={block.options} />;
+		case 'button':
+			return <BlockButton id={block.id} blockOptions={block.options} />;
 		case 'header':
-			return <BlockHeader blockOptions={block.options} />;
+			return <BlockHeader id={block.id} blockOptions={block.options} />;
 		case 'social':
-			return <BlockSocial blockOptions={block.options} />;
+			return <BlockSocial id={block.id} blockOptions={block.options} />;
 		case 'text2x':
-			return <BlockText2x blockOptions={block.options} />;
+			return <BlockText2x id={block.id} blockOptions={block.options} />;
 		case 'image2x':
-			return <BlockImage2x blockOptions={block.options} />;
+			return <BlockImage2x id={block.id} blockOptions={block.options} />;
 		case 'image3x':
-			return <BlockImage3x blockOptions={block.options} />;
+			return <BlockImage3x id={block.id} blockOptions={block.options} />;
 		case 'feedback':
-			return <BlockFeedback blockOptions={block.options} />;
+			return <BlockFeedback id={block.id} blockOptions={block.options} />;
 		case 'image_text':
-			return <BlockImageText blockOptions={block.options} />;
+			return <BlockImageText id={block.id} blockOptions={block.options} />;
 		case 'social_text':
-			return <BlockSocialText blockOptions={block.options} />;
+			return <BlockSocialText id={block.id} blockOptions={block.options} />;
 		case 'feedback_text':
-			return <BlockFeedbackText blockOptions={block.options} />;
+			return <BlockFeedbackText id={block.id} blockOptions={block.options} />;
 		default:
 			return null;
 	}

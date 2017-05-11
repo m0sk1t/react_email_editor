@@ -4,6 +4,9 @@ const OptionsImage3x = ({ block, language, onPropChange }) => {
 	return (
 		<div>
 			<div>
+				<label>{language["Custom style"]}: <input type="checkbox" checked={block.options.container.customStyle? 'checked': '' } onChange={(e) => onPropChange('customStyle', !block.options.container.customStyle, true)} /></label>
+			</div>
+			<div>
 				<label>URL 1: <input type="text" value={block.options.elements[0].source} onChange={(e) => onPropChange('source', e.target.value, false, 0)} /></label>
 			</div>
 			<div>

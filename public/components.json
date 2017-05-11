@@ -6,8 +6,9 @@
 				"block_type": "header",
 				"options": {
 					"container": {
-					"color": "#333333",
 						"padding": "2%",
+						"color": "#333333",
+						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
@@ -20,13 +21,53 @@
 			}
 		},
 		{
+			"preview": "images/hr.png",
+			"block": {
+				"block_type": "hr",
+				"options": {
+					"container": {
+						"padding": "2%",
+						"color": "#333333",
+						"customStyle": false,
+						"backgroundColor": "#FFFFFF"
+					},
+					"elements": [{
+						"height": "15px"
+					}]
+				}
+			}
+		},
+		{
+			"preview": "images/button.png",
+			"block": {
+				"block_type": "button",
+				"options": {
+					"container": {
+						"padding": "2%",
+						"color": "#333333",
+						"customStyle": false,
+						"backgroundColor": "#FFFFFF"
+					},
+					"elements": [{
+						"link": "",
+						"text": "BUTTON",
+						"textAlign": "center",
+						"buttonPaddings": "1% 3%",
+						"buttonBorderRadius": "5px",
+						"buttonBackgroundColor": "#9A9A9A"
+					}]
+				}
+			}
+		},
+		{
 			"preview": "images/text.png",
 			"block": {
 				"block_type": "text",
 				"options": {
 					"container": {
-					"color": "#333333",
 						"padding": "2%",
+						"color": "#333333",
+						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
@@ -41,8 +82,9 @@
 				"block_type": "text2x",
 				"options": {
 					"container": {
-					"color": "#333333",
 						"padding": "2%",
+						"color": "#333333",
+						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
@@ -62,8 +104,9 @@
 				"block_type": "image",
 				"options": {
 					"container": {
-					"color": "#333333",
 						"padding": "2%",
+						"color": "#333333",
+						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
@@ -78,8 +121,9 @@
 				"block_type": "image2x",
 				"options": {
 					"container": {
-					"color": "#333333",
 						"padding": "2%",
+						"color": "#333333",
+						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
@@ -96,8 +140,9 @@
 				"block_type": "image3x",
 				"options": {
 					"container": {
-					"color": "#333333",
 						"padding": "2%",
+						"color": "#333333",
+						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
@@ -116,8 +161,9 @@
 				"block_type": "image_text",
 				"options": {
 					"container": {
-					"color": "#333333",
 						"padding": "2%",
+						"color": "#333333",
+						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
@@ -138,8 +184,9 @@
 				"block_type": "social",
 				"options": {
 					"container": {
-					"color": "#333333",
 						"padding": "2%",
+						"color": "#333333",
+						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
@@ -166,8 +213,9 @@
 				"block_type": "social_text",
 				"options": {
 					"container": {
-					"color": "#333333",
 						"padding": "2%",
+						"color": "#333333",
+						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
@@ -198,8 +246,9 @@
 				"block_type": "feedback",
 				"options": {
 					"container": {
-					"color": "#333333",
 						"padding": "2%",
+						"color": "#333333",
+						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
@@ -223,8 +272,9 @@
 				"block_type": "feedback_text",
 				"options": {
 					"container": {
-					"color": "#333333",
 						"padding": "2%",
+						"color": "#333333",
+						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{

@@ -60,6 +60,7 @@ const BlockList = connect(
 				<tbody>
 					{template.map((block, index) =>
 						<tr
+							id={`id_${block.id}`}
 							key={block.id}
 							draggable="true"
 							style={{

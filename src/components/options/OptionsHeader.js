@@ -4,7 +4,7 @@ const OptionsHeader = ({ block, language, onPropChange }) => {
 	return (
 		<div>
 			<div>
-				<label>{language["Text"]}: <input type="text" value={block.options.elements[0].text} onChange={(e) => onPropChange('text', e.target.value, false, 0)} /></label>
+				<label>{language["Custom style"]}: <input type="checkbox" checked={block.options.container.customStyle? 'checked': '' } onChange={(e) => onPropChange('customStyle', !block.options.container.customStyle, true)} /></label>
 			</div>
 			<div>
 				<label>

@@ -1,8 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { stylizeBlock } from '../actions';
+import OptionsHr from '../components/options/OptionsHr';
 import OptionsText from '../components/options/OptionsText';
 import OptionsImage from '../components/options/OptionsImage';
+import OptionsButton from '../components/options/OptionsButton';
 import OptionsHeader from '../components/options/OptionsHeader';
 import OptionsSocial from '../components/options/OptionsSocial';
 import OptionsText2x from '../components/options/OptionsText2x';
@@ -37,10 +39,14 @@ const Options = connect(
 		const block = template.filter(b => b.selected)[0];
 		if (!block) return <div><label>{language["Nothing selected"]}</label></div>;
 		switch (block.block_type) {
+			case 'hr':
+				return <OptionsHr block={block} language={language} onPropChange={onPropChange} />;
 			case 'text':
 				return <OptionsText block={block} language={language} onPropChange={onPropChange} />;
 			case 'image':
 				return <OptionsImage block={block} language={language} onPropChange={onPropChange} />;
+			case 'button':
+				return <OptionsButton block={block} language={language} onPropChange={onPropChange} />;
 			case 'header':
 				return <OptionsHeader block={block} language={language} onPropChange={onPropChange} />;
 			case 'social':

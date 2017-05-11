@@ -3,8 +3,12 @@
 	"COMMON": "COMMON",
 	"OPTIONS": "OPTIONS",
 	"Common options": "Common options",
+	"URL": "URL",
 	"Color": "Color",
+	"Paddings": "Paddings",
 	"Background": "Background",
+	"Button background": "Button background",
+	"Button border radius": "Button border radius",
 	"Nothing selected": "Nothing selected",
 	"Undo changes": "Undo changes",
 	"Redo changes": "Redo changes",
@@ -30,5 +34,6 @@
 	"Icons position": "Icons position",
 	"Like": "Like",
 	"Dislike": "Dislike",
-	"Neutral": "Neutral"
+	"Neutral": "Neutral",
+	"Custom style": "Custom style"
 }

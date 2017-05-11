@@ -3,8 +3,12 @@
 	"COMMON": "Общие",
 	"OPTIONS": "Настройки",
 	"Common options": "Общие настройки блоков",
+	"URL": "Ссылка",
 	"Color": "Цвет шрифта",
+	"Paddings": "Отступы",
 	"Background": "Цвет фона",
+	"Button background": "Цвет фона кнопки",
+	"Button border radius": "Скругление кнопки",
 	"Nothing selected": "Блок не выбран",
 	"Undo changes": "Отменить изменения",
 	"Redo changes": "Повторить изменения",
@@ -30,5 +34,6 @@
 	"Icons position": "Положение иконок",
 	"Like": "Нравится",
 	"Dislike": "Не нравится",
-	"Neutral": "Нейтрально"
+	"Neutral": "Нейтрально",
+	"Custom style": "Свой стиль"
 }

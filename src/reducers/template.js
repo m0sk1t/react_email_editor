@@ -6,6 +6,7 @@ const block = (state, action) => {
 				selected: true,
 			};
 		case 'STYLIZE_ALL':
+			if (state.options.container.customStyle) return state;
 			let containerStyle = {};
 			containerStyle[action.propertyName] = action.propertyValue;
 			const change = {
