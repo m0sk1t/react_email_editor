@@ -88,4 +88,10 @@ export const saveTemplate = (id, html, template) => {
 		id,
 	};
 };
-export const sendTestEmail = ()=>{};
+export const sendTestEmail = (email, html) => {
+	return {
+		type: 'SEND_EMAIL',
+		email,
+		html,
+	};
+};

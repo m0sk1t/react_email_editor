@@ -1,22 +1,21 @@
 const noCors = { "mode": "no-cors" };
-const apiPath = "http://localhost:8888";
-const contentType = {"ContentType": "application/json"};
+const apiEndpoint = "http://localhost:8888";
 
 export const getLanguage = () => {
 	const lang = /^\w+/.exec(navigator.language)[0];
-	return fetch(`/translations/lang.${lang}.json`, { ...noCors, ...contentType })
+	return fetch(`/translations/lang.${lang}.json`, { ...noCors })
 		.then(res => res.json())
 		.then(json => json)
 };
 
 export const getTemplate = (templateId) => {
-	return fetch(templateId?`${apiPath}/template/${templateId}`:`/template.json`, { ...noCors, ...contentType })
+	return fetch(templateId?`${apiEndpoint}/template/${templateId}`:`/template.json`, { ...noCors })
 		.then(res => res.json())
 		.then(json => json)
 };
 
 export const getComponents = () => {
-	return fetch(`/components.json`, { ...noCors, ...contentType })
+	return fetch(`/components.json`, { ...noCors })
 		.then(res => res.json())
 		.then(json => json)
 };
@@ -25,38 +24,37 @@ export const saveImage = (file) => {
 	const params = {
 		method: 'POST',
 		body: file,
-		...noCors
+		...noCors,
 	};
-	return fetch(`${apiPath}/image`, params)
+	return fetch(`${apiEndpoint}/image`, params)
 		.then(res => res.json())
 		.then(json => json)
 };
 
 export const saveTemplate = ({ id, html, template }) => {
 	const params = {
-		...noCors,
 		method: 'POST',
+		...noCors,
 		body: {
-			id,
-			html,
-			template,
+			html: html,
+			template: template
 		}
 	};
-	return fetch(`${apiPath}/template/${id||''}`, params)
+	return fetch(`${apiEndpoint}/template/${id||'null'}`, params)
 		.then(res => res.json())
 		.then(json => json)
 };
 
-export const sendTestEmail = (id, email, templateHTML) => {
+export const sendTestEmail = (email, templateHTML) => {
 	const params = {
-		...noCors,
 		method: 'POST',
+		...noCors,
 		body: {
 			email,
 			templateHTML
 		}
 	};
-	return fetch(`${apiPath}send`, params)
+	return fetch(`${apiEndpoint}/send`, params)
 		.then(res => res.json())
 		.then(json => json)
 };

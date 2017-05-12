@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import { connect } from 'react-redux';
 import { stylizeBlock } from '../../actions';
@@ -58,7 +59,6 @@ const BlockText2x = connect(
 									<td
 									className="editable_first"
 									onClick={() => initEditable('first')}
-									style={blockOptions.elements[0]}
 									dangerouslySetInnerHTML={{__html: blockOptions?blockOptions.elements[0].text:'empty node'}}
 									></td>
 								</tr>
@@ -75,7 +75,6 @@ const BlockText2x = connect(
 									<td
 									className="editable_second"
 									onClick={() => initEditable('second')}
-									style={blockOptions.elements[0]}
 									dangerouslySetInnerHTML={{__html: blockOptions?blockOptions.elements[1].text:'empty node'}}
 									></td>
 								</tr>
