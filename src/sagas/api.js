@@ -3,8 +3,8 @@ const headersJSON = new Headers({
 	'Accept': 'application/json',
 	'Content-Type': 'application/json'
 });
-const apiEndpoint = "http://localhost:8888";
-// const apiEndpoint = "";
+// const apiEndpoint = "http://localhost:8888";
+const apiEndpoint = "";
 
 export const getLanguage = () => {
 	const lang = /^\w+/.exec(navigator.language)[0];

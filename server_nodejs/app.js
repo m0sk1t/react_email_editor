@@ -9,9 +9,9 @@ const cookieParser = require('cookie-parser');
 
 e.use(compression());
 e.use(cookieParser());
-e.use(bodyParser.json(/*{
+e.use(bodyParser.json({
 	'limit': '5mb'
-}*/));
+}));
 e.use(bodyParser.urlencoded({
 	'limit': '5mb',
 	'extended': true
