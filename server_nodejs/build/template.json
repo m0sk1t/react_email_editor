@@ -1,0 +1,69 @@
+{
+	"template": [
+		{
+			"id": 1491998309943,
+			"block_type": "image",
+			"options": {
+				"container": {
+					"padding": "2%",
+					"color": "#333333",
+					"backgroundColor": "#FFFFFF"
+				},
+				"elements": [{
+					"source": "https://www.w3schools.com/css/trolltunga.jpg"
+				}]
+			}
+		},
+		{
+			"id": 1491998309944,
+			"block_type": "header",
+			"options": {
+				"container": {
+					"padding": "2%",
+					"color": "#333333",
+					"backgroundColor": "#FFFFFF"
+				},
+				"elements": [{
+					"text": "Header",
+					"fontSize": "32px",
+					"fontWeight": "bold",
+					"textAlign": "center"
+				}]
+			}
+		},
+		{
+			"id": 1491998309945,
+			"block_type": "text",
+			"options": {
+				"container": {
+					"padding": "2%",
+					"color": "#333333",
+					"backgroundColor": "#FFFFFF"
+				},
+				"elements": [{
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu felis sit amet justo ullamcorper malesuada vitae nec odio. Duis suscipit, ligula in sollicitudin luctus, turpis purus bibendum lorem, in blandit nibh ipsum sit amet dui. Mauris nibh quam, commodo at ligula nec, volutpat euismod risus. Morbi nec nibh enim."
+				}]
+			}
+		},
+		{
+			"id": 1491998309946,
+			"block_type": "image_text",
+			"options": {
+				"container": {
+					"padding": "2%",
+					"color": "#333333",
+					"backgroundColor": "#FFFFFF"
+				},
+				"elements": [{
+						"width": "35%",
+						"float": "left",
+						"source": "https://www.w3schools.com/css/trolltunga.jpg"
+					},
+					{
+						"width": "65%",
+						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu felis sit amet justo ullamcorper malesuada vitae nec odio. Duis suscipit, ligula in sollicitudin luctus, turpis purus bibendum lorem, in blandit nibh ipsum sit amet dui. Mauris nibh quam, commodo at ligula nec, volutpat euismod risus. Morbi nec nibh enim."
+					}]
+			}
+		}
+	]
+}

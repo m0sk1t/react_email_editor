@@ -9,18 +9,19 @@ const cookieParser = require('cookie-parser');
 
 e.use(compression());
 e.use(cookieParser());
-e.use(bodyParser.json({
+e.use(bodyParser.json(/*{
 	'limit': '5mb'
-}));
+}*/));
 e.use(bodyParser.urlencoded({
 	'limit': '5mb',
 	'extended': true
 }));
 e.use(serveStatic(path.join(__dirname, '/build')));
 e.use(serveStatic(path.join(__dirname, '/uploads'))); // bad? maybe yes...
-e.use(require(path.join(__dirname, '/app/Router.js')));
 e.use(serveFavicon(path.join(__dirname, '/build/favicon.ico')));
 
+
+e.use(require(path.join(__dirname, '/app/Router.js')));
 e.listen(8888, () => {
 	mongoose.Promise = global.Promise;
 

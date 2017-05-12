@@ -12,10 +12,7 @@ const OptionsImageText = ({ block, language, onFileChange, onPropChange }) => {
 					<input
 						type="file"
 						onChange={(e) => {
-							var formData = new FormData();
-							var file = e.target.files[0];
-							formData.append('file', file);
-							onFileChange(block, 0, formData);
+							onFileChange(block, 0, e.target.files[0]);
 						}} />
 					<input type="text" value={block.options.elements[0].source} onChange={(e) => onPropChange('source', e.target.value, false, 0)} />
 				</label>

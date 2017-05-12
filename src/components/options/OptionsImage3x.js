@@ -12,10 +12,7 @@ const OptionsImage3x = ({ block, language, onFileChange, onPropChange }) => {
 					<input
 						type="file"
 						onChange={(e) => {
-							var formData = new FormData();
-							var file = e.target.files[0];
-							formData.append('file', file);
-							onFileChange(block, 0, formData);
+							onFileChange(block, 0, e.target.files[0]);
 						}} />
 					<input type="text" value={block.options.elements[0].source} onChange={(e) => onPropChange('source', e.target.value, false, 0)} />
 				</label>
@@ -26,10 +23,7 @@ const OptionsImage3x = ({ block, language, onFileChange, onPropChange }) => {
 					<input
 						type="file"
 						onChange={(e) => {
-							var formData = new FormData();
-							var file = e.target.files[0];
-							formData.append('file', file);
-							onFileChange(block, 1, formData);
+							onFileChange(block, 1, e.target.files[0]);
 						}} />
 					<input type="text" value={block.options.elements[1].source} onChange={(e) => onPropChange('source', e.target.value, false, 1)} />
 				</label>
@@ -40,10 +34,7 @@ const OptionsImage3x = ({ block, language, onFileChange, onPropChange }) => {
 					<input
 						type="file"
 						onChange={(e) => {
-							var formData = new FormData();
-							var file = e.target.files[0];
-							formData.append('file', file);
-							onFileChange(block, 2, formData);
+							onFileChange(block, 2, e.target.files[0]);
 						}} />
 					<input type="text" value={block.options.elements[2].source} onChange={(e) => onPropChange('source', e.target.value, false, 2)} />
 				</label>

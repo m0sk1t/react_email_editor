@@ -52,7 +52,7 @@ function* loadComponents(action) {
 
 function* sendEmail(action) {
 	try {
-		const res = yield sendTestEmail().then(res => res);
+		const res = yield sendTestEmail(action).then(res => res);
 		window.showMessage('ok', `Email successfully sended. Status: ${res.msg}`, messageTimeout);
 	} catch(e) {
 		window.showMessage('error', e, messageTimeout);

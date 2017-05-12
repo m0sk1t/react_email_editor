@@ -95,7 +95,7 @@ const ActionsPanel = connect(
 					</body>
 					</html>`;
 				let email = prompt(language["Enter email"]);
-				saveTemplate(email, html);
+				sendTestEmail(email, html);
 			}}
 			>&#x2709;</span>
 		</div>

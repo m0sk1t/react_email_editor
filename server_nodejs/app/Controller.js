@@ -1,6 +1,12 @@
 // file created with filename constroller.js =))) but quikly renamed
 const TemplateModel = require('./TemplateModel');
 
+const sendEmail = (req, res) => {
+	// TODO: use nodemailer
+	console.log('POST: /email', req.body);
+	res.json({msg: "OK"});
+};
+
 const getTemplate = (req, res) => {
 	TemplateModel.findById(req.params.id, (err, tpl) => {
 		if (err) return res.status(500).json(err);
@@ -10,7 +16,7 @@ const getTemplate = (req, res) => {
 };
 
 const setTemplate = (req, res) => {
-	console.log(req.body);
+	console.log('POST: /template/:id', req.body);
 	if (req.params.id === 'null') {
 		let newTemplate = new TemplateModel();
 		newTemplate.html = req.body.html;
@@ -33,11 +39,13 @@ const setTemplate = (req, res) => {
 };
 
 const uploadImage = (req, res) => {
+	console.log('POST: /image', req.files);
 	const imagePath = 'uploads/' + req.files.file.path.split('uploads/').join('');
 	res.json({ url: imagePath });
 };
 
 module.exports = {
+	sendEmail,
 	uploadImage,
 	getTemplate,
 	setTemplate,
