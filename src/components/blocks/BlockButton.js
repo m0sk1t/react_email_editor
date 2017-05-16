@@ -14,8 +14,9 @@ const BlockButton = ({ id, blockOptions, onPropChange }) => {
 					style={blockOptions.elements[0]}
 					>
 					<a
-					href={blockOptions.elements[0].link}
 					target="_blank"
+					href={blockOptions.elements[0].link}
+					title={blockOptions.elements[0].link}
 					style={{
 						'textDecoration': 'none',
 						'color': blockOptions.container.color,

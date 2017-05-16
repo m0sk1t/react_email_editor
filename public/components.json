@@ -8,12 +8,12 @@
 					"container": {
 						"padding": "2%",
 						"color": "#333333",
+						"fontSize": "32px",
 						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
 						"text": "Header",
-						"fontSize": "32px",
 						"fontWeight": "bold",
 						"textAlign": "center"
 					}]
@@ -45,6 +45,7 @@
 					"container": {
 						"padding": "2%",
 						"color": "#333333",
+						"fontSize": "24px",
 						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
 					},
@@ -66,6 +67,7 @@
 				"options": {
 					"container": {
 						"padding": "2%",
+						"fontSize": "16px",
 						"color": "#333333",
 						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
@@ -83,6 +85,7 @@
 				"options": {
 					"container": {
 						"padding": "2%",
+						"fontSize": "16px",
 						"color": "#333333",
 						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
@@ -169,6 +172,7 @@
 					"container": {
 						"padding": "2%",
 						"color": "#333333",
+						"fontSize": "16px",
 						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
 					},
@@ -222,6 +226,7 @@
 					"container": {
 						"padding": "2%",
 						"color": "#333333",
+						"fontSize": "16px",
 						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
 					},
@@ -281,6 +286,7 @@
 					"container": {
 						"padding": "2%",
 						"color": "#333333",
+						"fontSize": "16px",
 						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
 					},

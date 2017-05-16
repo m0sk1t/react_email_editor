@@ -1,6 +1,7 @@
 import React from 'react';
 
 const OptionsText2x = ({ block, language, onPropChange }) => {
+	const fontSize = block.options.container.fontSize.match(/\d+/)?block.options.container.fontSize.match(/\d+/)[0]: '16';
 	return (
 		<div>
 			<div>
@@ -45,6 +46,9 @@ const OptionsText2x = ({ block, language, onPropChange }) => {
 					<option value="right">{language["right"]}</option>
 				</select>
 				</label>
+			</div>
+			<div>
+				<label>{language["Font size"]}: <input type="number" value={fontSize} onChange={(e) => onPropChange('fontSize', `${e.target.value}px`, true)} /></label>
 			</div>
 			<div>
 				<label>

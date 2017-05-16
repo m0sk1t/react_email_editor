@@ -7,10 +7,14 @@ const OptionsHeader = ({ block, language, onPropChange }) => {
 		"center": "1",
 	}
 	const initialAlign = aligns[block.options.elements[0].textAlign];
+	const fontSize = block.options.container.fontSize.match(/\d+/)?block.options.container.fontSize.match(/\d+/)[0]: '16';
 	return (
 		<div>
 			<div>
 				<label>{language["Custom style"]}: <input type="checkbox" checked={block.options.container.customStyle? 'checked': '' } onChange={(e) => onPropChange('customStyle', !block.options.container.customStyle, true)} /></label>
+			</div>
+			<div>
+				<label>{language["Font size"]}: <input type="number" value={fontSize} onChange={(e) => onPropChange('fontSize', `${e.target.value}px`, true)} /></label>
 			</div>
 			<div>
 				<label>

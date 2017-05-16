@@ -23,18 +23,46 @@ const BlockSocial = ({ blockOptions }) => {
 									<td
 									style={blockOptions.elements[0]}
 									>
-										<a target="_blank" style={{
+										<a
+										target="_blank"
+										href={blockOptions.elements[0].ok_link}
+										title={blockOptions.elements[0].ok_link}
+										style={{
 											"display": blockOptions.elements[0].ok_display
-										}} href={blockOptions.elements[0].ok_link}><img alt="ok" src={`${imgLocation}${blockOptions.elements[0].ok_source}`} /></a>
-										<a target="_blank" style={{
+										}}
+										>
+											<img alt="ok" src={`${imgLocation}${blockOptions.elements[0].ok_source}`} />
+										</a>
+										<a
+										target="_blank"
+										href={blockOptions.elements[0].vk_link}
+										title={blockOptions.elements[0].vk_link}
+										style={{
 											"display": blockOptions.elements[0].vk_display
-										}} href={blockOptions.elements[0].vk_link}><img alt="vk" src={`${imgLocation}${blockOptions.elements[0].vk_source}`} /></a>
-										<a target="_blank" style={{
+										}}
+										>
+											<img alt="vk" src={`${imgLocation}${blockOptions.elements[0].vk_source}`} />
+										</a>
+										<a
+										target="_blank"
+										href={blockOptions.elements[0].youtube_link}
+										title={blockOptions.elements[0].youtube_link}
+										style={{
 											"display": blockOptions.elements[0].youtube_display
-										}} href={blockOptions.elements[0].youtube_link}><img alt="fb" src={`${imgLocation}${blockOptions.elements[0].youtube_source}`} /></a>
-										<a target="_blank" style={{
+										}}
+										>
+											<img alt="fb" src={`${imgLocation}${blockOptions.elements[0].youtube_source}`} />
+										</a>
+										<a
+										target="_blank"
+										href={blockOptions.elements[0].facebook_link}
+										title={blockOptions.elements[0].facebook_link}
+										style={{
 											"display": blockOptions.elements[0].facebook_display
-										}} href={blockOptions.elements[0].facebook_link}><img alt="yt" src={`${imgLocation}${blockOptions.elements[0].facebook_source}`} /></a>
+										}}
+										>
+											<img alt="yt" src={`${imgLocation}${blockOptions.elements[0].facebook_source}`} />
+										</a>
 									</td>
 								</tr>
 							</tbody>

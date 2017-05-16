@@ -62,15 +62,36 @@ const BlockFeedbackText = connect(
 											textAlign: blockOptions.elements[0].float
 										}}
 									>
-										<a target="_blank" style={{
+										<a
+										target="_blank"
+										href={blockOptions.elements[0].like_link}
+										title={blockOptions.elements[0].like_link}
+										style={{
 											"display": blockOptions.elements[0].like_display
-										}} href={blockOptions.elements[0].like_link}><img alt="like" src={`${imgLocation}${blockOptions.elements[0].like_source}`} /></a>
-										<a target="_blank" style={{
+										}}
+										>
+											<img alt="like" src={`${imgLocation}${blockOptions.elements[0].like_source}`} />
+										</a>
+										<a
+										target="_blank"
+										href={blockOptions.elements[0].neutral_link}
+										title={blockOptions.elements[0].neutral_link}
+										style={{
 											"display": blockOptions.elements[0].neutral_display
-										}} href={blockOptions.elements[0].neutral_link}><img alt="neutral" src={`${imgLocation}${blockOptions.elements[0].neutral_source}`} /></a>
-										<a target="_blank" style={{
+										}}
+										>
+											<img alt="neutral" src={`${imgLocation}${blockOptions.elements[0].neutral_source}`} />
+										</a>
+										<a
+										target="_blank"
+										href={blockOptions.elements[0].dislike_link}
+										title={blockOptions.elements[0].dislike_link}
+										style={{
 											"display": blockOptions.elements[0].dislike_display
-										}} href={blockOptions.elements[0].dislike_link}><img alt="dislike" src={`${imgLocation}${blockOptions.elements[0].dislike_source}`} /></a>
+										}}
+										>
+											<img alt="dislike" src={`${imgLocation}${blockOptions.elements[0].dislike_source}`} />
+										</a>
 									</td>
 								</tr>
 							</tbody>

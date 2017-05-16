@@ -21,11 +21,11 @@
 				"container": {
 					"padding": "2%",
 					"color": "#333333",
+					"fontSize": "32px",
 					"backgroundColor": "#FFFFFF"
 				},
 				"elements": [{
 					"text": "Header",
-					"fontSize": "32px",
 					"fontWeight": "bold",
 					"textAlign": "center"
 				}]
@@ -38,6 +38,7 @@
 				"container": {
 					"padding": "2%",
 					"color": "#333333",
+					"fontSize": "16px",
 					"backgroundColor": "#FFFFFF"
 				},
 				"elements": [{
@@ -52,6 +53,7 @@
 				"container": {
 					"padding": "2%",
 					"color": "#333333",
+					"fontSize": "16px",
 					"backgroundColor": "#FFFFFF"
 				},
 				"elements": [{

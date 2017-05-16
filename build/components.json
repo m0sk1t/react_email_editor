@@ -8,12 +8,12 @@
 					"container": {
 						"padding": "2%",
 						"color": "#333333",
+						"fontSize": "32px",
 						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
 						"text": "Header",
-						"fontSize": "32px",
 						"fontWeight": "bold",
 						"textAlign": "center"
 					}]
@@ -45,6 +45,7 @@
 					"container": {
 						"padding": "2%",
 						"color": "#333333",
+						"fontSize": "24px",
 						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
 					},
@@ -66,6 +67,7 @@
 				"options": {
 					"container": {
 						"padding": "2%",
+						"fontSize": "16px",
 						"color": "#333333",
 						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
@@ -83,6 +85,7 @@
 				"options": {
 					"container": {
 						"padding": "2%",
+						"fontSize": "16px",
 						"color": "#333333",
 						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
@@ -110,6 +113,7 @@
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
+						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					}]
 				}
@@ -127,8 +131,10 @@
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
+						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					},{
+						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					}]
 				}
@@ -146,10 +152,13 @@
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
+						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					},{
+						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					},{
+						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					}]
 				}
@@ -163,12 +172,14 @@
 					"container": {
 						"padding": "2%",
 						"color": "#333333",
+						"fontSize": "16px",
 						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
 						"width": "25%",
 						"float": "left",
+						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					},
 					{
@@ -215,6 +226,7 @@
 					"container": {
 						"padding": "2%",
 						"color": "#333333",
+						"fontSize": "16px",
 						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
 					},
@@ -274,6 +286,7 @@
 					"container": {
 						"padding": "2%",
 						"color": "#333333",
+						"fontSize": "16px",
 						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
 					},
