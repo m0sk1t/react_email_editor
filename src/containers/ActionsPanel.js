@@ -7,6 +7,7 @@ const mapStateToProps = (state) => {
 		id: state.templateId,
 		language: state.language,
 		template: state.template,
+		templateName: state.common.templateName,
 	};
 };
 
@@ -15,8 +16,8 @@ const mapDispatchToProps = (dispatch) => {
 		sendTestEmail: (email, html) => {
 			dispatch(sendTestEmail(email, html));
 		},
-		saveTemplate: (id, html, template) => {
-			dispatch(saveTemplate(id, html, template));
+		saveTemplate: (id, html, name, template) => {
+			dispatch(saveTemplate(id, html, name, template));
 		}
 	};
 };
@@ -24,7 +25,7 @@ const mapDispatchToProps = (dispatch) => {
 const ActionsPanel = connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(({ id, language, template, saveTemplate, sendTestEmail }) => {
+)(({ id, language, template, templateName, saveTemplate, sendTestEmail }) => {
 	const buttonStyle = {
 		'width': '3rem',
 		'margin': '1rem',
@@ -42,7 +43,7 @@ const ActionsPanel = connect(
 	return (
 		<div
 		style={{
-			'top': '1rem',
+			'top': '3rem',
 			'right': '5%',
 			'position': 'fixed',
 		}}
@@ -69,7 +70,7 @@ const ActionsPanel = connect(
 					${emailSource}
 					</body>
 					</html>`;
-				saveTemplate(id, html, template);
+				saveTemplate(id, html, templateName, template);
 			}}
 			>&#x2714;</span>
 			<span

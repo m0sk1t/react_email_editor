@@ -53,6 +53,13 @@ export const stylizeAll = (propertyName, propertyValue) => {
 	};
 };
 
+export const setTemplateName = (templateName) => {
+	return {
+		type: 'SET_TEMPLATE_NAME',
+		templateName,
+	};
+};
+
 export const setVisible = (tab) => {
 	return {
 		type: 'SET_VISIBLE',
@@ -80,11 +87,12 @@ export const addImage = (block, index, file) => {
 	};
 };
 
-export const saveTemplate = (id, html, template) => {
+export const saveTemplate = (id, html, name, template) => {
 	return {
 		type: 'SAVE_TEMPLATE',
 		template,
 		html,
+		name,
 		id,
 	};
 };

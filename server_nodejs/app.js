@@ -22,7 +22,7 @@ e.use(serveFavicon(path.join(__dirname, '/build/favicon.ico')));
 
 
 e.use(require(path.join(__dirname, '/app/Router.js')));
-e.listen(8888, () => {
+e.listen(7777, () => {
 	mongoose.Promise = global.Promise;
 
 	console.log(`Server started at: ${new Date()}, path: http://localhost:8888/`);

@@ -1,6 +1,12 @@
 import React from 'react';
 
 const OptionsHeader = ({ block, language, onPropChange }) => {
+	const aligns = {
+		"left": "0",
+		"right": "2",
+		"center": "1",
+	}
+	const initialAlign = aligns[block.options.elements[0].textAlign];
 	return (
 		<div>
 			<div>
@@ -9,7 +15,7 @@ const OptionsHeader = ({ block, language, onPropChange }) => {
 			<div>
 				<label>
 					{language["Align"]}:
-					<input type="range" min="0" max="2" step="1" onChange={(e) => {
+					<input type="range" value={initialAlign} min="0" max="2" step="1" onChange={(e) => {
 						let align = '';
 						switch (+e.target.value) {
 							case 0:
@@ -41,7 +47,7 @@ const OptionsHeader = ({ block, language, onPropChange }) => {
 			<div>
 				<label>
 					{language["Font family"]}:
-					<select style={{width: '50%'}} onChange={(e) => onPropChange('fontFamily', e.target.value, true, 0)}>
+					<select style={{width: '50%'}} onChange={(e) => onPropChange('fontFamily', e.target.value, true)}>
 						<option value='Georgia, serif'>Georgia, serif</option>
 						<option value='Tahoma, Geneva, sans-serif'>Tahoma, Geneva, sans-serif</option>
 						<option value='Verdana, Geneva, sans-serif'>Verdana, Geneva, sans-serif</option>

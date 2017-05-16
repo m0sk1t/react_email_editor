@@ -39,6 +39,7 @@ const App = connect(
 			'zIndex': 1,
 			'width': '25%',
 			'height': '100%',
+			'position': 'fixed',
 			'backgroundColor': '#FAFAFA',
 			'fontFamily': "'Play', sans-serif",
 			'boxShadow': 'rgb(102, 102, 102) 3px 3px 10px 1px'
@@ -51,7 +52,7 @@ const App = connect(
 		</div>
 		<div
 		style={{
-			'width': '75%',
+			'width': '100%',
 			'height': '100%',
 			'overflowY': 'auto',
 			'backgroundColor': '#EEEEEE'

@@ -8,6 +8,7 @@ function* loadLanguage() {
 		const res = yield getLanguage().then(res => res);
 		yield put({type: 'LANGUAGE_LOADED', language: res});
 	} catch(e) {
+		console.error(e);
 		window.showMessage('error', e, messageTimeout);
 	}
 };
@@ -16,7 +17,9 @@ function* loadTemplate(action) {
 	try {
 		const res = yield getTemplate(action.templateId).then(res => res);
 		yield put({type: 'TEMPLATE_LOADED', template: res.template});
+		yield put({type: 'SET_TEMPLATE_NAME', templateName: res.name});
 	} catch(e) {
+		console.error(e);
 		window.showMessage('error', e, messageTimeout);
 	}
 };
@@ -24,9 +27,10 @@ function* loadTemplate(action) {
 function* uploadTemplate(action) {
 	try {
 		const res = yield saveTemplate(action).then(res => res);
-		yield put({type: 'TEMPLATE_SAVED', templateId: res._id});
-		window.showMessage('ok', `Template saved. ID: ${res._id}`, messageTimeout);
+		yield put({type: 'TEMPLATE_SAVED', templateId: res.id});
+		window.showMessage('ok', `Template saved. ID: ${res.id}`, messageTimeout);
 	} catch(e) {
+		console.error(e);
 		window.showMessage('error', e, messageTimeout);
 	}
 };
@@ -37,6 +41,7 @@ function* uploadImage(action) {
 		yield put({type: 'IMAGE_ADDED', block: action.block, index: action.index, image: res.url});
 		window.showMessage('ok', 'Image upload success', messageTimeout);
 	} catch(e) {
+		console.error(e);
 		window.showMessage('error', e, messageTimeout);
 	}
 };
@@ -46,6 +51,7 @@ function* loadComponents(action) {
 		const res = yield getComponents().then(res => res);
 		yield put({type: 'COMPONENTS_LOADED', components: res.components});
 	} catch(e) {
+		console.error(e);
 		window.showMessage('error', e, messageTimeout);
 	}
 };
@@ -55,6 +61,7 @@ function* sendEmail(action) {
 		const res = yield sendTestEmail(action).then(res => res);
 		window.showMessage('ok', `Email successfully sended. Status: ${res.msg}`, messageTimeout);
 	} catch(e) {
+		console.error(e);
 		window.showMessage('error', e, messageTimeout);
 	}
 };

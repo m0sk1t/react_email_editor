@@ -9,13 +9,19 @@ const OptionsImage = ({ block, language, onFileChange, onPropChange }) => {
 			<div>
 				<label>
 					{language["URL"]}:
-					<input
-						type="file"
-						onChange={(e) => {
-							onFileChange(block, 0, e.target.files[0]);
-						}} />
+					<label>
+						<input
+							type="file"
+							onChange={(e) => {
+								onFileChange(block, 0, e.target.files[0]);
+							}} />
+						<div>&#8853;</div>
+					</label>
 					<input type="text" value={block.options.elements[0].source} onChange={(e) => onPropChange('source', e.target.value, false, 0)} />
 				</label>
+			</div>
+			<div>
+				<label>{language["Link"]}: <input type="text" value={block.options.elements[0].link} onChange={(e) => onPropChange('link', e.target.value, false, 0)} /></label>
 			</div>
 			<div>
 				<label>{language["Add paddings"]}: <input type="checkbox" checked={block.options.container.padding === '0'? '': 'checked'} onChange={(e) => onPropChange('padding', (block.options.container.padding === '0'? '2%': '0'), true)} /></label>

@@ -12,13 +12,58 @@ const BlockImage3x = ({ blockOptions }) => {
 			<tbody>
 				<tr>
 					<td>
-						<img alt={alt} width="100%" height="" src={blockOptions.elements[0].source} />
+						<a
+							href={blockOptions.elements[0].link}
+							target="_blank"
+						>
+							<img
+							alt={alt}
+							width="100%"
+							height=""
+							src={blockOptions.elements[0].source}
+							style={{
+								borderRadius: blockOptions.elements[0].borderRadius,
+								width: blockOptions.container.usePadding? '98%':' 100%',
+								padding: blockOptions.container.usePadding? '2% 2% 2% 0': '0'
+							}}
+							/>
+						</a>
 					</td>
 					<td>
-						<img alt={alt} width="100%" height="" src={blockOptions.elements[1].source} />
+						<a
+							href={blockOptions.elements[1].link}
+							target="_blank"
+						>
+							<img
+							alt={alt}
+							width="100%"
+							height=""
+							src={blockOptions.elements[1].source}
+							style={{
+								borderRadius: blockOptions.elements[0].borderRadius,
+								width: blockOptions.container.usePadding? '98%':' 100%',
+								padding: blockOptions.container.usePadding? '2% 0 2% 0': '0'
+							}}
+							/>
+						</a>
 					</td>
 					<td>
-						<img alt={alt} width="100%" height="" src={blockOptions.elements[2].source} />
+						<a
+							href={blockOptions.elements[2].link}
+							target="_blank"
+						>
+							<img
+							alt={alt}
+							width="100%"
+							height=""
+							src={blockOptions.elements[2].source}
+							style={{
+								borderRadius: blockOptions.elements[0].borderRadius,
+								width: blockOptions.container.usePadding? '98%':' 100%',
+								padding: blockOptions.container.usePadding? '2% 2% 2% 0': '0'
+							}}
+							/>
+						</a>
 					</td>
 				</tr>
 			</tbody>

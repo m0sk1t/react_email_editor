@@ -11,7 +11,7 @@ router.post('/send', sendEmail);
 
 router.get('/template/:id', getTemplate);
 
-router.post('/template/:id', setTemplate);
+router.post('/template/:id', multipart(), setTemplate);
 
 router.post('/image', multipart({ uploadDir: 'uploads/uploads' }), uploadImage);
 

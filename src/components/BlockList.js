@@ -45,6 +45,7 @@ const BlockList = connect(
 				'height': '100%',
 				'display': 'flex',
 				'overflowY': 'auto',
+				'paddingLeft': '25%',
 				'justifyContent': 'center',
 			}}
 		>
@@ -66,9 +67,19 @@ const BlockList = connect(
 								'boxShadow': block.selected?'#4CAF50 0px 0px 3px 7px':''
 							}}
 							onClick={(e) => {e.stopPropagation(); selectBlock(block.id);}}
-							onDragOver={ev => ev.preventDefault()}
+							onDragOver={ev => {
+									ev.preventDefault();
+									Array.prototype.forEach.call(document.querySelectorAll('.ree_single_block'), (el) => {
+										el.classList.remove('block__hovered');
+									});
+									ev.target.closest('.ree_single_block').classList.add('block__hovered');
+								}
+							}
 							onDragStart={() => blockDragged = block.id}
 							onDrop={() => {
+									Array.prototype.forEach.call(document.querySelectorAll('.ree_single_block'), (el) => {
+										el.classList.remove('block__hovered');
+									});
 									if (blockDragged) {
 										onDrop(blockDragged, index);
 									} else {
@@ -80,6 +91,7 @@ const BlockList = connect(
 							}
 						>
 							<td
+								className="ree_single_block"
 								style={block.options.container}
 							>
 							<Block

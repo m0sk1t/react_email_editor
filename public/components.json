@@ -110,6 +110,7 @@
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
+						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					}]
 				}
@@ -127,8 +128,10 @@
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
+						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					},{
+						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					}]
 				}
@@ -146,10 +149,13 @@
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
+						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					},{
+						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					},{
+						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					}]
 				}
@@ -169,6 +175,7 @@
 					"elements": [{
 						"width": "25%",
 						"float": "left",
+						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					},
 					{

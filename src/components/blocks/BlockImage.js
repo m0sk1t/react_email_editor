@@ -12,7 +12,11 @@ const BlockImage = ({ blockOptions }) => {
 			<tbody>
 				<tr>
 					<td>
-						<img alt={alt} width="100%" height="" src={blockOptions.elements[0].source} />
+						<a
+						href={blockOptions.elements[0].link}
+						target="_blank">
+							<img alt={alt} width="100%" height="" src={blockOptions.elements[0].source} />
+						</a>
 					</td>
 				</tr>
 			</tbody>

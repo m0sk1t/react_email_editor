@@ -1,26 +1,27 @@
-const noCors = { "mode": "no-cors" };
-const headersJSON = new Headers({
-	'Accept': 'application/json',
-	'Content-Type': 'application/json'
-});
-// const apiEndpoint = "http://localhost:8888";
-const apiEndpoint = "";
+window.wp && (window.wp.ajax.settings.url = window.ajaxurl);
+const rootPath = document.location.href.indexOf('page=nm_email_editor') === -1? '/': `${document.location.origin}/wp-content/plugins/newsmine/include/email_editor/`;
 
 export const getLanguage = () => {
 	const lang = /^\w+/.exec(navigator.language)[0];
-	return fetch(`/translations/lang.${lang}.json`, { ...noCors })
-		.then(res => res.json())
-		.then(json => json)
-};
-
-export const getTemplate = (templateId) => {
-	return fetch(templateId?`${apiEndpoint}/template/${templateId}`:`/template.json`, { ...noCors })
+	return fetch(`${rootPath}translations/lang.${lang}.json`)
 		.then(res => res.json())
 		.then(json => json)
 };
 
 export const getComponents = () => {
-	return fetch(`/components.json`, { ...noCors })
+	return fetch(`${rootPath}components.json`)
+		.then(res => res.json())
+		.then(json => json)
+};
+
+export const getTemplate = (templateId) => {
+	var formData = new FormData();
+	formData.append('id', templateId);
+	formData.append('action', 'ee_get_template');
+	return fetch(templateId?window.ajaxurl:`${rootPath}template.json`, {
+		method: templateId?'POST':'GET',
+		body: templateId?formData:null,
+	})
 		.then(res => res.json())
 		.then(json => json)
 };
@@ -28,36 +29,43 @@ export const getComponents = () => {
 export const saveImage = (file) => {
 	var formData = new FormData();
 	formData.append('file', file);
+	formData.append('action', 'ee_save_image');
 	const params = {
 		method: 'POST',
 		body: formData,
-		...noCors,
 	};
-	return fetch(`${apiEndpoint}/image`, params)
+	return fetch(window.ajaxurl, params)
 		.then(res => res.json())
 		.then(json => json)
 };
 
-export const saveTemplate = ({ id, html, template }) => {
+export const saveTemplate = ({ id, html, name, template }) => {
+	var formData = new FormData();
+	formData.append('template', JSON.stringify(template));
+	formData.append('action', 'ee_save_template');
+	formData.append('html', html);
+	formData.append('name', name);
+	formData.append('id', id);
 	const params = {
-		...noCors,
+		mode: 'no-cors',
 		method: 'POST',
-		headers: headersJSON,
-		body: JSON.stringify({ html, template })
+		body: formData
 	};
-	return fetch(`${apiEndpoint}/template/${id||'null'}`, params)
+	return fetch(window.ajaxurl, params)
 		.then(res => res.json())
 		.then(json => json)
 };
 
 export const sendTestEmail = ({ email, html }) => {
+	var formData = new FormData();
+	formData.append('action', 'ee_send_email');
+	formData.append('email', email);
+	formData.append('html', html);
 	const params = {
-		...noCors,
 		method: 'POST',
-		headers: headersJSON,
-		body: JSON.stringify({ email, html })
+		body: formData
 	};
-	return fetch(`${apiEndpoint}/send`, params)
+	return fetch(window.ajaxurl, params)
 		.then(res => res.json())
 		.then(json => json)
 };
