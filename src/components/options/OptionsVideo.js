@@ -1,27 +1,28 @@
 import React from 'react';
 
-const OptionsImage = ({ block, language, onFileChange, onPropChange }) => {
+const OptionsVideo = ({ block, language, onFileChange, onPropChange }) => {
 	return (
 		<div>
 			<div>
 				<label>{language["Custom style"]}: <input type="checkbox" checked={block.options.container.customStyle? 'checked': '' } onChange={(e) => onPropChange('customStyle', !block.options.container.customStyle, true)} /></label>
 			</div>
 			<div>
-				<label>
-					{language["URL"]}:
-					<label>
-						<input
-							type="file"
-							onChange={(e) => {
-								onFileChange(block, 0, e.target.files[0]);
-							}} />
-						<div>&#8853;</div>
-					</label>
-					<input type="text" value={block.options.elements[0].source} onChange={(e) => onPropChange('source', e.target.value, false, 0)} />
-				</label>
-			</div>
-			<div>
-				<label>{language["Link"]}: <input type="text" value={block.options.elements[0].link} onChange={(e) => onPropChange('link', e.target.value, false, 0)} /></label>
+				<label>{language["Link"]}:
+				<input
+				type="text"
+				value={block.options.elements[0].link}
+				onChange={(e) => {
+					let videoId = '';
+					switch (true) {
+						case e.target.value.trim().indexOf('https://www.youtube.com/') === 0:
+							videoId = e.target.value.trim().split('https://www.youtube.com/watch?v=')[1];
+							break;
+						default:
+							return alert('Тип видеохостинга пока не поддерживается');
+					}
+					onPropChange('link', e.target.value.trim(), false, 0);
+					onPropChange('source', videoId, false, 0);
+				}} /></label>
 			</div>
 			<div>
 				<label>
@@ -42,4 +43,4 @@ const OptionsImage = ({ block, language, onFileChange, onPropChange }) => {
 	);
 };
 
-export default OptionsImage;
+export default OptionsVideo;

@@ -4,7 +4,7 @@ const BlockImage3x = ({ blockOptions }) => {
 	const alt = "cool image!";
 	return (
 		<table
-			width="100%"
+			width="550"
 			cellPadding="0"
 			cellSpacing="0"
 			role="presentation"
@@ -18,13 +18,12 @@ const BlockImage3x = ({ blockOptions }) => {
 						>
 							<img
 							alt={alt}
-							width="100%"
-							height=""
 							src={blockOptions.elements[0].source}
+							width={blockOptions.container.usePadding? '180px':'183px'}
 							style={{
 								borderRadius: blockOptions.elements[0].borderRadius,
-								width: blockOptions.container.usePadding? '98%':' 100%',
-								padding: blockOptions.container.usePadding? '2% 2% 2% 0': '0'
+								width: blockOptions.container.usePadding? '180px':'183px',
+								padding: blockOptions.container.usePadding? '10px 5px 10px 0': '0'
 							}}
 							/>
 						</a>
@@ -36,13 +35,12 @@ const BlockImage3x = ({ blockOptions }) => {
 						>
 							<img
 							alt={alt}
-							width="100%"
-							height=""
 							src={blockOptions.elements[1].source}
+							width={blockOptions.container.usePadding? '180px':'183px'}
 							style={{
 								borderRadius: blockOptions.elements[0].borderRadius,
-								width: blockOptions.container.usePadding? '98%':' 100%',
-								padding: blockOptions.container.usePadding? '2% 0 2% 0': '0'
+								width: blockOptions.container.usePadding? '180px':'183px',
+								padding: blockOptions.container.usePadding? '10px 5px 10px 5px': '0'
 							}}
 							/>
 						</a>
@@ -54,13 +52,12 @@ const BlockImage3x = ({ blockOptions }) => {
 						>
 							<img
 							alt={alt}
-							width="100%"
-							height=""
 							src={blockOptions.elements[2].source}
+							width={blockOptions.container.usePadding? '180px':'183px'}
 							style={{
 								borderRadius: blockOptions.elements[0].borderRadius,
-								width: blockOptions.container.usePadding? '98%':' 100%',
-								padding: blockOptions.container.usePadding? '2% 2% 2% 0': '0'
+								width: blockOptions.container.usePadding? '180px':'183px',
+								padding: blockOptions.container.usePadding? '10px 0 10px 5px': '0'
 							}}
 							/>
 						</a>

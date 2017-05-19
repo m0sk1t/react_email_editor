@@ -5,11 +5,12 @@
 			"block_type": "image",
 			"options": {
 				"container": {
-					"padding": "2%",
+					"padding": "10px",
 					"color": "#333333",
 					"backgroundColor": "#FFFFFF"
 				},
 				"elements": [{
+					"width": "550px",
 					"source": "https://www.w3schools.com/css/trolltunga.jpg"
 				}]
 			}
@@ -19,7 +20,7 @@
 			"block_type": "header",
 			"options": {
 				"container": {
-					"padding": "2%",
+					"padding": "10px",
 					"color": "#333333",
 					"fontSize": "32px",
 					"backgroundColor": "#FFFFFF"
@@ -36,7 +37,7 @@
 			"block_type": "text",
 			"options": {
 				"container": {
-					"padding": "2%",
+					"padding": "10px",
 					"color": "#333333",
 					"fontSize": "16px",
 					"backgroundColor": "#FFFFFF"
@@ -51,18 +52,18 @@
 			"block_type": "image_text",
 			"options": {
 				"container": {
-					"padding": "2%",
+					"padding": "10px",
 					"color": "#333333",
 					"fontSize": "16px",
 					"backgroundColor": "#FFFFFF"
 				},
 				"elements": [{
-						"width": "35%",
+						"width": "275px",
 						"float": "left",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					},
 					{
-						"width": "65%",
+						"width": "270px",
 						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu felis sit amet justo ullamcorper malesuada vitae nec odio. Duis suscipit, ligula in sollicitudin luctus, turpis purus bibendum lorem, in blandit nibh ipsum sit amet dui. Mauris nibh quam, commodo at ligula nec, volutpat euismod risus. Morbi nec nibh enim."
 					}]
 			}

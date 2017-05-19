@@ -1,4 +1,10 @@
 window.wp && (window.wp.ajax.settings.url = window.ajaxurl);
+const headers = new Headers({
+	'Accept': 'aplication/json',
+	// 'Content-type': 'multipart/form-data'
+	'Content-type': 'application/x-www-form-urlencoded'
+	// 'Content-type': 'aplication/json;charset=UTF-8'
+})
 const rootPath = document.location.href.indexOf('page=nm_email_editor') === -1? '/': `${document.location.origin}/wp-content/plugins/newsmine/include/email_editor/`;
 
 export const getLanguage = () => {
@@ -15,57 +21,52 @@ export const getComponents = () => {
 };
 
 export const getTemplate = (templateId) => {
-	var formData = new FormData();
-	formData.append('id', templateId);
-	formData.append('action', 'ee_get_template');
-	return fetch(templateId?window.ajaxurl:`${rootPath}template.json`, {
-		method: templateId?'POST':'GET',
-		body: templateId?formData:null,
-	})
+	return fetch(new Request(templateId?window.ajaxurl:`${rootPath}template.json`, {
+			headers,
+			method: templateId?'POST':'GET',
+			body: templateId?encodeURI(`id=${templateId}&action=ee_get_template`):null,
+		}))
 		.then(res => res.json())
 		.then(json => json)
 };
 
 export const saveImage = (file) => {
-	var formData = new FormData();
+	let formData = new FormData();
 	formData.append('file', file);
 	formData.append('action', 'ee_save_image');
 	const params = {
 		method: 'POST',
-		body: formData,
+		body: formData
 	};
-	return fetch(window.ajaxurl, params)
+	return fetch(new Request(window.ajaxurl, params))
 		.then(res => res.json())
 		.then(json => json)
 };
 
 export const saveTemplate = ({ id, html, name, template }) => {
-	var formData = new FormData();
-	formData.append('template', JSON.stringify(template));
-	formData.append('action', 'ee_save_template');
-	formData.append('html', html);
-	formData.append('name', name);
-	formData.append('id', id);
 	const params = {
-		mode: 'no-cors',
+		headers,
 		method: 'POST',
-		body: formData
-	};
-	return fetch(window.ajaxurl, params)
+		body:	encodeURI(`id=${id||0}
+				&html=${html}
+				&name=${name}
+				&template=${JSON.stringify(template)}
+				&action=ee_save_template`),
+	}
+	return fetch(new Request(window.ajaxurl, params))
 		.then(res => res.json())
 		.then(json => json)
 };
 
 export const sendTestEmail = ({ email, html }) => {
-	var formData = new FormData();
-	formData.append('action', 'ee_send_email');
-	formData.append('email', email);
-	formData.append('html', html);
 	const params = {
+		headers,
 		method: 'POST',
-		body: formData
+		body:	encodeURI(`html=${html}
+				&email=${email}
+				&action=ee_send_email`),
 	};
-	return fetch(window.ajaxurl, params)
+	return fetch(new Request(window.ajaxurl, params))
 		.then(res => res.json())
 		.then(json => json)
 };

@@ -4,7 +4,7 @@ const BlockFeedback = ({ blockOptions }) => {
 	const imgLocation = document.location.href.indexOf('nm_email_editor') > 0? `${document.location.origin}/wp-content/plugins/newsmine/include/email_editor/`: '/';
 	return (
 		<table
-			width="100%"
+			width="550"
 			cellPadding="0"
 			cellSpacing="0"
 			role="presentation"

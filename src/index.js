@@ -15,6 +15,7 @@ document.location.search.substring(1).split('&').map(el => el.indexOf('id=') !==
 const store = createStore(todoApp, {
 	templateId,
 	'common': {
+		'fontSize': '16',
 		'templateName': '',
 		'color': '#333333',
 		'backgroundColor': '#FFFFFF',

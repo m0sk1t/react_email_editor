@@ -25,12 +25,15 @@ const BlockText2x = connect(
 		window.tinymce.init({
 			selector: `#id_${id} td.editable_${node}`,
 			inline: true,
-			plugins: [
-			'advlist autolink lists link image charmap anchor',
-			'searchreplace visualblocks code fullscreen',
-			'insertdatetime media table contextmenu'
-			],
-			toolbar: 'insertfile | styleselect | bold italic | bullist numlist | link image',
+			menubar: false,
+			paste_as_text: true,
+			preview_styles: false,
+			plugins: ["link hr paste lists textcolor code"],
+			toolbar: "bold italic forecolor backcolor hr styleselect removeformat | link unlink | pastetext code",
+			paste_postprocess : function(pl, o) {
+				o.node.innerHTML = o.node.innerHTML.replace(/&nbsp;/ig, " ");
+				o.node.innerHTML = o.node.innerHTML.replace(/&quot;/ig, "\"");
+			},
 			init_instance_callback: (editor) => {
 				editor.on('change', function (e) {
 					onPropChange('text', e.target.targetElm.innerHTML, false, 0);
@@ -40,7 +43,7 @@ const BlockText2x = connect(
 	};
 	return (
 		<table
-			width="100%"
+			width="550"
 			cellPadding="0"
 			cellSpacing="0"
 			role="presentation"

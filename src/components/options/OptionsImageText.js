@@ -2,6 +2,7 @@ import React from 'react';
 
 const OptionsImageText = ({ block, language, onFileChange, onPropChange }) => {
 	const fontSize = block.options.container.fontSize.match(/\d+/)?block.options.container.fontSize.match(/\d+/)[0]: '16';
+	const imageSize = block.options.elements[0].width === '136px'? 'small': (block.options.elements[0].width === '192px'? 'middle': 'big');
 	return (
 		<div>
 			<div>
@@ -10,11 +11,14 @@ const OptionsImageText = ({ block, language, onFileChange, onPropChange }) => {
 			<div>
 				<label>
 					{language["URL"]}:
-					<input
-						type="file"
-						onChange={(e) => {
-							onFileChange(block, 0, e.target.files[0]);
-						}} />
+					<label>
+						<input
+							type="file"
+							onChange={(e) => {
+								onFileChange(block, 0, e.target.files[0]);
+							}} />
+						<div>&#8853;</div>
+					</label>
 					<input type="text" value={block.options.elements[0].source} onChange={(e) => onPropChange('source', e.target.value, false, 0)} />
 				</label>
 			</div>
@@ -26,19 +30,19 @@ const OptionsImageText = ({ block, language, onFileChange, onPropChange }) => {
 			</div>
 			<div>
 				<label>{language["Image size"]}:
-				<select onChange={(e) => {
+				<select value={imageSize} onChange={(e) => {
 					switch (e.target.value) {
 						case 'small':
-							onPropChange('width', '25%', false, 0);
-							onPropChange('width', '75%', false, 1);
+							onPropChange('width', '136px', false, 0);
+							onPropChange('width', '410px', false, 1);
 							break;
 						case 'middle':
-							onPropChange('width', '35%', false, 0);
-							onPropChange('width', '65%', false, 1);
+							onPropChange('width', '192px', false, 0);
+							onPropChange('width', '350px', false, 1);
 							break;
 						case 'big':
-							onPropChange('width', '50%', false, 0);
-							onPropChange('width', '50%', false, 1);
+							onPropChange('width', '275px', false, 0);
+							onPropChange('width', '270px', false, 1);
 							break;
 						default:
 							break;

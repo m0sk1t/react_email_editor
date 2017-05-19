@@ -9,11 +9,14 @@ const OptionsImage3x = ({ block, language, onFileChange, onPropChange }) => {
 			<div>
 				<label>
 					{language["URL"]} 1:
-					<input
-						type="file"
-						onChange={(e) => {
-							onFileChange(block, 0, e.target.files[0]);
-						}} />
+					<label>
+						<input
+							type="file"
+							onChange={(e) => {
+								onFileChange(block, 0, e.target.files[0]);
+							}} />
+						<div>&#8853;</div>
+					</label>
 					<input type="text" value={block.options.elements[0].source} onChange={(e) => onPropChange('source', e.target.value, false, 0)} />
 				</label>
 			</div>
@@ -23,11 +26,14 @@ const OptionsImage3x = ({ block, language, onFileChange, onPropChange }) => {
 			<div>
 				<label>
 					{language["URL"]} 2:
-					<input
-						type="file"
-						onChange={(e) => {
-							onFileChange(block, 1, e.target.files[0]);
-						}} />
+					<label>
+						<input
+							type="file"
+							onChange={(e) => {
+								onFileChange(block, 1, e.target.files[0]);
+							}} />
+						<div>&#8853;</div>
+					</label>
 					<input type="text" value={block.options.elements[1].source} onChange={(e) => onPropChange('source', e.target.value, false, 1)} />
 				</label>
 			</div>
@@ -37,11 +43,14 @@ const OptionsImage3x = ({ block, language, onFileChange, onPropChange }) => {
 			<div>
 				<label>
 					{language["URL"]} 3:
-					<input
-						type="file"
-						onChange={(e) => {
-							onFileChange(block, 2, e.target.files[0]);
-						}} />
+					<label>
+						<input
+							type="file"
+							onChange={(e) => {
+								onFileChange(block, 2, e.target.files[0]);
+							}} />
+						<div>&#8853;</div>
+					</label>
 					<input type="text" value={block.options.elements[2].source} onChange={(e) => onPropChange('source', e.target.value, false, 2)} />
 				</label>
 			</div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { saveTemplate, sendTestEmail } from '../actions';
+import { saveTemplate, sendTestEmail, deselectBlocks } from '../actions';
 
 const mapStateToProps = (state) => {
 	return {
@@ -14,9 +14,11 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
 	return {
 		sendTestEmail: (email, html) => {
+			deselectBlocks();
 			dispatch(sendTestEmail(email, html));
 		},
 		saveTemplate: (id, html, name, template) => {
+			deselectBlocks();
 			dispatch(saveTemplate(id, html, name, template));
 		}
 	};
@@ -53,24 +55,10 @@ const ActionsPanel = connect(
 			title={language["Save template"]}
 			onClick={() => {
 				const emailSource = document.querySelector('#rootTable').innerHTML;
-				const html = `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-					<html>
-					<head>
-					<meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
-					<style type="text/css">
-					table {border-collapse:separate;}
-					a, a:link, a:visited {text-decoration: none; color: #00788a;} 
-					a:hover {text-decoration: underline;}
-					h2,h2 a,h2 a:visited,h3,h3 a,h3 a:visited,h4,h5,h6,.t_cht {color:#000 !important;}
-					.ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td {line-height: 100%;}
-					.ExternalClass {width: 100%;}
-					</style>
-					</head>
-					<body style="text-align: center">
-					${emailSource}
-					</body>
-					</html>`;
-				saveTemplate(id, html, templateName, template);
+				if (!templateName) {
+					return alert('Имя шаблона не задано! Перейдите на вкладку "Общие"');
+				}
+				saveTemplate(id || 0, emailSource, templateName, template);
 			}}
 			>&#x2714;</span>
 			<span
@@ -78,25 +66,8 @@ const ActionsPanel = connect(
 			style={buttonStyle}
 			onClick={() => {
 				const emailSource = document.querySelector('#rootTable').innerHTML;
-				const html = `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-					<html>
-					<head>
-					<meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
-					<style type="text/css">
-					table {border-collapse:separate;}
-					a, a:link, a:visited {text-decoration: none; color: #00788a;} 
-					a:hover {text-decoration: underline;}
-					h2,h2 a,h2 a:visited,h3,h3 a,h3 a:visited,h4,h5,h6,.t_cht {color:#000 !important;}
-					.ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td {line-height: 100%;}
-					.ExternalClass {width: 100%;}
-					</style>
-					</head>
-					<body style="text-align: center">
-					${emailSource}
-					</body>
-					</html>`;
 				let email = prompt(language["Enter email"]);
-				sendTestEmail(email, html);
+				sendTestEmail(email, emailSource);
 			}}
 			>&#x2709;</span>
 		</div>

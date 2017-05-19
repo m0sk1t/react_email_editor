@@ -4,7 +4,7 @@ const BlockSocial = ({ blockOptions }) => {
 	const imgLocation = document.location.href.indexOf('nm_email_editor') > 0? `${document.location.origin}/wp-content/plugins/newsmine/include/email_editor/`: '/';
 	return (
 		<table
-			width="100%"
+			width="550"
 			cellPadding="0"
 			cellSpacing="0"
 			role="presentation"
@@ -13,7 +13,7 @@ const BlockSocial = ({ blockOptions }) => {
 				<tr>
 					<td>
 						<table
-							width="100%"
+							width="570"
 							cellPadding="0"
 							cellSpacing="0"
 							role="presentation"
@@ -31,7 +31,7 @@ const BlockSocial = ({ blockOptions }) => {
 											"display": blockOptions.elements[0].ok_display
 										}}
 										>
-											<img alt="ok" src={`${imgLocation}${blockOptions.elements[0].ok_source}`} />
+											<img alt="OK link" src={`${imgLocation}${blockOptions.elements[0].ok_source}`} />
 										</a>
 										<a
 										target="_blank"
@@ -41,7 +41,7 @@ const BlockSocial = ({ blockOptions }) => {
 											"display": blockOptions.elements[0].vk_display
 										}}
 										>
-											<img alt="vk" src={`${imgLocation}${blockOptions.elements[0].vk_source}`} />
+											<img alt="VK link" src={`${imgLocation}${blockOptions.elements[0].vk_source}`} />
 										</a>
 										<a
 										target="_blank"
@@ -51,7 +51,7 @@ const BlockSocial = ({ blockOptions }) => {
 											"display": blockOptions.elements[0].youtube_display
 										}}
 										>
-											<img alt="fb" src={`${imgLocation}${blockOptions.elements[0].youtube_source}`} />
+											<img alt="Facebook link" src={`${imgLocation}${blockOptions.elements[0].youtube_source}`} />
 										</a>
 										<a
 										target="_blank"
@@ -61,7 +61,7 @@ const BlockSocial = ({ blockOptions }) => {
 											"display": blockOptions.elements[0].facebook_display
 										}}
 										>
-											<img alt="yt" src={`${imgLocation}${blockOptions.elements[0].facebook_source}`} />
+											<img alt="Youtube link" src={`${imgLocation}${blockOptions.elements[0].facebook_source}`} />
 										</a>
 									</td>
 								</tr>

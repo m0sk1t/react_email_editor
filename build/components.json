@@ -6,7 +6,7 @@
 				"block_type": "header",
 				"options": {
 					"container": {
-						"padding": "2%",
+						"padding": "10px",
 						"color": "#333333",
 						"fontSize": "32px",
 						"customStyle": false,
@@ -26,7 +26,7 @@
 				"block_type": "hr",
 				"options": {
 					"container": {
-						"padding": "2%",
+						"padding": "10px",
 						"color": "#333333",
 						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
@@ -43,7 +43,7 @@
 				"block_type": "button",
 				"options": {
 					"container": {
-						"padding": "2%",
+						"padding": "10px",
 						"color": "#333333",
 						"fontSize": "24px",
 						"customStyle": false,
@@ -66,7 +66,7 @@
 				"block_type": "text",
 				"options": {
 					"container": {
-						"padding": "2%",
+						"padding": "10px",
 						"fontSize": "16px",
 						"color": "#333333",
 						"customStyle": false,
@@ -84,7 +84,7 @@
 				"block_type": "text2x",
 				"options": {
 					"container": {
-						"padding": "2%",
+						"padding": "10px",
 						"fontSize": "16px",
 						"color": "#333333",
 						"customStyle": false,
@@ -107,14 +107,34 @@
 				"block_type": "image",
 				"options": {
 					"container": {
-						"padding": "2%",
+						"padding": "10px",
 						"color": "#333333",
 						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
+						"width": "550px",
 						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
+					}]
+				}
+			}
+		},
+		{
+			"preview": "images/video.png",
+			"block": {
+				"block_type": "video",
+				"options": {
+					"container": {
+						"padding": "10px",
+						"color": "#333333",
+						"customStyle": false,
+						"backgroundColor": "#FFFFFF"
+					},
+					"elements": [{
+						"width": "550px",
+						"link": "https://www.youtube.com/watch?v=9sYkyUeRjI8",
+						"source": "9sYkyUeRjI8"
 					}]
 				}
 			}
@@ -125,15 +145,17 @@
 				"block_type": "image2x",
 				"options": {
 					"container": {
-						"padding": "2%",
+						"padding": "10px",
 						"color": "#333333",
 						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
+						"width": "275px",
 						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					},{
+						"width": "275px",
 						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					}]
@@ -146,18 +168,21 @@
 				"block_type": "image3x",
 				"options": {
 					"container": {
-						"padding": "2%",
+						"padding": "10px",
 						"color": "#333333",
 						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
+						"width": "183px",
 						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					},{
+						"width": "183px",
 						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					},{
+						"width": "183px",
 						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					}]
@@ -170,20 +195,20 @@
 				"block_type": "image_text",
 				"options": {
 					"container": {
-						"padding": "2%",
+						"padding": "10px",
 						"color": "#333333",
 						"fontSize": "16px",
 						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
-						"width": "25%",
+						"width": "275px",
 						"float": "left",
 						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					},
 					{
-						"width": "75%",
+						"width": "270px",
 						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu felis sit amet justo ullamcorper malesuada vitae nec odio. Duis suscipit, ligula in sollicitudin luctus, turpis purus bibendum lorem, in blandit nibh ipsum sit amet dui. Mauris nibh quam, commodo at ligula nec, volutpat euismod risus. Morbi nec nibh enim."
 					}]
 				}
@@ -195,7 +220,7 @@
 				"block_type": "social",
 				"options": {
 					"container": {
-						"padding": "2%",
+						"padding": "10px",
 						"color": "#333333",
 						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
@@ -224,7 +249,7 @@
 				"block_type": "social_text",
 				"options": {
 					"container": {
-						"padding": "2%",
+						"padding": "10px",
 						"color": "#333333",
 						"fontSize": "16px",
 						"customStyle": false,
@@ -258,7 +283,7 @@
 				"block_type": "feedback",
 				"options": {
 					"container": {
-						"padding": "2%",
+						"padding": "10px",
 						"color": "#333333",
 						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
@@ -284,7 +309,7 @@
 				"block_type": "feedback_text",
 				"options": {
 					"container": {
-						"padding": "2%",
+						"padding": "10px",
 						"color": "#333333",
 						"fontSize": "16px",
 						"customStyle": false,

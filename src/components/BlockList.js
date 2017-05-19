@@ -1,11 +1,7 @@
 import React from 'react';
 import Block from './Block';
 import { connect } from 'react-redux';
-import { rmBlock } from '../actions';
-import { addBlock } from '../actions';
-import { swapBlocks } from '../actions';
-import { setVisible } from '../actions';
-import { selectBlock } from '../actions';
+import { rmBlock, addBlock, swapBlocks, setVisible, selectBlock } from '../actions';
 
 const mapStateToProps = (state) => {
 	return {
@@ -50,6 +46,7 @@ const BlockList = connect(
 			}}
 		>
 			<table
+				width="570px"
 				cellPadding="0"
 				cellSpacing="0"
 				role="presentation"

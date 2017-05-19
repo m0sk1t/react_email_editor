@@ -1,10 +1,10 @@
 import React from 'react';
 
-const BlockImage = ({ blockOptions }) => {
+const BlockVideo = ({ blockOptions }) => {
 	const alt = "cool image!";
 	return (
 		<table
-			width={blockOptions.elements[0].width}
+			width="550"
 			cellPadding="0"
 			cellSpacing="0"
 			role="presentation"
@@ -15,7 +15,7 @@ const BlockImage = ({ blockOptions }) => {
 						<a
 						href={blockOptions.elements[0].link}
 						target="_blank">
-							<img alt={alt} width={blockOptions.elements[0].width} src={blockOptions.elements[0].source} />
+							<img alt={alt} width={blockOptions.elements[0].width} height="" src={`https://img.youtube.com/vi/${blockOptions.elements[0].source}/0.jpg`} />
 						</a>
 					</td>
 				</tr>
@@ -24,4 +24,4 @@ const BlockImage = ({ blockOptions }) => {
 	);
 };
 
-export default BlockImage;
+export default BlockVideo;

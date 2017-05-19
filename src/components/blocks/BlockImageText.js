@@ -26,12 +26,15 @@ const BlockImageText = connect(
 		window.tinymce.init({
 			selector: `#id_${id} td.editable`,
 			inline: true,
-			plugins: [
-			'advlist autolink lists link image charmap anchor',
-			'searchreplace visualblocks code fullscreen',
-			'insertdatetime media table contextmenu'
-			],
-			toolbar: 'insertfile | styleselect | bold italic | bullist numlist | link image',
+			menubar: false,
+			paste_as_text: true,
+			preview_styles: false,
+			plugins: ["link hr paste lists textcolor code"],
+			toolbar: "bold italic forecolor backcolor hr styleselect removeformat | link unlink | pastetext code",
+			paste_postprocess : function(pl, o) {
+				o.node.innerHTML = o.node.innerHTML.replace(/&nbsp;/ig, " ");
+				o.node.innerHTML = o.node.innerHTML.replace(/&quot;/ig, "\"");
+			},
 			init_instance_callback: (editor) => {
 				editor.on('change', function (e) {
 					onPropChange('text', e.target.targetElm.innerHTML, false, 1);
@@ -41,7 +44,7 @@ const BlockImageText = connect(
 	};
 	return (
 		<table
-			width="100%"
+			width="550"
 			cellPadding="0"
 			cellSpacing="0"
 			role="presentation"
@@ -62,9 +65,12 @@ const BlockImageText = connect(
 											href={blockOptions.elements[0].link}
 											target="_blank"
 										>
-											<img style={{
+											<img
+											width={blockOptions.elements[0].width}
+											style={{
+												width: blockOptions.elements[0].width,
 												borderRadius: blockOptions.elements[0].borderRadius
-											}} alt={alt} width="100%" height="" src={blockOptions.elements[0].source} />
+											}} alt={alt} src={blockOptions.elements[0].source} />
 										</a>
 									</td>
 								</tr>
