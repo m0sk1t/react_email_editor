@@ -52,9 +52,9 @@ const Common = connect(
 				</div>
 				<hr />
 				<div>
-					<label>{language["Font size"]}: <input type="number" value={fontSize} onChange={(e) => stylizeAll('fontSize', `${e.target.value}px`, true)} /></label>
+					<label>{language["Font size"]}: <input type="number" value={fontSize.match(/\d+/)[0]} onChange={(e) => stylizeAll('fontSize', `${e.target.value}px`, true)} /></label>
 				</div>
-				<div>
+{/*				<div>
 					<label>
 						{language["Font family"]}:
 						<select style={{width: '50%'}} onChange={(e) => stylizeAll('fontFamily', e.target.value, true, 0)}>
@@ -63,18 +63,18 @@ const Common = connect(
 							<option value='Verdana, Geneva, sans-serif'>Verdana, Geneva, sans-serif</option>
 							<option value='Arial, Helvetica, sans-serif'>Arial, Helvetica, sans-serif</option>
 							<option value='Impact, Charcoal, sans-serif'>Impact, Charcoal, sans-serif</option>
-							<option value='"Times New Roman", Times, serif'>"Times New Roman", Times, serif</option>
-							<option value='"Courier New", Courier, monospace'>"Courier New", Courier, monospace</option>
-							<option value='"Arial Black", Gadget, sans-serif'>"Arial Black", Gadget, sans-serif</option>
-							<option value='"Lucida Console", Monaco, monospace'>"Lucida Console", Monaco, monospace</option>
-							<option value='"Comic Sans MS", cursive, sans-serif'>"Comic Sans MS", cursive, sans-serif</option>
-							<option value='"Trebuchet MS", Helvetica, sans-serif'>"Trebuchet MS", Helvetica, sans-serif</option>
-							<option value='"Lucida Sans Unicode", "Lucida Grande", sans-serif'>"Lucida Sans Unicode", "Lucida Grande", sans-serif</option>
-							<option value='"Palatino Linotype", "Book Antiqua", Palatino, serif'>"Palatino Linotype", "Book Antiqua", Palatino, serif</option>
+							<option value='\"Times New Roman\", Times, serif'>"Times New Roman", Times, serif</option>
+							<option value='\"Courier New\", Courier, monospace'>"Courier New", Courier, monospace</option>
+							<option value='\"Arial Black\", Gadget, sans-serif'>"Arial Black", Gadget, sans-serif</option>
+							<option value='\"Lucida Console\", Monaco, monospace'>"Lucida Console", Monaco, monospace</option>
+							<option value='\"Comic Sans MS\", cursive, sans-serif'>"Comic Sans MS", cursive, sans-serif</option>
+							<option value='\"Trebuchet MS\", Helvetica, sans-serif'>"Trebuchet MS", Helvetica, sans-serif</option>
+							<option value='\"Lucida Sans Unicode\", "Lucida Grande", sans-serif'>"Lucida Sans Unicode", "Lucida Grande", sans-serif</option>
+							<option value='\"Palatino Linotype\", "Book Antiqua", Palatino, serif'>"Palatino Linotype", "Book Antiqua", Palatino, serif</option>
 						</select>
 					</label>
 				</div>
-			</div>
+*/}			</div>
 			);
 	}
 	return null;

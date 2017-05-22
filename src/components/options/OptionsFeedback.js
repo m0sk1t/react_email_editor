@@ -9,6 +9,7 @@ const OptionsFeedback = ({ block, language, onPropChange }) => {
 			<div>
 				<label>{language["Background"]}: <input type="color" value={block.options.container.backgroundColor} onChange={(e) => onPropChange('backgroundColor', e.target.value, true)} /></label>
 			</div>
+			<hr />
 			<div>
 				<label>
 					{language["Align"]}:
@@ -53,6 +54,7 @@ const OptionsFeedback = ({ block, language, onPropChange }) => {
 					</select>
 				 </label>
 			</div>
+			<hr />
 			<div>
 				<label>
 					{language["Like"]}:

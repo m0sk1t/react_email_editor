@@ -23,6 +23,7 @@ const OptionsImage2x = ({ block, language, onFileChange, onPropChange }) => {
 			<div>
 				<label>{language["Link"]} 1: <input type="text" value={block.options.elements[0].link} onChange={(e) => onPropChange('link', e.target.value, false, 0)} /></label>
 			</div>
+			<hr />
 			<div>
 				<label>
 					{language["URL"]} 2:
@@ -46,6 +47,7 @@ const OptionsImage2x = ({ block, language, onFileChange, onPropChange }) => {
 			<div>
 				<label>{language["Border radius"]}: <input type="text" value={block.options.elements[0].borderRadius} onChange={(e) => onPropChange('borderRadius', e.target.value, false, 0)} /></label>
 			</div>
+			<hr />
 			<div>
 				<label>{language["Background"]}: <input type="color" value={block.options.container.backgroundColor} onChange={(e) => onPropChange('backgroundColor', e.target.value, true)} /></label>
 			</div>
