@@ -31,7 +31,7 @@ const OptionsImage = ({ block, language, onFileChange, onPropChange }) => {
 					checked={block.options.container.padding === '0'? '': 'checked'}
 					onChange={(e) => {
 						onPropChange('padding', (block.options.container.padding === '0'? '10px': '0'), true);
-						onPropChange('width', (block.options.container.padding === '0'? '550px': '570px'), false, 0);
+						onPropChange('width', (block.options.container.padding === '0'? '550': '570'), false, 0);
 						}
 					} /></label>
 			</div>

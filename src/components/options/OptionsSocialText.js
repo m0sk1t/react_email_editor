@@ -19,20 +19,20 @@ const OptionsSocialText = ({ block, language, onPropChange }) => {
 					<input type="range" min="0" max="3" step="1" value={block.options.elements[0].iconsSize} onChange={(e) => {
 						switch (+e.target.value) {
 							case 0:
-								onPropChange('width', '50px', false, 0);
-								onPropChange('width', '500px', false, 1);
+								onPropChange('width', '50', false, 0);
+								onPropChange('width', '500', false, 1);
 								break;
 							case 1:
-								onPropChange('width', '100px', false, 0);
-								onPropChange('width', '450px', false, 1);
+								onPropChange('width', '100', false, 0);
+								onPropChange('width', '450', false, 1);
 								break;
 							case 2:
-								onPropChange('width', '200px', false, 0);
-								onPropChange('width', '350px', false, 1);
+								onPropChange('width', '200', false, 0);
+								onPropChange('width', '350', false, 1);
 								break;
 							case 3:
-								onPropChange('width', '275px', false, 0);
-								onPropChange('width', '275px', false, 1);
+								onPropChange('width', '275', false, 0);
+								onPropChange('width', '275', false, 1);
 								break;
 							default:
 								break;

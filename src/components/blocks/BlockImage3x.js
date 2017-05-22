@@ -12,7 +12,7 @@ const BlockImage3x = ({ blockOptions }) => {
 			<tbody>
 				<tr>
 					<td
-					width={blockOptions.container.usePadding? '180px':'183px'}
+					width={blockOptions.container.usePadding? '180':'183'}
 					>
 						<a
 							href={blockOptions.elements[0].link}
@@ -21,7 +21,7 @@ const BlockImage3x = ({ blockOptions }) => {
 							<img
 							alt={alt}
 							src={blockOptions.elements[0].source}
-							width={blockOptions.container.usePadding? '180px':'183px'}
+							width={blockOptions.container.usePadding? '180':'183'}
 							style={{
 								borderRadius: blockOptions.elements[0].borderRadius,
 								width: blockOptions.container.usePadding? '180px':'183px',
@@ -31,7 +31,7 @@ const BlockImage3x = ({ blockOptions }) => {
 						</a>
 					</td>
 					<td
-					width={blockOptions.container.usePadding? '180px':'183px'}
+					width={blockOptions.container.usePadding? '180':'183'}
 					>
 						<a
 							href={blockOptions.elements[1].link}
@@ -40,7 +40,7 @@ const BlockImage3x = ({ blockOptions }) => {
 							<img
 							alt={alt}
 							src={blockOptions.elements[1].source}
-							width={blockOptions.container.usePadding? '180px':'183px'}
+							width={blockOptions.container.usePadding? '180':'183'}
 							style={{
 								borderRadius: blockOptions.elements[0].borderRadius,
 								width: blockOptions.container.usePadding? '180px':'183px',
@@ -50,7 +50,7 @@ const BlockImage3x = ({ blockOptions }) => {
 						</a>
 					</td>
 					<td
-					width={blockOptions.container.usePadding? '180px':'183px'}
+					width={blockOptions.container.usePadding? '180':'183'}
 					>
 						<a
 							href={blockOptions.elements[2].link}
@@ -59,7 +59,7 @@ const BlockImage3x = ({ blockOptions }) => {
 							<img
 							alt={alt}
 							src={blockOptions.elements[2].source}
-							width={blockOptions.container.usePadding? '180px':'183px'}
+							width={blockOptions.container.usePadding? '180':'183'}
 							style={{
 								borderRadius: blockOptions.elements[0].borderRadius,
 								width: blockOptions.container.usePadding? '180px':'183px',

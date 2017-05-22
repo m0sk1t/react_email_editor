@@ -54,7 +54,7 @@ const BlockFeedbackText = connect(
 				<tr>
 					<td
 					style={blockOptions.elements[0]}
-					width={blockOptions.elements[0].width}
+					width={blockOptions.elements[0].width.match(/\d+/)[0]}
 					>
 						<a
 						target="_blank"
@@ -91,7 +91,7 @@ const BlockFeedbackText = connect(
 					className="editable"
 					onClick={() => initEditable()}
 					style={blockOptions.elements[1]}
-					width={blockOptions.elements[1].width}
+					width={blockOptions.elements[1].width.match(/\d+/)[0]}
 					dangerouslySetInnerHTML={{__html: blockOptions?blockOptions.elements[1].text:'empty node'}}
 					></td>
 				</tr>

@@ -54,14 +54,14 @@ const BlockText2x = connect(
 					<td
 					className="editable_first"
 					onClick={() => initEditable('first')}
-					width={blockOptions.elements[0].width}
+					width={blockOptions.elements[0].width.match(/\d+/)[0]}
 					style={{...blockOptions.elements[0], padding: '0 10px'}}
 					dangerouslySetInnerHTML={{__html: blockOptions?blockOptions.elements[0].text:'empty node'}}
 					></td>
 					<td
 					className="editable_second"
 					onClick={() => initEditable('second')}
-					width={blockOptions.elements[1].width}
+					width={blockOptions.elements[1].width.match(/\d+/)[0]}
 					style={{...blockOptions.elements[1], padding: '0 10px'}}
 					dangerouslySetInnerHTML={{__html: blockOptions?blockOptions.elements[1].text:'empty node'}}
 					></td>

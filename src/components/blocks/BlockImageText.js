@@ -54,14 +54,14 @@ const BlockImageText = connect(
 				<tr>
 					<td
 					style={blockOptions.elements[0]}
-					width={blockOptions.elements[0].width}
+					width={blockOptions.elements[0].width.match(/\d+/)[0]}
 					>
 						<a
 							href={blockOptions.elements[0].link}
 							target="_blank"
 						>
 							<img
-							width={blockOptions.elements[0].width}
+							width={blockOptions.elements[0].width.match(/\d+/)[0]}
 							style={{
 								width: blockOptions.elements[0].width,
 								borderRadius: blockOptions.elements[0].borderRadius
@@ -71,7 +71,7 @@ const BlockImageText = connect(
 					<td
 					className="editable"
 					onClick={() => initEditable()}
-					width={blockOptions.elements[1].width}
+					width={blockOptions.elements[1].width.match(/\d+/)[0]}
 					style={{...blockOptions.elements[1], padding: '0 10px'}}
 					dangerouslySetInnerHTML={{__html: blockOptions?blockOptions.elements[1].text:'empty node'}}
 					>

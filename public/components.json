@@ -91,10 +91,10 @@
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
-						"width": "275px",
+						"width": "275",
 						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu felis sit amet justo ullamcorper malesuada vitae nec odio. Duis suscipit, ligula in sollicitudin luctus, turpis purus bibendum lorem, in blandit nibh ipsum sit amet dui. Mauris nibh quam, commodo at ligula nec, volutpat euismod risus. Morbi nec nibh enim."
 					},{
-						"width": "275px",
+						"width": "275",
 						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu felis sit amet justo ullamcorper malesuada vitae nec odio. Duis suscipit, ligula in sollicitudin luctus, turpis purus bibendum lorem, in blandit nibh ipsum sit amet dui. Mauris nibh quam, commodo at ligula nec, volutpat euismod risus. Morbi nec nibh enim."
 					}]
 				}
@@ -112,7 +112,7 @@
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
-						"width": "550px",
+						"width": "550",
 						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					}]
@@ -131,7 +131,7 @@
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
-						"width": "550px",
+						"width": "550",
 						"link": "https://www.youtube.com/watch?v=9sYkyUeRjI8",
 						"source": "9sYkyUeRjI8"
 					}]
@@ -150,11 +150,11 @@
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
-						"width": "275px",
+						"width": "275",
 						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					},{
-						"width": "275px",
+						"width": "275",
 						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					}]
@@ -173,15 +173,15 @@
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
-						"width": "183px",
+						"width": "183",
 						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					},{
-						"width": "183px",
+						"width": "183",
 						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					},{
-						"width": "183px",
+						"width": "183",
 						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					}]
@@ -201,13 +201,13 @@
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
-						"width": "275px",
+						"width": "275",
 						"float": "left",
 						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					},
 					{
-						"width": "275px",
+						"width": "275",
 						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu felis sit amet justo ullamcorper malesuada vitae nec odio. Duis suscipit, ligula in sollicitudin luctus, turpis purus bibendum lorem, in blandit nibh ipsum sit amet dui. Mauris nibh quam, commodo at ligula nec, volutpat euismod risus. Morbi nec nibh enim."
 					}]
 				}
@@ -255,7 +255,7 @@
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
-						"width": "275px",
+						"width": "275",
 						"float": "left",
 						"ok_source": "icons/ok_3d.png",
 						"vk_source": "icons/vk_3d.png",
@@ -270,7 +270,7 @@
 						"youtube_link": "",
 						"facebook_link": ""
 					},{
-						"width": "275px",
+						"width": "275",
 						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu felis sit amet justo ullamcorper malesuada vitae nec odio. Duis suscipit, ligula in sollicitudin luctus, turpis purus bibendum lorem, in blandit nibh ipsum sit amet dui. Mauris nibh quam, commodo at ligula nec, volutpat euismod risus. Morbi nec nibh enim."
 					}]
 				}
@@ -315,7 +315,7 @@
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
-						"width": "275px",
+						"width": "275",
 						"like_source": "icons/like_3d.png",
 						"dislike_source": "icons/dislike_3d.png",
 						"neutral_source": "icons/neutral_3d.png",
@@ -326,7 +326,7 @@
 						"dislike_link": "",
 						"neutral_link": ""
 					},{
-						"width": "275px",
+						"width": "275",
 						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu felis sit amet justo ullamcorper malesuada vitae nec odio. Duis suscipit, ligula in sollicitudin luctus, turpis purus bibendum lorem, in blandit nibh ipsum sit amet dui. Mauris nibh quam, commodo at ligula nec, volutpat euismod risus. Morbi nec nibh enim."
 					}]
 				}

@@ -12,14 +12,14 @@ const BlockImage2x = ({ blockOptions }) => {
 			<tbody>
 				<tr>
 					<td
-					width={blockOptions.container.usePadding? '265px':'275px'}
+					width={blockOptions.container.usePadding? '265':'275'}
 					>
 						<a
 						href={blockOptions.elements[0].link}
 						target="_blank">
 							<img
 							alt={alt}
-							width={blockOptions.container.usePadding? '265px':'275px'}
+							width={blockOptions.container.usePadding? '265':'275'}
 							style={{
 								borderRadius: blockOptions.elements[0].borderRadius,
 								width: blockOptions.container.usePadding? '265px':'275px',
@@ -29,7 +29,7 @@ const BlockImage2x = ({ blockOptions }) => {
 						</a>
 					</td>
 					<td
-					width={blockOptions.container.usePadding? '265px':'275px'}
+					width={blockOptions.container.usePadding? '265':'275'}
 					>
 						<a
 							href={blockOptions.elements[1].link}
@@ -37,7 +37,7 @@ const BlockImage2x = ({ blockOptions }) => {
 						>
 							<img
 							alt={alt}
-							width={blockOptions.container.usePadding? '265px':'275px'}
+							width={blockOptions.container.usePadding? '265':'275'}
 							style={{
 								borderRadius: blockOptions.elements[0].borderRadius,
 								width: blockOptions.container.usePadding? '265px':'275px',
