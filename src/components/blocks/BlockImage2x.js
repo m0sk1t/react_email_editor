@@ -11,7 +11,9 @@ const BlockImage2x = ({ blockOptions }) => {
 		>
 			<tbody>
 				<tr>
-					<td>
+					<td
+					width={blockOptions.container.usePadding? '265px':'275px'}
+					>
 						<a
 						href={blockOptions.elements[0].link}
 						target="_blank">
@@ -26,7 +28,9 @@ const BlockImage2x = ({ blockOptions }) => {
 								src={blockOptions.elements[0].source} />
 						</a>
 					</td>
-					<td>
+					<td
+					width={blockOptions.container.usePadding? '265px':'275px'}
+					>
 						<a
 							href={blockOptions.elements[1].link}
 							target="_blank"

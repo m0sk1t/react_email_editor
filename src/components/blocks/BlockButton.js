@@ -11,6 +11,7 @@ const BlockButton = ({ id, blockOptions, onPropChange }) => {
 			<tbody>
 				<tr>
 					<td
+					width="550"
 					style={blockOptions.elements[0]}
 					>
 					<a

@@ -91,11 +91,10 @@
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
-						"width": "50%",
-						"float": "left",
+						"width": "275px",
 						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu felis sit amet justo ullamcorper malesuada vitae nec odio. Duis suscipit, ligula in sollicitudin luctus, turpis purus bibendum lorem, in blandit nibh ipsum sit amet dui. Mauris nibh quam, commodo at ligula nec, volutpat euismod risus. Morbi nec nibh enim."
 					},{
-						"width": "50%",
+						"width": "275px",
 						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu felis sit amet justo ullamcorper malesuada vitae nec odio. Duis suscipit, ligula in sollicitudin luctus, turpis purus bibendum lorem, in blandit nibh ipsum sit amet dui. Mauris nibh quam, commodo at ligula nec, volutpat euismod risus. Morbi nec nibh enim."
 					}]
 				}
@@ -208,7 +207,7 @@
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					},
 					{
-						"width": "270px",
+						"width": "275px",
 						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu felis sit amet justo ullamcorper malesuada vitae nec odio. Duis suscipit, ligula in sollicitudin luctus, turpis purus bibendum lorem, in blandit nibh ipsum sit amet dui. Mauris nibh quam, commodo at ligula nec, volutpat euismod risus. Morbi nec nibh enim."
 					}]
 				}
@@ -256,7 +255,7 @@
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
-						"width": "25%",
+						"width": "275px",
 						"float": "left",
 						"ok_source": "icons/ok_3d.png",
 						"vk_source": "icons/vk_3d.png",
@@ -271,7 +270,7 @@
 						"youtube_link": "",
 						"facebook_link": ""
 					},{
-						"width": "75%",
+						"width": "275px",
 						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu felis sit amet justo ullamcorper malesuada vitae nec odio. Duis suscipit, ligula in sollicitudin luctus, turpis purus bibendum lorem, in blandit nibh ipsum sit amet dui. Mauris nibh quam, commodo at ligula nec, volutpat euismod risus. Morbi nec nibh enim."
 					}]
 				}
@@ -316,8 +315,7 @@
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
-						"width": "25%",
-						"float": "left",
+						"width": "275px",
 						"like_source": "icons/like_3d.png",
 						"dislike_source": "icons/dislike_3d.png",
 						"neutral_source": "icons/neutral_3d.png",
@@ -328,7 +326,7 @@
 						"dislike_link": "",
 						"neutral_link": ""
 					},{
-						"width": "75%",
+						"width": "275px",
 						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu felis sit amet justo ullamcorper malesuada vitae nec odio. Duis suscipit, ligula in sollicitudin luctus, turpis purus bibendum lorem, in blandit nibh ipsum sit amet dui. Mauris nibh quam, commodo at ligula nec, volutpat euismod risus. Morbi nec nibh enim."
 					}]
 				}

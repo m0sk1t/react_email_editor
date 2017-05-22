@@ -28,6 +28,7 @@ const BlockFeedbackText = connect(
 			menubar: false,
 			paste_as_text: true,
 			preview_styles: false,
+			paste_data_images:false,
 			plugins: ["link hr paste lists textcolor code"],
 			toolbar: "bold italic forecolor backcolor hr styleselect removeformat | link unlink | pastetext code",
 			paste_postprocess : function(pl, o) {
@@ -51,74 +52,48 @@ const BlockFeedbackText = connect(
 		>
 			<tbody>
 				<tr>
-					<td>
-						<table
-							cellPadding="0"
-							cellSpacing="0"
-							role="presentation"
-							style={blockOptions.elements[0]}
+					<td
+					style={blockOptions.elements[0]}
+					width={blockOptions.elements[0].width}
+					>
+						<a
+						target="_blank"
+						href={blockOptions.elements[0].like_link}
+						title={blockOptions.elements[0].like_link}
+						style={{
+							"display": blockOptions.elements[0].like_display
+						}}
 						>
-							<tbody>
-								<tr>
-									<td
-										style={{
-											textAlign: blockOptions.elements[0].float
-										}}
-									>
-										<a
-										target="_blank"
-										href={blockOptions.elements[0].like_link}
-										title={blockOptions.elements[0].like_link}
-										style={{
-											"display": blockOptions.elements[0].like_display
-										}}
-										>
-											<img alt="like" src={`${imgLocation}${blockOptions.elements[0].like_source}`} />
-										</a>
-										<a
-										target="_blank"
-										href={blockOptions.elements[0].neutral_link}
-										title={blockOptions.elements[0].neutral_link}
-										style={{
-											"display": blockOptions.elements[0].neutral_display
-										}}
-										>
-											<img alt="neutral" src={`${imgLocation}${blockOptions.elements[0].neutral_source}`} />
-										</a>
-										<a
-										target="_blank"
-										href={blockOptions.elements[0].dislike_link}
-										title={blockOptions.elements[0].dislike_link}
-										style={{
-											"display": blockOptions.elements[0].dislike_display
-										}}
-										>
-											<img alt="dislike" src={`${imgLocation}${blockOptions.elements[0].dislike_source}`} />
-										</a>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-						<table
-							cellPadding="0"
-							cellSpacing="0"
-							role="presentation"
-							style={blockOptions.elements[1]}
+							<img alt="like" src={`${imgLocation}${blockOptions.elements[0].like_source}`} />
+						</a>
+						<a
+						target="_blank"
+						href={blockOptions.elements[0].neutral_link}
+						title={blockOptions.elements[0].neutral_link}
+						style={{
+							"display": blockOptions.elements[0].neutral_display
+						}}
 						>
-							<tbody>
-								<tr>
-									<td
-									style={{
-										"padding": "0 2%"
-									}}
-									className="editable"
-									onClick={() => initEditable()}
-									dangerouslySetInnerHTML={{__html: blockOptions?blockOptions.elements[1].text:'empty node'}}
-									></td>
-								</tr>
-							</tbody>
-						</table>
+							<img alt="neutral" src={`${imgLocation}${blockOptions.elements[0].neutral_source}`} />
+						</a>
+						<a
+						target="_blank"
+						href={blockOptions.elements[0].dislike_link}
+						title={blockOptions.elements[0].dislike_link}
+						style={{
+							"display": blockOptions.elements[0].dislike_display
+						}}
+						>
+							<img alt="dislike" src={`${imgLocation}${blockOptions.elements[0].dislike_source}`} />
+						</a>
 					</td>
+					<td
+					className="editable"
+					onClick={() => initEditable()}
+					style={blockOptions.elements[1]}
+					width={blockOptions.elements[1].width}
+					dangerouslySetInnerHTML={{__html: blockOptions?blockOptions.elements[1].text:'empty node'}}
+					></td>
 				</tr>
 			</tbody>
 		</table>

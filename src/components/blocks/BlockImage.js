@@ -9,9 +9,15 @@ const BlockImage = ({ blockOptions }) => {
 			cellSpacing="0"
 			role="presentation"
 		>
-			<tbody>
-				<tr>
-					<td>
+			<tbody
+			width={blockOptions.elements[0].width}
+			>
+				<tr
+				width={blockOptions.elements[0].width}
+				>
+					<td
+					width={blockOptions.elements[0].width}
+					>
 						<a
 						href={blockOptions.elements[0].link}
 						target="_blank">

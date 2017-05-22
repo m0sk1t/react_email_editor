@@ -11,7 +11,9 @@ const BlockImage3x = ({ blockOptions }) => {
 		>
 			<tbody>
 				<tr>
-					<td>
+					<td
+					width={blockOptions.container.usePadding? '180px':'183px'}
+					>
 						<a
 							href={blockOptions.elements[0].link}
 							target="_blank"
@@ -28,7 +30,9 @@ const BlockImage3x = ({ blockOptions }) => {
 							/>
 						</a>
 					</td>
-					<td>
+					<td
+					width={blockOptions.container.usePadding? '180px':'183px'}
+					>
 						<a
 							href={blockOptions.elements[1].link}
 							target="_blank"
@@ -45,7 +49,9 @@ const BlockImage3x = ({ blockOptions }) => {
 							/>
 						</a>
 					</td>
-					<td>
+					<td
+					width={blockOptions.container.usePadding? '180px':'183px'}
+					>
 						<a
 							href={blockOptions.elements[2].link}
 							target="_blank"

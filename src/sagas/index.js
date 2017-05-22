@@ -26,8 +26,8 @@ function* loadComponents(action) {
 function* loadTemplate(action) {
 	try {
 		const res = yield getTemplate(action.templateId).then(res => res);
-		if (res.data && !!res.success) throw new Error(res.data);
-		if (res.data && !!res.data.template) throw new Error("Пришёл пустой шаблон!");
+		if (res.data && !res.success) throw new Error(res.data);
+		if (res.data && !res.data.template) throw new Error("Пришёл пустой шаблон!");
 		yield put({type: 'TEMPLATE_LOADED', template: res.data? res.data.template: res.template});
 		yield put({type: 'SET_TEMPLATE_NAME', templateName: res.data? res.data.name: res.name});
 	} catch(e) {

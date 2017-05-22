@@ -2,7 +2,6 @@ import React from 'react';
 
 const OptionsImageText = ({ block, language, onFileChange, onPropChange }) => {
 	const fontSize = block.options.container.fontSize.match(/\d+/)?block.options.container.fontSize.match(/\d+/)[0]: '16';
-	const imageSize = block.options.elements[0].width === '136px'? 'small': (block.options.elements[0].width === '192px'? 'middle': 'big');
 	return (
 		<div>
 			<div>
@@ -30,28 +29,29 @@ const OptionsImageText = ({ block, language, onFileChange, onPropChange }) => {
 			</div>
 			<div>
 				<label>{language["Image size"]}:
-				<select value={imageSize} onChange={(e) => {
-					switch (e.target.value) {
-						case 'small':
-							onPropChange('width', '136px', false, 0);
-							onPropChange('width', '410px', false, 1);
-							break;
-						case 'middle':
-							onPropChange('width', '192px', false, 0);
-							onPropChange('width', '350px', false, 1);
-							break;
-						case 'big':
-							onPropChange('width', '275px', false, 0);
-							onPropChange('width', '270px', false, 1);
-							break;
-						default:
-							break;
-					}
-				}}>
-					<option value="small">{language["small"]}</option>
-					<option value="middle">{language["middle"]}</option>
-					<option value="big">{language["big"]}</option>
-				</select>
+					<input type="range" min="0" max="3" step="1" value={block.options.elements[0].imageSize} onChange={(e) => {
+						switch (+e.target.value) {
+							case 0:
+								onPropChange('width', '50px', false, 0);
+								onPropChange('width', '500px', false, 1);
+								break;
+							case 1:
+								onPropChange('width', '100px', false, 0);
+								onPropChange('width', '450px', false, 1);
+								break;
+							case 2:
+								onPropChange('width', '200px', false, 0);
+								onPropChange('width', '350px', false, 1);
+								break;
+							case 3:
+								onPropChange('width', '275px', false, 0);
+								onPropChange('width', '275px', false, 1);
+								break;
+							default:
+								break;
+						}
+						onPropChange('imageSize', e.target.value, false, 0);
+					}} />
 				</label>
 			</div>
 			<div>

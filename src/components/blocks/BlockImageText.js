@@ -29,6 +29,7 @@ const BlockImageText = connect(
 			menubar: false,
 			paste_as_text: true,
 			preview_styles: false,
+			paste_data_images:false,
 			plugins: ["link hr paste lists textcolor code"],
 			toolbar: "bold italic forecolor backcolor hr styleselect removeformat | link unlink | pastetext code",
 			paste_postprocess : function(pl, o) {
@@ -51,51 +52,29 @@ const BlockImageText = connect(
 		>
 			<tbody>
 				<tr>
-					<td>
-						<table
-							cellPadding="0"
-							cellSpacing="0"
-							role="presentation"
-							style={blockOptions.elements[0]}
+					<td
+					style={blockOptions.elements[0]}
+					width={blockOptions.elements[0].width}
+					>
+						<a
+							href={blockOptions.elements[0].link}
+							target="_blank"
 						>
-							<tbody>
-								<tr>
-									<td>
-										<a
-											href={blockOptions.elements[0].link}
-											target="_blank"
-										>
-											<img
-											width={blockOptions.elements[0].width}
-											style={{
-												width: blockOptions.elements[0].width,
-												borderRadius: blockOptions.elements[0].borderRadius
-											}} alt={alt} src={blockOptions.elements[0].source} />
-										</a>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-						<table
-							cellPadding="0"
-							cellSpacing="0"
-							role="presentation"
-							style={blockOptions.elements[1]}
-						>
-							<tbody>
-								<tr>
-									<td
-									style={{
-										"padding": "0 2%"
-									}}
-									className="editable"
-									onClick={() => initEditable()}
-									dangerouslySetInnerHTML={{__html: blockOptions?blockOptions.elements[1].text:'empty node'}}
-									>
-									</td>
-								</tr>
-							</tbody>
-						</table>
+							<img
+							width={blockOptions.elements[0].width}
+							style={{
+								width: blockOptions.elements[0].width,
+								borderRadius: blockOptions.elements[0].borderRadius
+							}} alt={alt} src={blockOptions.elements[0].source} />
+						</a>
+					</td>
+					<td
+					className="editable"
+					onClick={() => initEditable()}
+					width={blockOptions.elements[1].width}
+					style={{...blockOptions.elements[1], padding: '0 10px'}}
+					dangerouslySetInnerHTML={{__html: blockOptions?blockOptions.elements[1].text:'empty node'}}
+					>
 					</td>
 				</tr>
 			</tbody>

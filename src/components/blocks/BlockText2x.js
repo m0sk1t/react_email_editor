@@ -28,6 +28,7 @@ const BlockText2x = connect(
 			menubar: false,
 			paste_as_text: true,
 			preview_styles: false,
+			paste_data_images:false,
 			plugins: ["link hr paste lists textcolor code"],
 			toolbar: "bold italic forecolor backcolor hr styleselect removeformat | link unlink | pastetext code",
 			paste_postprocess : function(pl, o) {
@@ -50,40 +51,20 @@ const BlockText2x = connect(
 		>
 			<tbody>
 				<tr>
-					<td>
-						<table
-							cellPadding="0"
-							cellSpacing="0"
-							role="presentation"
-							style={blockOptions.elements[0]}
-						>
-							<tbody>
-								<tr>
-									<td
-									className="editable_first"
-									onClick={() => initEditable('first')}
-									dangerouslySetInnerHTML={{__html: blockOptions?blockOptions.elements[0].text:'empty node'}}
-									></td>
-								</tr>
-							</tbody>
-						</table>
-						<table
-							cellPadding="0"
-							cellSpacing="0"
-							role="presentation"
-							style={blockOptions.elements[1]}
-						>
-							<tbody>
-								<tr>
-									<td
-									className="editable_second"
-									onClick={() => initEditable('second')}
-									dangerouslySetInnerHTML={{__html: blockOptions?blockOptions.elements[1].text:'empty node'}}
-									></td>
-								</tr>
-							</tbody>
-						</table>
-					</td>
+					<td
+					className="editable_first"
+					onClick={() => initEditable('first')}
+					width={blockOptions.elements[0].width}
+					style={{...blockOptions.elements[0], padding: '0 10px'}}
+					dangerouslySetInnerHTML={{__html: blockOptions?blockOptions.elements[0].text:'empty node'}}
+					></td>
+					<td
+					className="editable_second"
+					onClick={() => initEditable('second')}
+					width={blockOptions.elements[1].width}
+					style={{...blockOptions.elements[1], padding: '0 10px'}}
+					dangerouslySetInnerHTML={{__html: blockOptions?blockOptions.elements[1].text:'empty node'}}
+					></td>
 				</tr>
 			</tbody>
 		</table>

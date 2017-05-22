@@ -19,20 +19,20 @@ const OptionsSocialText = ({ block, language, onPropChange }) => {
 					<input type="range" min="0" max="3" step="1" value={block.options.elements[0].iconsSize} onChange={(e) => {
 						switch (+e.target.value) {
 							case 0:
-								onPropChange('width', '15%', false, 0);
-								onPropChange('width', '85%', false, 1);
+								onPropChange('width', '50px', false, 0);
+								onPropChange('width', '500px', false, 1);
 								break;
 							case 1:
-								onPropChange('width', '25%', false, 0);
-								onPropChange('width', '75%', false, 1);
+								onPropChange('width', '100px', false, 0);
+								onPropChange('width', '450px', false, 1);
 								break;
 							case 2:
-								onPropChange('width', '35%', false, 0);
-								onPropChange('width', '65%', false, 1);
+								onPropChange('width', '200px', false, 0);
+								onPropChange('width', '350px', false, 1);
 								break;
 							case 3:
-								onPropChange('width', '50%', false, 0);
-								onPropChange('width', '50%', false, 1);
+								onPropChange('width', '275px', false, 0);
+								onPropChange('width', '275px', false, 1);
 								break;
 							default:
 								break;
@@ -43,7 +43,7 @@ const OptionsSocialText = ({ block, language, onPropChange }) => {
 			</div>
 			<div>
 				<label>{language["Icons position"]}:
-				<select onChange={(e) => onPropChange('float', e.target.value, false, 0)}>
+				<select onChange={(e) => onPropChange('textAlign', e.target.value, false, 0)}>
 					<option value="left">{language["left"]}</option>
 					<option value="right">{language["right"]}</option>
 				</select>

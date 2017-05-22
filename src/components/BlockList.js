@@ -46,7 +46,7 @@ const BlockList = connect(
 			}}
 		>
 			<table
-				width="570px"
+				width="570"
 				cellPadding="0"
 				cellSpacing="0"
 				role="presentation"
@@ -88,6 +88,7 @@ const BlockList = connect(
 							}
 						>
 							<td
+								width="570"
 								className="ree_single_block"
 								style={block.options.container}
 							>

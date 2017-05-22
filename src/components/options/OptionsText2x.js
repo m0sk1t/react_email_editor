@@ -15,36 +15,29 @@ const OptionsText2x = ({ block, language, onPropChange }) => {
 			</div>
 			<div>
 				<label>{language["Text"]} 1:
-				<select onChange={(e) => {
-					switch (e.target.value) {
-						case 'small':
-							onPropChange('width', '25%', false, 0);
-							onPropChange('width', '75%', false, 1);
-							break;
-						case 'middle':
-							onPropChange('width', '35%', false, 0);
-							onPropChange('width', '65%', false, 1);
-							break;
-						case 'big':
-							onPropChange('width', '50%', false, 0);
-							onPropChange('width', '50%', false, 1);
-							break;
-						default:
-							break;
-					}
-				}}>
-					<option value="small">{language["small"]}</option>
-					<option value="middle">{language["middle"]}</option>
-					<option value="big">{language["big"]}</option>
-				</select>
-				</label>
-			</div>
-			<div>
-				<label>{language["Text"]} 1 position:
-				<select onChange={(e) => onPropChange('float', e.target.value, false, 0)}>
-					<option value="left">{language["left"]}</option>
-					<option value="right">{language["right"]}</option>
-				</select>
+					<input type="range" min="0" max="3" step="1" value={block.options.elements[0].textSize} onChange={(e) => {
+						switch (+e.target.value) {
+							case 0:
+								onPropChange('width', '50px', false, 0);
+								onPropChange('width', '500px', false, 1);
+								break;
+							case 1:
+								onPropChange('width', '100px', false, 0);
+								onPropChange('width', '450px', false, 1);
+								break;
+							case 2:
+								onPropChange('width', '200px', false, 0);
+								onPropChange('width', '350px', false, 1);
+								break;
+							case 3:
+								onPropChange('width', '275px', false, 0);
+								onPropChange('width', '275px', false, 1);
+								break;
+							default:
+								break;
+						}
+						onPropChange('textSize', e.target.value, false, 0);
+					}} />
 				</label>
 			</div>
 			<div>
