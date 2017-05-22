@@ -18,6 +18,7 @@ const store = createStore(todoApp, {
 		'fontSize': '16',
 		'templateName': '',
 		'color': '#333333',
+		'bgcolor': '#FAFAFA',
 		'backgroundColor': '#FFFFFF',
 	},
 	'template': [],

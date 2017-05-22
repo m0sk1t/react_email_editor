@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { stylizeAll, setTemplateName } from '../actions';
+import { stylizeAll, setBgcolor, setTemplateName } from '../actions';
 
 const mapStateToProps = (state) => {
 	return {
@@ -17,6 +17,9 @@ const mapDispatchToProps = (dispatch) => {
 		},
 		stylizeAll: (prop, val) => {
 			dispatch(stylizeAll(prop, val));
+		},
+		setBgcolor: (val) => {
+			dispatch(setBgcolor(val));
 		}
 	};
 };
@@ -24,7 +27,7 @@ const mapDispatchToProps = (dispatch) => {
 const Common = connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(({ tabs, common, language, stylizeAll, setTemplateName }) => {
+)(({ tabs, common, language, stylizeAll, setBgcolor, setTemplateName }) => {
 	if (tabs && tabs.common) {
 		const fontSize = common.fontSize.match(/\d+/)?common.fontSize.match(/\d+/)[0]: '16';
 		return (
@@ -38,11 +41,16 @@ const Common = connect(
 					<label>{language["Template name"]}: <input type="text" value={common.templateName} onChange={(e) => setTemplateName(e.target.value)} /></label>
 				</div>
 				<div>
+					<label>{language["Template background"]}: <input type="color" value={common.bgcolor} onChange={(e) => setBgcolor(e.target.value)} /></label>
+				</div>
+				<hr />
+				<div>
 					<label>{language["Color"]}: <input type="color" value={common.color} onChange={(e) => stylizeAll('color', e.target.value)} /></label>
 				</div>
 				<div>
 					<label>{language["Background"]}: <input type="color" value={common.backgroundColor} onChange={(e) => stylizeAll('backgroundColor', e.target.value)} /></label>
 				</div>
+				<hr />
 				<div>
 					<label>{language["Font size"]}: <input type="number" value={fontSize} onChange={(e) => stylizeAll('fontSize', `${e.target.value}px`, true)} /></label>
 				</div>

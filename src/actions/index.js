@@ -21,6 +21,13 @@ export const selectBlock = (id) => {
 	};
 };
 
+export const setBgcolor = (bgcolor) => {
+	return {
+		type: 'SET_BGCOLOR',
+		bgcolor
+	};
+};
+
 export const deselectBlocks = () => {
 	return {
 		type: 'DESELECT_BLOCKS'

@@ -45,59 +45,72 @@ const BlockList = connect(
 				'justifyContent': 'center',
 			}}
 		>
-			<table
-				width="570"
-				cellPadding="0"
-				cellSpacing="0"
-				role="presentation"
-				style={{
-					'width':'570px',
-				}}
-			>
+			<table style={{backgroundColor: common.bgcolor}} width="100%">
 				<tbody>
-					{template.map((block, index) =>
-						<tr
-							id={`id_${block.id}`}
-							key={block.id}
-							draggable="true"
-							style={{
-								'boxShadow': block.selected?'#4CAF50 0px 0px 3px 7px':''
-							}}
-							onClick={(e) => {e.stopPropagation(); selectBlock(block.id);}}
-							onDragOver={ev => {
-									ev.preventDefault();
-									Array.prototype.forEach.call(document.querySelectorAll('.ree_single_block'), (el) => {
-										el.classList.remove('block__hovered');
-									});
-									ev.target.closest('.ree_single_block').classList.add('block__hovered');
-								}
-							}
-							onDragStart={() => blockDragged = block.id}
-							onDrop={() => {
-									Array.prototype.forEach.call(document.querySelectorAll('.ree_single_block'), (el) => {
-										el.classList.remove('block__hovered');
-									});
-									if (blockDragged) {
-										onDrop(blockDragged, index);
-									} else {
-										let newBlock = components.filter(el => el.selected)[0].block;
-										newBlock.options.container = Object.assign({}, newBlock.options.container, common);
-										onAdd(newBlock, index);
-									}
-								}
-							}
+					<tr>
+						<td
+						style={{
+							'display': 'flex',
+							'justifyContent': 'center',
+						}}
 						>
-							<td
+							<table id="rootTemplate"
 								width="570"
-								className="ree_single_block"
-								style={block.options.container}
+								cellPadding="0"
+								cellSpacing="0"
+								role="presentation"
+								style={{
+									'width':'570px',
+								}}
 							>
-							<Block
-								block={block}
-							 />
-							</td>
-						</tr>
-					)}
+								<tbody>
+									{template.map((block, index) =>
+										<tr
+											id={`id_${block.id}`}
+											key={block.id}
+											draggable="true"
+											style={{
+												'boxShadow': block.selected?'#4CAF50 0px 0px 3px 7px':''
+											}}
+											onClick={(e) => {e.stopPropagation(); selectBlock(block.id);}}
+											onDragOver={ev => {
+													ev.preventDefault();
+													Array.prototype.forEach.call(document.querySelectorAll('.ree_single_block'), (el) => {
+														el.classList.remove('block__hovered');
+													});
+													ev.target.closest('.ree_single_block').classList.add('block__hovered');
+												}
+											}
+											onDragStart={() => blockDragged = block.id}
+											onDrop={() => {
+													Array.prototype.forEach.call(document.querySelectorAll('.ree_single_block'), (el) => {
+														el.classList.remove('block__hovered');
+													});
+													if (blockDragged) {
+														onDrop(blockDragged, index);
+													} else {
+														let newBlock = components.filter(el => el.selected)[0].block;
+														newBlock.options.container = Object.assign({}, newBlock.options.container, common);
+														onAdd(newBlock, index);
+													}
+												}
+											}
+										>
+											<td
+												width="570"
+												className="ree_single_block"
+												style={block.options.container}
+											>
+											<Block
+												block={block}
+											 />
+											</td>
+										</tr>
+									)}
+								</tbody>
+							</table>
+						</td>
+					</tr>
 				</tbody>
 			</table>
 		</div>

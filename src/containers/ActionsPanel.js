@@ -58,7 +58,7 @@ const ActionsPanel = connect(
 				if (!templateName) {
 					return alert('Имя шаблона не задано! Перейдите на вкладку "Общие"');
 				}
-				saveTemplate(id || 0, emailSource.replace(/<table/, '<table align="center"'), templateName, template);
+				saveTemplate(id || 0, emailSource.replace(/<table id="rootTemplate"/, '<table align="center" id="rootTemplate"'), templateName, template);
 			}}
 			>&#x2714;</span>
 			<span
@@ -67,7 +67,7 @@ const ActionsPanel = connect(
 			onClick={() => {
 				const emailSource = document.querySelector('#rootTable').innerHTML;
 				let email = prompt(language["Enter email"]);
-				sendTestEmail(email, emailSource.replace(/<table/, '<table align="center"'));
+				sendTestEmail(email, emailSource.replace(/<table id="rootTemplate"/, '<table align="center" id="rootTemplate"'));
 			}}
 			>&#x2709;</span>
 		</div>

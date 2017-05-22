@@ -4,6 +4,10 @@ const common = (state = {}, action) => {
 			let style = {};
 			style[action.propertyName] = action.propertyValue;
 			return Object.assign({}, state, style);
+		case 'SET_BGCOLOR':
+			let bgcolor = {};
+			bgcolor.bgcolor = action.bgcolor;
+			return Object.assign({}, state, bgcolor);
 		case 'SET_TEMPLATE_NAME':
 			let name = {};
 			name.templateName = action.templateName;
