@@ -37,12 +37,14 @@ const block = (state, action) => {
 		
 		case 'STYLIZE_BLOCK':
 			let style = {};
+			const customStyle = ((action.propertyName === 'color') || (action.propertyName === 'backgroundColor'));
+			style.customStyle = customStyle;
 			style[action.propertyName] = action.propertyValue;
 			if (action.container) {
 				const change = {
 					options: {
+						elements: state.options.elements,
 						container: Object.assign({}, state.options.container, style),
-						elements: state.options.elements
 					}
 				}
 				return Object.assign({}, state, change);

@@ -29,7 +29,7 @@ const Common = connect(
 	mapDispatchToProps
 )(({ tabs, common, language, stylizeAll, setBgcolor, setTemplateName }) => {
 	if (tabs && tabs.common) {
-		const fontSize = common.fontSize.match(/\d+/)?common.fontSize.match(/\d+/)[0]: '16';
+//		const fontSize = common.fontSize.match(/\d+/)?common.fontSize.match(/\d+/)[0]: '16';
 		return (
 			<div
 			style={{
@@ -51,9 +51,9 @@ const Common = connect(
 					<label>{language["Background"]}: <input type="color" value={common.backgroundColor} onChange={(e) => stylizeAll('backgroundColor', e.target.value)} /></label>
 				</div>
 				<hr />
-				<div>
+{/*				<div>
 					<label>{language["Font size"]}: <input type="number" value={fontSize.match(/\d+/)[0]} onChange={(e) => stylizeAll('fontSize', `${e.target.value}px`, true)} /></label>
-				</div>
+				</div>*/}
 {/*				<div>
 					<label>
 						{language["Font family"]}:
