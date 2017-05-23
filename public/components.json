@@ -6,14 +6,14 @@
 				"block_type": "header",
 				"options": {
 					"container": {
-						"padding": "2%",
+						"padding": "10px",
 						"color": "#333333",
+						"fontSize": "32px",
 						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
 						"text": "Header",
-						"fontSize": "32px",
 						"fontWeight": "bold",
 						"textAlign": "center"
 					}]
@@ -26,7 +26,7 @@
 				"block_type": "hr",
 				"options": {
 					"container": {
-						"padding": "2%",
+						"padding": "10px",
 						"color": "#333333",
 						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
@@ -43,8 +43,9 @@
 				"block_type": "button",
 				"options": {
 					"container": {
-						"padding": "2%",
+						"padding": "10px",
 						"color": "#333333",
+						"fontSize": "24px",
 						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
 					},
@@ -65,7 +66,8 @@
 				"block_type": "text",
 				"options": {
 					"container": {
-						"padding": "2%",
+						"padding": "10px",
+						"fontSize": "16px",
 						"color": "#333333",
 						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
@@ -82,17 +84,17 @@
 				"block_type": "text2x",
 				"options": {
 					"container": {
-						"padding": "2%",
+						"padding": "10px",
+						"fontSize": "16px",
 						"color": "#333333",
 						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
-						"width": "50%",
-						"float": "left",
+						"width": "275",
 						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu felis sit amet justo ullamcorper malesuada vitae nec odio. Duis suscipit, ligula in sollicitudin luctus, turpis purus bibendum lorem, in blandit nibh ipsum sit amet dui. Mauris nibh quam, commodo at ligula nec, volutpat euismod risus. Morbi nec nibh enim."
 					},{
-						"width": "50%",
+						"width": "275",
 						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu felis sit amet justo ullamcorper malesuada vitae nec odio. Duis suscipit, ligula in sollicitudin luctus, turpis purus bibendum lorem, in blandit nibh ipsum sit amet dui. Mauris nibh quam, commodo at ligula nec, volutpat euismod risus. Morbi nec nibh enim."
 					}]
 				}
@@ -104,13 +106,34 @@
 				"block_type": "image",
 				"options": {
 					"container": {
-						"padding": "2%",
+						"padding": "10px",
 						"color": "#333333",
 						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
+						"width": "550",
+						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
+					}]
+				}
+			}
+		},
+		{
+			"preview": "images/video.png",
+			"block": {
+				"block_type": "video",
+				"options": {
+					"container": {
+						"padding": "10px",
+						"color": "#333333",
+						"customStyle": false,
+						"backgroundColor": "#FFFFFF"
+					},
+					"elements": [{
+						"width": "550",
+						"link": "https://www.youtube.com/watch?v=9sYkyUeRjI8",
+						"source": "9sYkyUeRjI8"
 					}]
 				}
 			}
@@ -121,14 +144,18 @@
 				"block_type": "image2x",
 				"options": {
 					"container": {
-						"padding": "2%",
+						"padding": "10px",
 						"color": "#333333",
 						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
+						"width": "275",
+						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					},{
+						"width": "275",
+						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					}]
 				}
@@ -140,16 +167,22 @@
 				"block_type": "image3x",
 				"options": {
 					"container": {
-						"padding": "2%",
+						"padding": "10px",
 						"color": "#333333",
 						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
+						"width": "183",
+						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					},{
+						"width": "183",
+						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					},{
+						"width": "183",
+						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					}]
 				}
@@ -161,18 +194,20 @@
 				"block_type": "image_text",
 				"options": {
 					"container": {
-						"padding": "2%",
+						"padding": "10px",
 						"color": "#333333",
+						"fontSize": "16px",
 						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
-						"width": "25%",
+						"width": "275",
 						"float": "left",
+						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					},
 					{
-						"width": "75%",
+						"width": "275",
 						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu felis sit amet justo ullamcorper malesuada vitae nec odio. Duis suscipit, ligula in sollicitudin luctus, turpis purus bibendum lorem, in blandit nibh ipsum sit amet dui. Mauris nibh quam, commodo at ligula nec, volutpat euismod risus. Morbi nec nibh enim."
 					}]
 				}
@@ -184,7 +219,7 @@
 				"block_type": "social",
 				"options": {
 					"container": {
-						"padding": "2%",
+						"padding": "10px",
 						"color": "#333333",
 						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
@@ -213,13 +248,14 @@
 				"block_type": "social_text",
 				"options": {
 					"container": {
-						"padding": "2%",
+						"padding": "10px",
 						"color": "#333333",
+						"fontSize": "16px",
 						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
-						"width": "25%",
+						"width": "275",
 						"float": "left",
 						"ok_source": "icons/ok_3d.png",
 						"vk_source": "icons/vk_3d.png",
@@ -234,7 +270,7 @@
 						"youtube_link": "",
 						"facebook_link": ""
 					},{
-						"width": "75%",
+						"width": "275",
 						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu felis sit amet justo ullamcorper malesuada vitae nec odio. Duis suscipit, ligula in sollicitudin luctus, turpis purus bibendum lorem, in blandit nibh ipsum sit amet dui. Mauris nibh quam, commodo at ligula nec, volutpat euismod risus. Morbi nec nibh enim."
 					}]
 				}
@@ -246,7 +282,7 @@
 				"block_type": "feedback",
 				"options": {
 					"container": {
-						"padding": "2%",
+						"padding": "10px",
 						"color": "#333333",
 						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
@@ -272,14 +308,14 @@
 				"block_type": "feedback_text",
 				"options": {
 					"container": {
-						"padding": "2%",
+						"padding": "10px",
 						"color": "#333333",
+						"fontSize": "16px",
 						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
-						"width": "25%",
-						"float": "left",
+						"width": "275",
 						"like_source": "icons/like_3d.png",
 						"dislike_source": "icons/dislike_3d.png",
 						"neutral_source": "icons/neutral_3d.png",
@@ -290,7 +326,7 @@
 						"dislike_link": "",
 						"neutral_link": ""
 					},{
-						"width": "75%",
+						"width": "275",
 						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu felis sit amet justo ullamcorper malesuada vitae nec odio. Duis suscipit, ligula in sollicitudin luctus, turpis purus bibendum lorem, in blandit nibh ipsum sit amet dui. Mauris nibh quam, commodo at ligula nec, volutpat euismod risus. Morbi nec nibh enim."
 					}]
 				}

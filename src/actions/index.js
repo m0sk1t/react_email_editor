@@ -21,6 +21,13 @@ export const selectBlock = (id) => {
 	};
 };
 
+export const setBgcolor = (bgcolor) => {
+	return {
+		type: 'SET_BGCOLOR',
+		bgcolor
+	};
+};
+
 export const deselectBlocks = () => {
 	return {
 		type: 'DESELECT_BLOCKS'
@@ -53,6 +60,13 @@ export const stylizeAll = (propertyName, propertyValue) => {
 	};
 };
 
+export const setTemplateName = (templateName) => {
+	return {
+		type: 'SET_TEMPLATE_NAME',
+		templateName,
+	};
+};
+
 export const setVisible = (tab) => {
 	return {
 		type: 'SET_VISIBLE',
@@ -80,11 +94,12 @@ export const addImage = (block, index, file) => {
 	};
 };
 
-export const saveTemplate = (id, html, template) => {
+export const saveTemplate = (id, html, name, template) => {
 	return {
 		type: 'SAVE_TEMPLATE',
 		template,
 		html,
+		name,
 		id,
 	};
 };

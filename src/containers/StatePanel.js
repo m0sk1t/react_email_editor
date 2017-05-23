@@ -45,8 +45,8 @@ const StatePanel = connect(
 	return (
 		<div
 		style={{
-			'top': '1rem',
-			'left': '30%',
+			'top': '3rem',
+			'left': '35%',
 			'position': 'fixed',
 		}}
 		>

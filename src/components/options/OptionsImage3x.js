@@ -9,36 +9,63 @@ const OptionsImage3x = ({ block, language, onFileChange, onPropChange }) => {
 			<div>
 				<label>
 					{language["URL"]} 1:
-					<input
-						type="file"
-						onChange={(e) => {
-							onFileChange(block, 0, e.target.files[0]);
-						}} />
+					<label>
+						<input
+							type="file"
+							onChange={(e) => {
+								onFileChange(block, 0, e.target.files[0]);
+							}} />
+						<div>&#8853;</div>
+					</label>
 					<input type="text" value={block.options.elements[0].source} onChange={(e) => onPropChange('source', e.target.value, false, 0)} />
 				</label>
 			</div>
 			<div>
+				<label>{language["Link"]} 1: <input type="text" value={block.options.elements[0].link} onChange={(e) => onPropChange('link', e.target.value, false, 0)} /></label>
+			</div>
+			<hr />
+			<div>
 				<label>
 					{language["URL"]} 2:
-					<input
-						type="file"
-						onChange={(e) => {
-							onFileChange(block, 1, e.target.files[0]);
-						}} />
+					<label>
+						<input
+							type="file"
+							onChange={(e) => {
+								onFileChange(block, 1, e.target.files[0]);
+							}} />
+						<div>&#8853;</div>
+					</label>
 					<input type="text" value={block.options.elements[1].source} onChange={(e) => onPropChange('source', e.target.value, false, 1)} />
 				</label>
 			</div>
 			<div>
+				<label>{language["Link"]} 2: <input type="text" value={block.options.elements[1].link} onChange={(e) => onPropChange('link', e.target.value, false, 1)} /></label>
+			</div>
+			<hr />
+			<div>
 				<label>
 					{language["URL"]} 3:
-					<input
-						type="file"
-						onChange={(e) => {
-							onFileChange(block, 2, e.target.files[0]);
-						}} />
+					<label>
+						<input
+							type="file"
+							onChange={(e) => {
+								onFileChange(block, 2, e.target.files[0]);
+							}} />
+						<div>&#8853;</div>
+					</label>
 					<input type="text" value={block.options.elements[2].source} onChange={(e) => onPropChange('source', e.target.value, false, 2)} />
 				</label>
 			</div>
+			<div>
+				<label>{language["Link"]} 3: <input type="text" value={block.options.elements[2].link} onChange={(e) => onPropChange('link', e.target.value, false, 2)} /></label>
+			</div>
+			<div>
+				<label>{language["Add paddings"]}: <input type="checkbox" checked={block.options.container.usePadding? 'checked': ''} onChange={(e) => onPropChange('usePadding', !block.options.container.usePadding, true)} /></label>
+			</div>
+			<div>
+				<label>{language["Border radius"]}: <input type="text" value={block.options.elements[0].borderRadius} onChange={(e) => onPropChange('borderRadius', e.target.value, false, 0)} /></label>
+			</div>
+			<hr />
 			<div>
 				<label>{language["Background"]}: <input type="color" value={block.options.container.backgroundColor} onChange={(e) => onPropChange('backgroundColor', e.target.value, true)} /></label>
 			</div>

@@ -20,7 +20,7 @@ const setTemplate = (req, res) => {
 	if (req.params.id === 'null') {
 		let newTemplate = new TemplateModel();
 		newTemplate.html = req.body.html;
-		newTemplate.template = req.body.template;
+		newTemplate.template = JSON.parse(req.body.template);
 		newTemplate.save(err => {
 			if (err) return res.status(500).json(err);
 			res.json(newTemplate);

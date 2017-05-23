@@ -2,6 +2,7 @@ import React from 'react';
 import BlockHr from './blocks/BlockHr';
 import BlockText from './blocks/BlockText';
 import BlockImage from './blocks/BlockImage';
+import BlockVideo from './blocks/BlockVideo';
 import BlockButton from './blocks/BlockButton';
 import BlockHeader from './blocks/BlockHeader';
 import BlockSocial from './blocks/BlockSocial';
@@ -22,6 +23,8 @@ const Block = ({ block }) => {
 			return <BlockText id={block.id} blockOptions={block.options} />;
 		case 'image':
 			return <BlockImage id={block.id} blockOptions={block.options} />;
+		case 'video':
+			return <BlockVideo id={block.id} blockOptions={block.options} />;
 		case 'button':
 			return <BlockButton id={block.id} blockOptions={block.options} />;
 		case 'header':

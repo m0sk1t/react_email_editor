@@ -8,13 +8,17 @@ import createSagaMiddleware from 'redux-saga';
 import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
+let templateId = '';
 const sagaMiddleware = createSagaMiddleware();
-const templateId = document.location.search.split('?id=').join('');
+document.location.search.substring(1).split('&').map(el => el.indexOf('id=') !== -1 && (templateId = el.split('id=').join('')));
 
-let store = createStore(todoApp, {
+const store = createStore(todoApp, {
 	templateId,
 	'common': {
+		'fontSize': '16',
+		'templateName': '',
 		'color': '#333333',
+		'bgcolor': '#FAFAFA',
 		'backgroundColor': '#FFFFFF',
 	},
 	'template': [],

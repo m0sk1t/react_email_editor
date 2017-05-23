@@ -23,10 +23,11 @@ const Blocks = connect(
 )(({ tabs, components, selectComponent }) => {
 	if (tabs && tabs.blocks) {
 		const alt = "block preview";
+		const imgLocation = document.location.href.indexOf('nm_email_editor') > 0? `${document.location.origin}/wp-content/plugins/newsmine/include/email_editor/`:'/';
 		return (
 			<div
 			style={{
-				'height': '93%',
+				'height': '100%',
 				'display': 'flex',
 				'overflowY': 'auto',
 				'alignItems': 'center',
@@ -44,7 +45,7 @@ const Blocks = connect(
 						draggable="true"
 						onClick={() => selectComponent(index)}
 						onDragStart={() => selectComponent(index)}
-						><img style={{'width': '100%'}} alt={alt} src={el.preview} />
+						><img style={{'width': '100%'}} alt={alt} src={`${imgLocation}${el.preview}`} />
 					</div>
 				)}
 			</div>

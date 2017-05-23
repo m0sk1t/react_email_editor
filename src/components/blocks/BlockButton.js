@@ -3,7 +3,7 @@ import React from 'react';
 const BlockButton = ({ id, blockOptions, onPropChange }) => {
 	return (
 		<table
-			width="100%"
+			width="550"
 			cellPadding="0"
 			cellSpacing="0"
 			role="presentation"
@@ -11,11 +11,13 @@ const BlockButton = ({ id, blockOptions, onPropChange }) => {
 			<tbody>
 				<tr>
 					<td
+					width="550"
 					style={blockOptions.elements[0]}
 					>
 					<a
-					href={blockOptions.elements[0].link}
 					target="_blank"
+					href={blockOptions.elements[0].link}
+					title={blockOptions.elements[0].link}
 					style={{
 						'textDecoration': 'none',
 						'color': blockOptions.container.color,

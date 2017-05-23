@@ -2,10 +2,10 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
+		<script src="tinymce/tinymce.min.js"></script>
 		<link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
-		<script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=sa20ib37hyepxkihcm5js7yi2c8r97x2wyalyvlns12ua5xy"></script>
 		<style>
 			html,
 			body,
@@ -19,7 +19,7 @@
 			td p {
 				margin: 0!important;
 			}
-			#rootTable>table {
+			#rootTemplate {
 				box-shadow: 2px 2px 5px 1px rgb(102, 102, 102);
 			}
 			#root input[type="text"] {
@@ -32,17 +32,9 @@
 				justify-content: space-between;
 			}
 			input[type="file"] {
-				opacity: 1;
-				width: 30px;
-				height: 30px;
-				cursor: pointer;
-				position: relative;
+				display: none;
 			}
-			input[type="file"]::after {
-				content: "\2295";
-				top: 0;
-				left: 0;
-				opacity: 1;
+			input[type="file"] ~ div {
 				width: 32px;
 				height: 32px;
 				display: flex;
@@ -50,8 +42,7 @@
 				color: #fafafa;
 				cursor: pointer;
 				font-size: 30px;
-				position: absolute;
-				align-items: flex-end;
+				align-items: center;
 				justify-content: center;
 				background-color: rgb(51, 170, 51);
 			}
@@ -60,7 +51,7 @@
 				z-index: 999;
 				width: 520px;
 				padding: 20px;
-				position: absolute;
+				position: fixed;
 				border-radius: 5px;
 				left: calc(50% - 100px);
 				transition: top .5s ease-out;
@@ -76,6 +67,11 @@
 			#ree_message.visible.error {
 				background-color: #e33;
 				box-shadow: 0px 0px 3px 3px #f77;
+			}
+			.block__hovered {
+				opacity: .5!important;
+				background-color: teal!important;
+				box-shadow: 0px 0px 5px 5px teal!important;
 			}
 		</style>
 		<script>
