@@ -1,3 +1,4 @@
+const port = 8888;
 const path = require('path');
 const e = require('express')();
 const mongoose = require('mongoose');
@@ -20,12 +21,11 @@ e.use(serveStatic(path.join(__dirname, '/build')));
 e.use(serveStatic(path.join(__dirname, '/uploads'))); // bad? maybe yes...
 e.use(serveFavicon(path.join(__dirname, '/build/favicon.ico')));
 
-
 e.use(require(path.join(__dirname, '/app/Router.js')));
-e.listen(7777, () => {
+e.listen(port, () => {
 	mongoose.Promise = global.Promise;
 
-	console.log(`Server started at: ${new Date()}, path: http://localhost:8888/`);
+	console.log(`Server started at: ${new Date()}, path: http://localhost:${port}/`);
 
 	mongoose.connect('mongodb://localhost:27017/email_editor');
 

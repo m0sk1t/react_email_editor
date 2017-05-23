@@ -5,11 +5,12 @@
 			"block_type": "image",
 			"options": {
 				"container": {
-					"padding": "2%",
+					"padding": "10px",
 					"color": "#333333",
 					"backgroundColor": "#FFFFFF"
 				},
 				"elements": [{
+					"width": "550",
 					"source": "https://www.w3schools.com/css/trolltunga.jpg"
 				}]
 			}
@@ -19,13 +20,13 @@
 			"block_type": "header",
 			"options": {
 				"container": {
-					"padding": "2%",
+					"padding": "10px",
 					"color": "#333333",
+					"fontSize": "32px",
 					"backgroundColor": "#FFFFFF"
 				},
 				"elements": [{
 					"text": "Header",
-					"fontSize": "32px",
 					"fontWeight": "bold",
 					"textAlign": "center"
 				}]
@@ -36,8 +37,9 @@
 			"block_type": "text",
 			"options": {
 				"container": {
-					"padding": "2%",
+					"padding": "10px",
 					"color": "#333333",
+					"fontSize": "16px",
 					"backgroundColor": "#FFFFFF"
 				},
 				"elements": [{
@@ -50,17 +52,18 @@
 			"block_type": "image_text",
 			"options": {
 				"container": {
-					"padding": "2%",
+					"padding": "10px",
 					"color": "#333333",
+					"fontSize": "16px",
 					"backgroundColor": "#FFFFFF"
 				},
 				"elements": [{
-						"width": "35%",
+						"width": "275",
 						"float": "left",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					},
 					{
-						"width": "65%",
+						"width": "275",
 						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu felis sit amet justo ullamcorper malesuada vitae nec odio. Duis suscipit, ligula in sollicitudin luctus, turpis purus bibendum lorem, in blandit nibh ipsum sit amet dui. Mauris nibh quam, commodo at ligula nec, volutpat euismod risus. Morbi nec nibh enim."
 					}]
 			}

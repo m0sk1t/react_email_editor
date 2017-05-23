@@ -20,6 +20,7 @@ const setTemplate = (req, res) => {
 	if (req.params.id === 'null') {
 		let newTemplate = new TemplateModel();
 		newTemplate.html = req.body.html;
+		newTemplate.name = req.body.name;
 		newTemplate.template = JSON.parse(req.body.template);
 		newTemplate.save(err => {
 			if (err) return res.status(500).json(err);
@@ -29,6 +30,7 @@ const setTemplate = (req, res) => {
 		TemplateModel.findByIdAndUpdate(req.params.id, {
 			"$set": {
 				html: req.body.html,
+				name: req.body.name,
 				template: req.body.template,
 			}
 		}, (err, tpl) => {

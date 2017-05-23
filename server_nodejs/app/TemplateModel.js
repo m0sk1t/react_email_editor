@@ -7,6 +7,10 @@ const TemplateModel = require('mongoose').model('TemplateModel', {
 		type: String,
 		default: ''
 	},
+	name: {
+		type: String,
+		default: ''
+	},
 });
 
 module.exports = TemplateModel;
