@@ -21,7 +21,8 @@ const setTemplate = (req, res) => {
 		let newTemplate = new TemplateModel();
 		newTemplate.html = req.body.html;
 		newTemplate.name = req.body.name;
-		newTemplate.template = JSON.parse(req.body.template);
+		// needed if no-cors enabled: newTemplate.template = JSON.parse(req.body.template);
+		newTemplate.template = req.body.template;
 		newTemplate.save(err => {
 			if (err) return res.status(500).json(err);
 			res.json(newTemplate);
