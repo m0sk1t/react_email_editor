@@ -1,7 +1,7 @@
 import React from 'react';
 
 const OptionsButton = ({ block, language, onPropChange }) => {
-//	const fontSize = block.options.container.fontSize.match(/\d+/)?block.options.container.fontSize.match(/\d+/)[0]: '16';
+	const fontSize = block.options.container.fontSize.match(/\d+/)?block.options.container.fontSize.match(/\d+/)[0]: '16';
 	return (
 		<div>
 			<div>
@@ -20,10 +20,10 @@ const OptionsButton = ({ block, language, onPropChange }) => {
 			<div>
 				<label>{language["Height"]}: <input type="text" value={block.options.container.height} onChange={(e) => onPropChange('height', e.target.value, true)} /></label>
 			</div>
-{/*			<div>
-				<label>{language["Font size"]}: <input type="number" value={fontSize.match(/\d+/)[0]} onChange={(e) => onPropChange('fontSize', `${e.target.value}px`, true)} /></label>
+			<div>
+				<label>{language["Font size"]}: <input type="number" value={fontSize} onChange={(e) => onPropChange('fontSize', `${e.target.value}px`, true)} /></label>
 			</div>
-*/}			<hr />
+			<hr />
 			<div>
 				<label>{language["Color"]}: <input type="color" value={block.options.container.color} onChange={(e) => onPropChange('color', e.target.value, true)} /></label>
 			</div>

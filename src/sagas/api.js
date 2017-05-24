@@ -5,7 +5,7 @@ const headers = {
 };
  
 /*
-using fetch with mode: no-cors you can only set
+using fetch with { "mode": "no-cors" } you can only set
 	application/x-www-form-urlencoded
 	multipart/form-data
 	text/plain
@@ -52,7 +52,7 @@ export const saveImage = (file) => {
 
 export const saveTemplate = ({ id, html, name, template }) => {
 /*
-with mode: no-cors use this
+with noCors use this
 	var formData = new FormData();
 	formData.append('html', html);
 	formData.append('name', name);
@@ -62,7 +62,7 @@ with mode: no-cors use this
 		method,
 		headers,
 		// ...noCors,
-		body: JSON.stringify({ html, name, template })
+		body: JSON.stringify({ html, name, template }) // formData
 	};
 	return fetch(new Request(`${apiEndpoint}/template/${id||'null'}`, params))
 		.then(res => res.json())
@@ -71,7 +71,7 @@ with mode: no-cors use this
 
 export const sendTestEmail = ({ email, html }) => {
 /*
-with mode: no-cors use this
+with noCors use this
 	var formData = new FormData();
 	formData.append('html', html);
 	formData.append('email', email);
@@ -80,7 +80,7 @@ with mode: no-cors use this
 		method,
 		headers,
 		// ...noCors,
-		body: JSON.stringify({ email, html })
+		body: JSON.stringify({ email, html }) // formData
 	};
 	return fetch(new Request(`${apiEndpoint}/send`, params))
 		.then(res => res.json())

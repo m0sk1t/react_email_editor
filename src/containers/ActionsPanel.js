@@ -54,20 +54,26 @@ const ActionsPanel = connect(
 			style={buttonStyle}
 			title={language["Save template"]}
 			onClick={() => {
-				const emailSource = document.querySelector('#rootTable').innerHTML;
+				let emailSource = document.querySelector('#rootTable').innerHTML;
+				emailSource = emailSource.replace(/&nbsp;/ig, " ");
+				emailSource = emailSource.replace(/&quot;/ig, "\"");
+				emailSource = emailSource.replace(/<table id="rootTemplate"/, '<table align="center" id="rootTemplate"')
 				if (!templateName) {
 					return alert('Имя шаблона не задано! Перейдите на вкладку "Общие"');
 				}
-				saveTemplate(id || 0, emailSource.replace(/<table id="rootTemplate"/, '<table align="center" id="rootTemplate"'), templateName, template);
+				saveTemplate(id || 0, emailSource, templateName, template);
 			}}
 			>&#x2714;</span>
 			<span
 			title={language["Send test email"]}
 			style={buttonStyle}
 			onClick={() => {
-				const emailSource = document.querySelector('#rootTable').innerHTML;
+				let emailSource = document.querySelector('#rootTable').innerHTML;
+				emailSource = emailSource.replace(/&nbsp;/ig, " ");
+				emailSource = emailSource.replace(/&quot;/ig, "\"");
+				emailSource = emailSource.replace(/<table id="rootTemplate"/, '<table align="center" id="rootTemplate"')
 				let email = prompt(language["Enter email"]);
-				sendTestEmail(email, emailSource.replace(/<table id="rootTemplate"/, '<table align="center" id="rootTemplate"'));
+				sendTestEmail(email, emailSource);
 			}}
 			>&#x2709;</span>
 		</div>
