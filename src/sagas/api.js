@@ -1,9 +1,7 @@
 window.wp && (window.wp.ajax.settings.url = window.ajaxurl);
 const headers = new Headers({
 	'Accept': 'aplication/json',
-	// 'Content-type': 'multipart/form-data'
 	'Content-type': 'application/x-www-form-urlencoded'
-	// 'Content-type': 'aplication/json;charset=UTF-8'
 })
 const rootPath = document.location.href.indexOf('page=nm_email_editor') === -1? '/': `${document.location.origin}/wp-content/plugins/newsmine/include/email_editor/`;
 

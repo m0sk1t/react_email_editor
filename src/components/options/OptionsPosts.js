@@ -1,29 +1,12 @@
 import React from 'react';
 
-const OptionsImageText = ({ block, language, onFileChange, onPropChange }) => {
+const OptionsPosts = ({ block, language, onPropChange }) => {
 	return (
 		<div>
 			<div>
 				<label>{language["Custom style"]}: <input type="checkbox" checked={block.options.container.customStyle? 'checked': '' } onChange={(e) => onPropChange('customStyle', !block.options.container.customStyle, true)} /></label>
 			</div>
 			<hr />
-			<div>
-				<label>
-					{language["URL"]}:
-					<label>
-						<input
-							type="file"
-							onChange={(e) => {
-								onFileChange(block, 0, e.target.files[0]);
-							}} />
-						<div>&#8853;</div>
-					</label>
-					<input type="text" value={block.options.elements[0].source} onChange={(e) => onPropChange('source', e.target.value, false, 0)} />
-				</label>
-			</div>
-			<div>
-				<label>{language["Link"]}: <input type="text" value={block.options.elements[0].link} onChange={(e) => onPropChange('link', e.target.value, false, 0)} /></label>
-			</div>
 			<div>
 				<label>{language["Border radius"]}: <input type="text" value={block.options.elements[0].borderRadius} onChange={(e) => onPropChange('borderRadius', e.target.value, false, 0)} /></label>
 			</div>
@@ -56,6 +39,54 @@ const OptionsImageText = ({ block, language, onFileChange, onPropChange }) => {
 			</div>
 			<hr />
 			<div>
+				[title]
+				<label>
+					{language["Align"]}:
+					<input
+					value={(block.options.elements[2].textAlign === 'left'?0:(block.options.elements[2].textAlign === "right"?2:1))}
+					type="range" min="0" max="2" step="1"
+					onChange={(e) => {
+						let align = '';
+						switch (+e.target.value) {
+							case 0:
+								align = 'left';
+								break;
+							case 1:
+								align = 'center';
+								break;
+							case 2:
+								align = 'right';
+								break;
+							default:
+								align = 'left';
+								break;
+						}
+						onPropChange('textAlign', align, false, 2);
+					}} />
+				</label>
+			</div>
+			<div>
+				<label>{language["Height"]}: <input type="number" value={block.options.elements[2].height} onChange={(e) => onPropChange('height', e.target.value, false, 2)} /></label>
+			</div>
+			<div>
+				<label>{language["Color"]}: <input type="color" value={block.options.elements[2].color} onChange={(e) => onPropChange('color', e.target.value, false, 2)} /></label>
+			</div>
+			<div>
+				<label>{language["Background"]}: <input type="color" value={block.options.elements[2].backgroundColor} onChange={(e) => onPropChange('backgroundColor', e.target.value, false, 2)} /></label>
+			</div>
+			<hr />
+			[separator]
+			<div>
+				<label>{language["Height"]}: <input type="number" value={block.options.elements[3].height} onChange={(e) => onPropChange('height', e.target.value, false, 3)} /></label>
+			</div>
+			<div>
+				<label>{language["Show separator"]}: <input type="checkbox" checked={block.options.elements[3].display === ''? 'none': ''} onChange={(e) => onPropChange('display', (block.options.elements[3].display === ''? 'none': ''), false, 3)} /></label>
+			</div>
+			<div>
+				<label>{language["Background"]}: <input type="color" value={block.options.elements[3].backgroundColor} onChange={(e) => onPropChange('backgroundColor', e.target.value, false, 3)} /></label>
+			</div>
+			<hr />
+			<div>
 				<label>{language["Color"]}: <input type="color" value={block.options.container.color} onChange={(e) => onPropChange('color', e.target.value, true)} /></label>
 			</div>
 			<div>
@@ -85,4 +116,4 @@ const OptionsImageText = ({ block, language, onFileChange, onPropChange }) => {
 	);
 };
 
-export default OptionsImageText;
+export default OptionsPosts;

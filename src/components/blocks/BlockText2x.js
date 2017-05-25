@@ -29,8 +29,8 @@ const BlockText2x = connect(
 			paste_as_text: true,
 			preview_styles: false,
 			paste_data_images:false,
-			plugins: ["link hr paste lists textcolor code"],
-			toolbar: "bold italic forecolor backcolor hr styleselect removeformat | link unlink | pastetext code",
+			plugins: ["link paste hr lists textcolor code"],
+			toolbar: "bold italic forecolor backcolor hr styleselect removeformat | link unlink | code",
 			paste_postprocess : function(pl, o) {
 				o.node.innerHTML = o.node.innerHTML.replace(/&nbsp;/ig, " ");
 				o.node.innerHTML = o.node.innerHTML.replace(/&quot;/ig, "\"");

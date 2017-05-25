@@ -4,6 +4,7 @@ import { addImage, stylizeBlock } from '../actions';
 import OptionsHr from '../components/options/OptionsHr';
 import OptionsText from '../components/options/OptionsText';
 import OptionsImage from '../components/options/OptionsImage';
+import OptionsPosts from '../components/options/OptionsPosts';
 import OptionsVideo from '../components/options/OptionsVideo';
 import OptionsButton from '../components/options/OptionsButton';
 import OptionsHeader from '../components/options/OptionsHeader';
@@ -49,6 +50,10 @@ const Options = connect(
 				return <OptionsText block={block} language={language} onPropChange={onPropChange} />;
 			case 'image':
 				return <OptionsImage block={block} language={language} onFileChange={onFileChange} onPropChange={onPropChange} />;
+			case 'posts':
+				return <OptionsPosts block={block} language={language} onPropChange={onPropChange} />;
+			case 'posts_title':
+				return <OptionsPosts block={block} language={language} onPropChange={onPropChange} />;
 			case 'video':
 				return <OptionsVideo block={block} language={language} onFileChange={onFileChange} onPropChange={onPropChange} />;
 			case 'button':

@@ -2,6 +2,7 @@ import React from 'react';
 import BlockHr from './blocks/BlockHr';
 import BlockText from './blocks/BlockText';
 import BlockImage from './blocks/BlockImage';
+import BlockPosts from './blocks/BlockPosts';
 import BlockVideo from './blocks/BlockVideo';
 import BlockButton from './blocks/BlockButton';
 import BlockHeader from './blocks/BlockHeader';
@@ -11,6 +12,7 @@ import BlockImage2x from './blocks/BlockImage2x';
 import BlockImage3x from './blocks/BlockImage3x';
 import BlockFeedback from './blocks/BlockFeedback';
 import BlockImageText from './blocks/BlockImageText';
+import BlockPostsTitle from './blocks/BlockPostsTitle';
 import BlockSocialText from './blocks/BlockSocialText';
 import BlockFeedbackText from './blocks/BlockFeedbackText';
 
@@ -23,6 +25,8 @@ const Block = ({ block }) => {
 			return <BlockText id={block.id} blockOptions={block.options} />;
 		case 'image':
 			return <BlockImage id={block.id} blockOptions={block.options} />;
+		case 'posts':
+			return <BlockPosts id={block.id} blockOptions={block.options} />;
 		case 'video':
 			return <BlockVideo id={block.id} blockOptions={block.options} />;
 		case 'button':
@@ -41,6 +45,8 @@ const Block = ({ block }) => {
 			return <BlockFeedback id={block.id} blockOptions={block.options} />;
 		case 'image_text':
 			return <BlockImageText id={block.id} blockOptions={block.options} />;
+		case 'posts_title':
+			return <BlockPostsTitle id={block.id} blockOptions={block.options} />;
 		case 'social_text':
 			return <BlockSocialText id={block.id} blockOptions={block.options} />;
 		case 'feedback_text':
