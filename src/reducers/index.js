@@ -6,6 +6,7 @@ import language from './language';
 import template from './template';
 import components from './components';
 import templateId from './templateId';
+import tinymce_config from './tinymce_config';
 
 const EmailEditor = combineReducers({
     tabs,
@@ -13,7 +14,8 @@ const EmailEditor = combineReducers({
     language,
     template,
     components,
-    templateId
+    templateId,
+    tinymce_config
 });
 
 export default EmailEditor;

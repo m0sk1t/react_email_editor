@@ -21,6 +21,20 @@ const store = createStore(todoApp, {
 		'bgcolor': '#FAFAFA',
 		'backgroundColor': '#FFFFFF',
 	},
+	'tinymce_config': {
+		inline: true,
+		menubar: false,
+		paste_as_text: true,
+		preview_styles: false,
+		paste_data_images: false,
+		paste_auto_cleanup_on_paste: true,
+		plugins: ["link paste hr lists textcolor code"],
+		toolbar: "bold italic forecolor backcolor hr styleselect removeformat | link unlink | code",
+		paste_postprocess : function(pl, o) {
+			o.node.innerHTML = o.node.innerHTML.replace(/&nbsp;/ig, " ");
+			o.node.innerHTML = o.node.innerHTML.replace(/&quot;/ig, "\"");
+		}
+	},
 	'template': [],
 	'components': [],
 	'tabs': {

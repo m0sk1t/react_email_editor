@@ -5,7 +5,7 @@ import { stylizeBlock } from '../../actions';
 
 const mapStateToProps = (state) => {
 	return {
-		template: state.template
+		config: state.tinymce_config
 	};
 };
 
@@ -20,22 +20,12 @@ const mapDispatchToProps = (dispatch) => {
 const BlockImageText = connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(({ id, blockOptions, onPropChange }) => {
+)(({ id, config, blockOptions, onPropChange }) => {
 	const alt = "cool image!";
 	const initEditable = () => {
 		window.tinymce.init({
+			...config,
 			selector: `#id_${id} td.editable`,
-			inline: true,
-			menubar: false,
-			paste_as_text: true,
-			preview_styles: false,
-			paste_data_images:false,
-			plugins: ["link paste hr lists textcolor code"],
-			toolbar: "bold italic forecolor backcolor hr styleselect removeformat | link unlink | code",
-			paste_postprocess : function(pl, o) {
-				o.node.innerHTML = o.node.innerHTML.replace(/&nbsp;/ig, " ");
-				o.node.innerHTML = o.node.innerHTML.replace(/&quot;/ig, "\"");
-			},
 			init_instance_callback: (editor) => {
 				editor.on('change', function (e) {
 					onPropChange('text', e.target.targetElm.innerHTML, false, 1);

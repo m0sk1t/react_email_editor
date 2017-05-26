@@ -22,30 +22,29 @@ const Blocks = connect(
 	mapDispatchToProps
 )(({ tabs, components, selectComponent }) => {
 	if (tabs && tabs.blocks) {
-		const alt = "block preview";
 		const imgLocation = document.location.href.indexOf('nm_email_editor') > 0? `${document.location.origin}/wp-content/plugins/newsmine/include/email_editor/`:'/';
 		return (
 			<div
 			style={{
 				'height': '100%',
-				'display': 'flex',
-				'overflowY': 'auto',
-				'alignItems': 'center',
-				'flexDirection': 'column',
+				'overflowY': 'auto'
 			}}
 			>
 				{components.map((el, index) => 
 					<div
 						key={index}
 						style={{
-							'width': '90%',
-							'margin': '1%',
+							'width': '340px',
+							'height': '140px',
+							'margin': '1% auto',
+							'backgroundSize': 'cover',
 							'border': '1px solid #DDDDDD',
+							'backgroundImage': `url('${imgLocation}${el.preview}')`
 						}}
 						draggable="true"
 						onClick={() => selectComponent(index)}
 						onDragStart={() => selectComponent(index)}
-						><img style={{'width': '100%'}} alt={alt} src={`${imgLocation}${el.preview}`} />
+						>
 					</div>
 				)}
 			</div>

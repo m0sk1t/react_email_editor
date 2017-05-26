@@ -5,7 +5,7 @@ import { stylizeBlock } from '../../actions';
 
 const mapStateToProps = (state) => {
 	return {
-		template: state.template
+		config: state.tinymce_config
 	};
 };
 
@@ -20,21 +20,11 @@ const mapDispatchToProps = (dispatch) => {
 const BlockFeedbackText = connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(({ id, blockOptions, onPropChange }) => {
+)(({ id, config, blockOptions, onPropChange }) => {
 	const initEditable = () => {
 		window.tinymce.init({
+			...config,
 			selector: `#id_${id} td.editable`,
-			inline: true,
-			menubar: false,
-			paste_as_text: true,
-			preview_styles: false,
-			paste_data_images:false,
-			plugins: ["link hr paste lists textcolor code"],
-			toolbar: "bold italic forecolor backcolor hr styleselect removeformat | link unlink | code",
-			paste_postprocess : function(pl, o) {
-				o.node.innerHTML = o.node.innerHTML.replace(/&nbsp;/ig, " ");
-				o.node.innerHTML = o.node.innerHTML.replace(/&quot;/ig, "\"");
-			},
 			init_instance_callback: (editor) => {
 				editor.on('change', function (e) {
 					onPropChange('text', e.target.targetElm.innerHTML, false, 1);
@@ -58,7 +48,7 @@ const BlockFeedbackText = connect(
 					>
 						<a
 						target="_blank"
-						href={blockOptions.elements[0].like_link}
+						href={blockOptions.elements[0].like_link?`[feedback_url action="like" redirect="${blockOptions.elements[0].like_link}"`:`[feedback_url action="like"]`}
 						title={blockOptions.elements[0].like_link}
 						style={{
 							"display": blockOptions.elements[0].like_display
@@ -68,7 +58,7 @@ const BlockFeedbackText = connect(
 						</a>
 						<a
 						target="_blank"
-						href={blockOptions.elements[0].neutral_link}
+						href={blockOptions.elements[0].neutral_link?`[feedback_url action="neutral" redirect="${blockOptions.elements[0].neutral_link}"`:`[feedback_url action="neutral"]`}
 						title={blockOptions.elements[0].neutral_link}
 						style={{
 							"display": blockOptions.elements[0].neutral_display
@@ -78,7 +68,7 @@ const BlockFeedbackText = connect(
 						</a>
 						<a
 						target="_blank"
-						href={blockOptions.elements[0].dislike_link}
+						href={blockOptions.elements[0].dislike_link?`[feedback_url action="dislike" redirect="${blockOptions.elements[0].dislike_link}"`:`[feedback_url action="dislike"]`}
 						title={blockOptions.elements[0].dislike_link}
 						style={{
 							"display": blockOptions.elements[0].dislike_display

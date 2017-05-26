@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React from 'react';
 
-const BlockPosts = ({ id, blockOptions }) => {
+const BlockPosts = ({ blockOptions }) => {
 	const alt = "cool image!";
 	return (
 		<table
