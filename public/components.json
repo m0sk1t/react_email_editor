@@ -6,9 +6,9 @@
 				"block_type": "header",
 				"options": {
 					"container": {
+						"height": "42",
 						"padding": "10px",
 						"color": "#333333",
-						"fontSize": "32px",
 						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
 					},
@@ -26,13 +26,14 @@
 				"block_type": "hr",
 				"options": {
 					"container": {
+						"height": "15",
 						"padding": "10px",
 						"color": "#333333",
 						"customStyle": false,
 						"backgroundColor": "#FFFFFF"
 					},
 					"elements": [{
-						"height": "15px"
+						"height": "15"
 					}]
 				}
 			}
@@ -43,6 +44,7 @@
 				"block_type": "button",
 				"options": {
 					"container": {
+						"height": "24",
 						"padding": "10px",
 						"color": "#333333",
 						"fontSize": "24px",
@@ -151,6 +153,7 @@
 					},
 					"elements": [{
 						"width": "275",
+						"float": "left",
 						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					},{
@@ -174,14 +177,17 @@
 					},
 					"elements": [{
 						"width": "183",
+						"float": "left",
 						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					},{
 						"width": "183",
+						"float": "left",
 						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					},{
 						"width": "183",
+						"float": "left",
 						"link": "https://www.w3schools.com/css/trolltunga.jpg",
 						"source": "https://www.w3schools.com/css/trolltunga.jpg"
 					}]
@@ -316,6 +322,7 @@
 					},
 					"elements": [{
 						"width": "275",
+						"float": "left",
 						"like_source": "icons/like_3d.png",
 						"dislike_source": "icons/dislike_3d.png",
 						"neutral_source": "icons/neutral_3d.png",
@@ -328,6 +335,72 @@
 					},{
 						"width": "275",
 						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu felis sit amet justo ullamcorper malesuada vitae nec odio. Duis suscipit, ligula in sollicitudin luctus, turpis purus bibendum lorem, in blandit nibh ipsum sit amet dui. Mauris nibh quam, commodo at ligula nec, volutpat euismod risus. Morbi nec nibh enim."
+					}]
+				}
+			}
+		},
+		{
+			"preview": "images/posts.png",
+			"block": {
+				"block_type": "posts",
+				"options": {
+					"container": {
+						"padding": "10px",
+						"color": "#333333",
+						"fontSize": "16px",
+						"customStyle": false,
+						"backgroundColor": "#FFFFFF"
+					},
+					"elements": [{
+						"width": "275",
+						"float": "left"
+					},
+					{
+						"width": "275",
+						"padding": "10px"
+					},
+					{
+						"height": "30",
+						"color": "#333333",
+						"textAlign": "center",
+						"backgroundColor": "#FFFFFF"
+					},
+					{
+						"height": "20",
+						"display": ""
+					}]
+				}
+			}
+		},
+		{
+			"preview": "images/posts_title.png",
+			"block": {
+				"block_type": "posts_title",
+				"options": {
+					"container": {
+						"padding": "10px",
+						"color": "#333333",
+						"fontSize": "16px",
+						"customStyle": false,
+						"backgroundColor": "#FFFFFF"
+					},
+					"elements": [{
+						"width": "275",
+						"float": "left"
+					},
+					{
+						"width": "275",
+						"padding": "10px"
+					},
+					{
+						"height": "30",
+						"color": "#333333",
+						"textAlign": "center",
+						"backgroundColor": "#FFFFFF"
+					},
+					{
+						"height": "20",
+						"display": ""
 					}]
 				}
 			}

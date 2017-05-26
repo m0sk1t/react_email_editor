@@ -13,6 +13,7 @@ const BlockHr = ({ id, blockOptions, onPropChange }) => {
 					<td
 					width="550"
 					style={blockOptions.elements[0]}
+					height={blockOptions.container.height}
 					>
 					<hr />
 					</td>

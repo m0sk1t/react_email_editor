@@ -6,6 +6,7 @@ const OptionsImage = ({ block, language, onFileChange, onPropChange }) => {
 			<div>
 				<label>{language["Custom style"]}: <input type="checkbox" checked={block.options.container.customStyle? 'checked': '' } onChange={(e) => onPropChange('customStyle', !block.options.container.customStyle, true)} /></label>
 			</div>
+			<hr />
 			<div>
 				<label>
 					{language["URL"]}:
@@ -23,7 +24,6 @@ const OptionsImage = ({ block, language, onFileChange, onPropChange }) => {
 			<div>
 				<label>{language["Link"]}: <input type="text" value={block.options.elements[0].link} onChange={(e) => onPropChange('link', e.target.value, false, 0)} /></label>
 			</div>
-			<hr />
 			<div>
 				<label>
 					{language["Add paddings"]}:
@@ -36,7 +36,6 @@ const OptionsImage = ({ block, language, onFileChange, onPropChange }) => {
 						}
 					} /></label>
 			</div>
-			<hr />
 			<div>
 				<label>{language["Background"]}: <input type="color" value={block.options.container.backgroundColor} onChange={(e) => onPropChange('backgroundColor', e.target.value, true)} /></label>
 			</div>

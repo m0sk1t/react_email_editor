@@ -5,7 +5,7 @@ import { stylizeBlock } from '../../actions';
 
 const mapStateToProps = (state) => {
 	return {
-		template: state.template
+		config: state.tinymce_config
 	};
 };
 
@@ -20,21 +20,11 @@ const mapDispatchToProps = (dispatch) => {
 const BlockHeader = connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(({ id, blockOptions, onPropChange }) => {
+)(({ id, config, blockOptions, onPropChange }) => {
 	const initEditable = () => {
 		window.tinymce.init({
+			...config,
 			selector: `#id_${id} td.editable`,
-			inline: true,
-			menubar: false,
-			paste_as_text: true,
-			preview_styles: false,
-			paste_data_images: false,
-			plugins: ["link hr paste lists textcolor code"],
-			toolbar: "bold italic forecolor backcolor hr styleselect removeformat | link unlink | code",
-			paste_postprocess : function(pl, o) {
-				o.node.innerHTML = o.node.innerHTML.replace(/&nbsp;/ig, " ");
-				o.node.innerHTML = o.node.innerHTML.replace(/&quot;/ig, "\"");
-			},
 			init_instance_callback: (editor) => {
 				editor.on('change', function (e) {
 					onPropChange('text', e.target.targetElm.innerHTML, false, 1);
@@ -56,6 +46,7 @@ const BlockHeader = connect(
 					className="editable"
 					onClick={() => initEditable()}
 					style={blockOptions.elements[0]}
+					height={blockOptions.container.height}
 					dangerouslySetInnerHTML={{__html: blockOptions?blockOptions.elements[0].text:'empty node'}}
 					>
 					</td>

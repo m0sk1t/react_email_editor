@@ -20,6 +20,7 @@
 			"block_type": "header",
 			"options": {
 				"container": {
+					"height": "42",
 					"padding": "10px",
 					"color": "#333333",
 					"fontSize": "32px",
