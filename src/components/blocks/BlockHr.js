@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BlockHr = ({ id, blockOptions, onPropChange }) => {
+const BlockHr = ({ blockOptions, onPropChange }) => {
 	return (
 		<table
 			width="550"

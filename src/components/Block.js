@@ -4,6 +4,7 @@ import BlockText from './blocks/BlockText';
 import BlockImage from './blocks/BlockImage';
 import BlockPosts from './blocks/BlockPosts';
 import BlockVideo from './blocks/BlockVideo';
+import Block3Icons from './blocks/Block3Icons';
 import BlockButton from './blocks/BlockButton';
 import BlockHeader from './blocks/BlockHeader';
 import BlockSocial from './blocks/BlockSocial';
@@ -29,6 +30,8 @@ const Block = ({ block }) => {
 			return <BlockPosts id={block.id} blockOptions={block.options} />;
 		case 'video':
 			return <BlockVideo id={block.id} blockOptions={block.options} />;
+		case '3_icons':
+			return <Block3Icons id={block.id} blockOptions={block.options} />;
 		case 'button':
 			return <BlockButton id={block.id} blockOptions={block.options} />;
 		case 'header':

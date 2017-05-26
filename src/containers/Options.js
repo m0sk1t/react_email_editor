@@ -5,6 +5,7 @@ import OptionsHr from '../components/options/OptionsHr';
 import OptionsText from '../components/options/OptionsText';
 import OptionsImage from '../components/options/OptionsImage';
 import OptionsPosts from '../components/options/OptionsPosts';
+import Options3Icons from '../components/options/Options3Icons';
 import OptionsVideo from '../components/options/OptionsVideo';
 import OptionsButton from '../components/options/OptionsButton';
 import OptionsHeader from '../components/options/OptionsHeader';
@@ -50,6 +51,8 @@ const Options = connect(
 				return <OptionsText block={block} language={language} onPropChange={onPropChange} />;
 			case 'image':
 				return <OptionsImage block={block} language={language} onFileChange={onFileChange} onPropChange={onPropChange} />;
+			case '3_icons':
+				return <Options3Icons block={block} language={language} onFileChange={onFileChange} onPropChange={onPropChange} />;
 			case 'posts':
 				return <OptionsPosts block={block} language={language} onPropChange={onPropChange} />;
 			case 'posts_title':

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BlockButton = ({ id, blockOptions, onPropChange }) => {
+const BlockButton = ({ blockOptions, onPropChange }) => {
 	return (
 		<table
 			width="550"
