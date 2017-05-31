@@ -36,7 +36,7 @@ Left panel containing block list, common options and block options tabs. In the 
 
 ![Block actions and options](https://habrastorage.org/web/cd2/765/f7e/cd2765f7ee754197925d25f4dbd0ac97.png)
 
-Common options give you aibility to apply color or bgcolor to all blocks, which have customStyle flag set to false:
+Common options give you ability to apply color or bgcolor to all blocks, which have customStyle flag setted to false:
 
 ![Common options](https://habrastorage.org/web/837/8db/a10/8378dba1062644deae06e365f6eee08a.png)
 
@@ -97,7 +97,7 @@ const OptionsHr = ({ block, language, onPropChange }) => {
 export default OptionsHr;
 ```
 
-## Inner objects
+## Store objects
 
 * template - Array of building blocks. Every block containing
   * id
