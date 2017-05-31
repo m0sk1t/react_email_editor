@@ -165,7 +165,7 @@ when take this picture:
 
 ![New block preview](https://habrastorage.org/web/5cd/0f5/c4d/5cd0f5c4d4ae434d9810aeeb0cccb918.png)
 
-and place it to folder _src/images_ and you must comething like this result:
+and place it to folder _src/images_ and you must get something like this:
 
 ![New block added](https://habrastorage.org/web/ea0/530/a94/ea0530a942144bc1a214ece366b08e5e.png)
 
@@ -307,7 +307,7 @@ import Options3Icons from '../components/options/Options3Icons';
 //...and here...
 ```
 
-After saving all files, and dragginging our new block to template you must see this picture:
+After saving all files, and dragging our new block to template you must see this picture:
 
 ![Hoooray!!! New block added!!!](https://habrastorage.org/web/6dd/efe/520/6ddefe520c7f49b8be2fad710eec2002.png)
 
