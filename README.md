@@ -8,7 +8,9 @@ Inspired by [Mosaico](https://mosaico.io)
 
 ## Before start
 
-You should have basic knowledge of NodeJS, React, Redux. It helps you understanding how to use and extend this project.
+You should have basic knowledge of NodeJS+npm, React+Redux, JS+JSX. It helps you to understand how to use and extend this project.
+
+Обзорная статья на русском находится по этой ссылке https://habrahabr.ru/post/329488/.
 
 ## Installation
 
