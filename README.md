@@ -2,13 +2,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Summary
 
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/m0sk1t)
-This project is experimental! My attempt to create visual email template editor using React+Redux+etc... tools stack.
+This project is experimental! It's my attempt to create visual email template editor using React+Redux+etc... tools stack.
 
 Inspired by [Mosaico](https://mosaico.io)
 
 ## Before start
 
-You must have basic knowledge of NodeJS, React, Redux for understanding how to use and extend this project.
+You should have basic knowledge of NodeJS, React, Redux. It helps you understanding how to use and extend this project.
 
 ## Installation
 
@@ -38,17 +38,17 @@ in _server_nodejs_ folder. This helps you to check save\send functions from clie
 
 ## Interface
 
-Left panel containing block list, common options and block options tabs. In the middle of the screen you see template. If you click on some block, action buttons will appears. You can drag block from block list to template, click on action button for remove block, save template or send test email:
+Left panel contains block list, common options and block options tabs. In the middle of the screen you see template. If you click on some block, action buttons will appear. You can drag the block from block list to template, click on action button for remove block, save the template or send the test email:
 
 ![Block actions and options](https://habrastorage.org/web/cd2/765/f7e/cd2765f7ee754197925d25f4dbd0ac97.png)
 
-Common options give you ability to apply color or bgcolor to all blocks, which have customStyle flag setted to false:
+Common options give you ability to apply color or background color to all blocks, which have _false_ in customStyle options:
 
 ![Common options](https://habrastorage.org/web/837/8db/a10/8378dba1062644deae06e365f6eee08a.png)
 
 ## Block example
 
-This is an example of block with HR element:
+This is an example of the block with HR element:
 
 ```javascript
 import React from 'react';
@@ -80,7 +80,7 @@ export default BlockHr;
 
 ## Block options example
 
-This is an example of options of block with HR element:
+This is an example of the options of the block with HR element:
 
 ```javascript
 import React from 'react';
@@ -112,11 +112,11 @@ export default OptionsHr;
   * options
     * container - style options for container
     * elements - Array of block elements (mixed style properties and custom data, ex. source or text)
-* common - Object containig common options for both template blocks and added blocks
+* common - Object containing common options for both template blocks and added blocks
 * components - blocks available for adding
 * tabs - tabs visibility settings
 * tinymce_config - common options for TinyMCE
-* language - localisation of interface
+* language - localization of the interface
 * templateId - template id
 
 ## Diagram of conveyor of actions
@@ -172,7 +172,7 @@ when take this picture:
 
 ![New block preview](https://habrastorage.org/web/5cd/0f5/c4d/5cd0f5c4d4ae434d9810aeeb0cccb918.png)
 
-and save it to folder _src/images_ and you must get something like this:
+and save it to folder _src/images_ and you should get something like this:
 
 ![New block added](https://habrastorage.org/web/ea0/530/a94/ea0530a942144bc1a214ece366b08e5e.png)
 
@@ -301,7 +301,7 @@ import Block3Icons from './blocks/Block3Icons';
 //...and here...
 ```
 
-almost same make with _src/containers/Options.js_:
+the same make with _src/containers/Options.js_:
 
 ```javascript
 //...another imports...
@@ -314,7 +314,7 @@ import Options3Icons from '../components/options/Options3Icons';
 //...and here...
 ```
 
-After saving all files, and dragging our new block to template you must see this picture:
+After saving all files, and dragging our new block to template you will see this picture:
 
 ![Hoooray!!! New block added!!!](https://habrastorage.org/web/6dd/efe/520/6ddefe520c7f49b8be2fad710eec2002.png)
 
