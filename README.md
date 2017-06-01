@@ -6,7 +6,12 @@ This project is experimental! My attempt to create visual email template editor 
 
 Inspired by [Mosaico](https://mosaico.io)
 
+## Before start
+
+You must have basic knowledge of NodeJS, React, Redux for understanding how to use and extend this project.
+
 ## Installation
+
 Just download this repo, and after then run following commands:
 
 ```
@@ -14,7 +19,7 @@ npm install
 npm start
 ```
 
-it opens your browser with address http://localhost:3000, and you will see this:
+your browser will be opened with address http://localhost:3000, and you will see this:
 
 ![Main interface](https://habrastorage.org/web/991/b47/e7e/991b47e7e43a41f899e576cef8e053f5.png)
 
@@ -32,6 +37,7 @@ node app
 in _server_nodejs_ folder. This helps you to check save\send functions from client to server. Then open http://localhost:8888 in your browser.
 
 ## Interface
+
 Left panel containing block list, common options and block options tabs. In the middle of the screen you see template. If you click on some block, action buttons will appears. You can drag block from block list to template, click on action button for remove block, save template or send test email:
 
 ![Block actions and options](https://habrastorage.org/web/cd2/765/f7e/cd2765f7ee754197925d25f4dbd0ac97.png)
@@ -41,6 +47,7 @@ Common options give you ability to apply color or bgcolor to all blocks, which h
 ![Common options](https://habrastorage.org/web/837/8db/a10/8378dba1062644deae06e365f6eee08a.png)
 
 ## Block example
+
 This is an example of block with HR element:
 
 ```javascript
@@ -97,7 +104,7 @@ const OptionsHr = ({ block, language, onPropChange }) => {
 export default OptionsHr;
 ```
 
-## Store objects
+## Store structure
 
 * template - Array of building blocks. Every block containing
   * id
@@ -112,7 +119,7 @@ export default OptionsHr;
 * language - localisation of interface
 * templateId - template id
 
-## Conveyor diagram
+## Diagram of conveyor of actions
 
 ![Common options](https://habrastorage.org/web/994/9a1/fe7/9949a1fe72d6446199fbbb860e35b175.png)
 
@@ -165,7 +172,7 @@ when take this picture:
 
 ![New block preview](https://habrastorage.org/web/5cd/0f5/c4d/5cd0f5c4d4ae434d9810aeeb0cccb918.png)
 
-and place it to folder _src/images_ and you must get something like this:
+and save it to folder _src/images_ and you must get something like this:
 
 ![New block added](https://habrastorage.org/web/ea0/530/a94/ea0530a942144bc1a214ece366b08e5e.png)
 
@@ -311,4 +318,4 @@ After saving all files, and dragging our new block to template you must see this
 
 ![Hoooray!!! New block added!!!](https://habrastorage.org/web/6dd/efe/520/6ddefe520c7f49b8be2fad710eec2002.png)
 
-That's all!!! Thank for reading, and try to make your own coolest block =)
+That's all!!! Thank for reading. Try to make your own coolest block =)
