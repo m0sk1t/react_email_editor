@@ -48,7 +48,7 @@ const BlockFeedbackText = connect(
 					>
 						<a
 						target="_blank"
-						href={blockOptions.elements[0].like_link}
+						href={blockOptions.elements[0].like_link?`[feedback_url action="like" redirect="${blockOptions.elements[0].like_link}"]`:'[feedback_url action="like"]'}
 						title={blockOptions.elements[0].like_link}
 						style={{
 							"display": blockOptions.elements[0].like_display
@@ -58,7 +58,7 @@ const BlockFeedbackText = connect(
 						</a>
 						<a
 						target="_blank"
-						href={blockOptions.elements[0].neutral_link}
+						href={blockOptions.elements[0].neutral_link?`[feedback_url action="neutral" redirect="${blockOptions.elements[0].neutral_link}"]`:'[feedback_url action="neutral"]'}
 						title={blockOptions.elements[0].neutral_link}
 						style={{
 							"display": blockOptions.elements[0].neutral_display
@@ -68,7 +68,7 @@ const BlockFeedbackText = connect(
 						</a>
 						<a
 						target="_blank"
-						href={blockOptions.elements[0].dislike_link}
+						href={blockOptions.elements[0].dislike_link?`[feedback_url action="dislike" redirect="${blockOptions.elements[0].dislike_link}"]`:'[feedback_url action="dislike"]'}
 						title={blockOptions.elements[0].dislike_link}
 						style={{
 							"display": blockOptions.elements[0].dislike_display
