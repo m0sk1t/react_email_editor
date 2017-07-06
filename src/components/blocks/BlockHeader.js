@@ -42,12 +42,12 @@ const BlockHeader = connect(
 			<tbody>
 				<tr>
 					<td
-					width="550"
-					className="editable"
-					onClick={() => initEditable()}
-					style={blockOptions.elements[0]}
-					height={blockOptions.container.height}
-					dangerouslySetInnerHTML={{__html: blockOptions?blockOptions.elements[0].text:'empty node'}}
+						width="550"
+						className="editable"
+						onClick={() => initEditable()}
+						style={blockOptions.elements[0]}
+						height={blockOptions.container.height}
+						dangerouslySetInnerHTML={{__html: blockOptions?blockOptions.elements[0].text:'empty node'}}
 					>
 					</td>
 				</tr>

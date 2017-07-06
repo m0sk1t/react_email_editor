@@ -32,7 +32,7 @@ const BlockSocialText = connect(
 			}
 		})
 	};
-	const imgLocation = '/';
+	const imgLocation = document.location.href.indexOf('nm_email_editor') > 0? `${document.location.origin}/wp-content/plugins/newsmine/include/email_editor/`: '/';
 	return (
 		<table
 			width="550"
