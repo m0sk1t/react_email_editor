@@ -22,7 +22,7 @@ const Blocks = connect(
 	mapDispatchToProps
 )(({ tabs, components, selectComponent }) => {
 	if (tabs && tabs.blocks) {
-		const imgLocation = '/';
+		const imgLocation = document.location.href.indexOf('nm_email_editor') > 0? `${document.location.origin}/wp-content/plugins/newsmine/include/email_editor/`: '/';
 		return (
 			<div
 			style={{
