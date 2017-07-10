@@ -21,42 +21,6 @@
 			}
 		},
 		{
-			"preview": "images/3_icons.png",
-			"block": {
-				"block_type": "3_icons",
-				"options": {
-					"container": {
-						"padding": "0 50px",
-						"color": "#333333",
-						"fontSize": "20px",
-						"customStyle": false,
-						"backgroundColor": "#F7F8FA"
-					},
-					"elements": [{
-						"source": "https://images.vexels.com/media/users/3/136010/isolated/preview/e7e28c15388e5196611aa2d7b7056165-ghost-skull-circle-icon-by-vexels.png"
-					},
-					{
-						"source": "http://www.1pengguna.com/1pengguna/uploads/images/tipimgdemo/kesihatan.gif"
-					},
-					{
-						"source": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Circle-icons-cloud.svg/2000px-Circle-icons-cloud.svg.png"
-					},
-					{
-						"text": "DEADS",
-						"textAlign": "center"
-					},
-					{
-						"text": "LOVES",
-						"textAlign": "center"
-					},
-					{
-						"text": "CLOUDS",
-						"textAlign": "center"
-					}]
-				}
-			}
-		},
-		{
 			"preview": "images/hr.png",
 			"block": {
 				"block_type": "hr",
