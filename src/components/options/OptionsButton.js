@@ -11,7 +11,7 @@ const OptionsButton = ({ block, language, onPropChange }) => {
 				<label>{language["Text"]}: <input type="text" value={block.options.elements[0].text} onChange={(e) => onPropChange('text', e.target.value, false, 0)} /></label>
 			</div>
 			<div>
-				<label>{language["URL"]}: <input type="text" value={block.options.elements[0].link} onChange={(e) => onPropChange('link', e.target.value, false, 0)} /></label>
+				<label>{language["Link"]}: <input type="text" value={block.options.elements[0].link} onChange={(e) => onPropChange('link', e.target.value, false, 0)} /></label>
 			</div>
 			<hr />
 			<div>
