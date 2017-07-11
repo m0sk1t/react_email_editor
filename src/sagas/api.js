@@ -1,4 +1,5 @@
 window.wp && (window.wp.ajax.settings.url = window.ajaxurl);
+const credentials = 'same-origin';
 const headers = new Headers({
 	'Accept': 'aplication/json',
 	'Content-type': 'application/x-www-form-urlencoded'
@@ -7,13 +8,13 @@ const rootPath = document.location.href.indexOf('page=nm_email_editor') === -1? 
 
 export const getLanguage = () => {
 	const lang = /^\w+/.exec(navigator.language)[0];
-	return fetch(`${rootPath}translations/lang.${lang}.json`)
+	return fetch(`${rootPath}translations/lang.${lang}.json`, {credentials})
 		.then(res => res.json())
 		.then(json => json)
 };
 
 export const getComponents = () => {
-	return fetch(`${rootPath}components.json`)
+	return fetch(`${rootPath}components.json`, {credentials})
 		.then(res => res.json())
 		.then(json => json)
 };
@@ -21,6 +22,7 @@ export const getComponents = () => {
 export const getTemplate = (templateId) => {
 	return fetch(new Request(templateId?window.ajaxurl:`${rootPath}template.json`, {
 			headers,
+			credentials,
 			method: templateId?'POST':'GET',
 			body: templateId?encodeURI(`id=${templateId}&action=ee_get_template`):null,
 		}))
@@ -33,6 +35,7 @@ export const saveImage = (file) => {
 	formData.append('file', file);
 	formData.append('action', 'ee_save_image');
 	const params = {
+		credentials,
 		method: 'POST',
 		body: formData
 	};
@@ -44,6 +47,7 @@ export const saveImage = (file) => {
 export const saveTemplate = ({ id, html, name, template }) => {
 	const params = {
 		headers,
+		credentials,
 		method: 'POST',
 		body:	encodeURI(`id=${id||0}
 				&html=${html}
@@ -59,6 +63,7 @@ export const saveTemplate = ({ id, html, name, template }) => {
 export const sendTestEmail = ({ email, html }) => {
 	const params = {
 		headers,
+		credentials,
 		method: 'POST',
 		body:	encodeURI(`html=${html}
 				&email=${email}
